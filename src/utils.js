@@ -41,3 +41,5 @@ export async function loadJson(glob) {
   }
   return data;
 }
+
+export const baseUrl = import.meta.env.BASE_URL;

@@ -12,14 +12,12 @@ export default function App() {
       const glob = import.meta.glob("./content/festivals/*.json");
       const data = await loadJson(glob);
       setFestivals(data);
-      console.log(data);
     }
 
     async function loadBands() {
       const glob = import.meta.glob("./content/bands/*.json");
       const data = await loadJson(glob);
       setBands(data);
-      console.log(data);
     }
 
     loadFestivals();

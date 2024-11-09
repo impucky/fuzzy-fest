@@ -6,14 +6,17 @@ import {
   ZoomControl,
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import "leaflet-defaulticon-compatibility";
+import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import { useMap } from "react-leaflet/hooks";
 import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import { findCoordsCenter } from "../utils";
+import { baseUrl } from "../utils";
 
 function MapCenterHandler({ center, routerLocation }) {
   // Don't recenter when navigating back to list
-  if (routerLocation === "/") return;
+  if (routerLocation === baseUrl) return;
 
   const map = useMap();
   map.flyTo(center, 10);
@@ -26,8 +29,7 @@ export default function Map(props) {
   const [center, setCenter] = useState(null);
 
   const centerOnFestival = () => {
-    console.log(routerLocation, festivals);
-    const festival = festivals.find((f) => routerLocation.slice(1) === f.slug);
+    const festival = festivals.find((f) => routerLocation.slice(12) === f.slug);
     if (festival) {
       setCenter([festival.location.lat, festival.location.lon]);
     }
@@ -43,7 +45,7 @@ export default function Map(props) {
 
   // Recenter when navigating from sidebar list
   useEffect(() => {
-    if (routerLocation !== "/") {
+    if (routerLocation !== baseUrl) {
       centerOnFestival();
     }
   }, [routerLocation]);
@@ -73,7 +75,7 @@ export default function Map(props) {
               eventHandlers={{
                 click: () => {
                   setCenter(position);
-                  setRouterLocation(f.slug);
+                  setRouterLocation(baseUrl + f.slug);
                 },
               }}
             >

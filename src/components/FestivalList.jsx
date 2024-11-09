@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { baseUrl } from "../utils";
 
 export default function FestivalList({ festivals }) {
   return (
@@ -9,7 +10,7 @@ export default function FestivalList({ festivals }) {
           <li key={f.name}>
             <Link
               className="p-4 text-center text-3xl font-bold leading-normal hover:drop-shadow-[2px_4px_0_salmon]"
-              href={`/${f.slug}`}
+              href={baseUrl + f.slug}
             >
               - {f.name}
             </Link>

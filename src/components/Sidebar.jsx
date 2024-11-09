@@ -1,6 +1,7 @@
 import { Link, Route, Switch, useLocation } from "wouter";
 import FestivalList from "./FestivalList";
 import Festival from "./Festival";
+import { baseUrl } from "../utils";
 
 export default function Sidebar(props) {
   const { festivals, bands } = props;
@@ -9,20 +10,20 @@ export default function Sidebar(props) {
   return (
     <div className="z-[500] w-3/6 overflow-y-auto shadow-sm">
       <Switch>
-        <Route path="/">
+        <Route path={`${baseUrl}`}>
           <FestivalList festivals={festivals} />
         </Route>
 
-        <Route path="/:festival">
+        <Route path={`${baseUrl}:festival`}>
           {(params) => {
             const info = festivals.find((f) => f.slug === params.festival);
             if (!info) {
-              setLocation("/");
+              setLocation(baseUrl);
               return;
             }
             return (
               <>
-                <Link href="/" className="p-2 text-sm hover:underline">
+                <Link href={baseUrl} className="p-2 text-sm hover:underline">
                   ← Back to list
                 </Link>
                 <Festival
