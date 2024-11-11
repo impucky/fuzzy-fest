@@ -33,7 +33,6 @@ export default function MapFilters({ filters, setFilters, defaultFilters }) {
         <input
           type="date"
           value={filters.dateRange.from}
-          defaultValue={filters.dateRange.from}
           onChange={(e) =>
             onDateChange({ from: e.target.value, to: filters.dateRange.to })
           }
@@ -44,7 +43,6 @@ export default function MapFilters({ filters, setFilters, defaultFilters }) {
         <input
           type="date"
           value={filters.dateRange.to}
-          defaultValue={filters.dateRange.to}
           onChange={(e) =>
             onDateChange({ from: filters.dateRange.from, to: e.target.value })
           }

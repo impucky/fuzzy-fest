@@ -16,9 +16,9 @@ import { findCoordsCenter, baseUrl, formatDate } from "../utils";
 
 function MapCenterHandler({ center, routerLocation }) {
   const [prevCenter, setPrevCenter] = useState(center);
+  const map = useMap();
   // Don't recenter when navigating back to list
   if (routerLocation === baseUrl || center === prevCenter) return;
-  const map = useMap();
   map.flyTo(center, 10);
   setPrevCenter(center);
 }

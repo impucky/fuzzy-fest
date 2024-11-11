@@ -3,25 +3,29 @@ import { loadJson } from "./utils";
 import Map from "./components/Map";
 import Sidebar from "./components/Sidebar";
 
+import { client } from "../tina/__generated__/client";
+
 export default function App() {
   const [festivals, setFestivals] = useState(null);
   const [bands, setBands] = useState(null);
 
   useEffect(() => {
-    async function loadFestivals() {
-      const glob = import.meta.glob("./content/festivals/*.json");
-      const data = await loadJson(glob);
-      setFestivals(data);
+    async function loadContent() {
+      const festivalsResponse = await client.queries.festivalConnection();
+      const festivals = festivalsResponse.data.festivalConnection.edges.map(
+        (festival) => {
+          return festival.node;
+        },
+      );
+      const bandsResponse = await client.queries.bandConnection();
+      const bands = bandsResponse.data.bandConnection.edges.map((band) => {
+        return band.node;
+      });
+      setFestivals(festivals);
+      setBands(bands);
     }
 
-    async function loadBands() {
-      const glob = import.meta.glob("./content/bands/*.json");
-      const data = await loadJson(glob);
-      setBands(data);
-    }
-
-    loadFestivals();
-    loadBands();
+    loadContent();
   }, []);
 
   return festivals && bands ? (
