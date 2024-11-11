@@ -1,11 +1,11 @@
 ---
 name: A Colossal Weekend
 slug: a-colossal-weekend
-website: https://www.acolossalweekend.dk/
-dates:
-  start: '2025-05-08'
-  end: '2025-05-10'
+website: 'https://www.acolossalweekend.dk/'
 isIndoor: true
+dates:
+  start: 2025-05-08T00:00:00.000Z
+  end: 2025-05-10T00:00:00.000Z
 location:
   country: Denmark
   city: Copenhagen
@@ -21,3 +21,4 @@ lineup:
   - jo-quail
   - machukha
 ---
+
