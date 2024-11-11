@@ -1,5 +1,5 @@
 ---
-name: A Colossal Weeken
+name: A Colossal Weekend
 slug: a-colossal-weekend
 website: 'https://www.acolossalweekend.dk/'
 isIndoor: true
