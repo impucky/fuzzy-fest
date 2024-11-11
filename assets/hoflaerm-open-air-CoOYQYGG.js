@@ -1,1 +1,0 @@
-const o="Hoflärm Open Air",n="hoflaerm-open-air",t="https://www.hoflaerm.de/",e={start:"2025-08-14",end:"2025-08-16"},s=!1,a={country:"Germany",city:"Hoflärm",lat:50.73718292189523,lon:7.673405155188494},l=[],r={name:o,slug:n,website:t,dates:e,isIndoor:s,location:a,lineup:l};export{e as dates,r as default,s as isIndoor,l as lineup,a as location,o as name,n as slug,t as website};
