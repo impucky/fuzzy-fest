@@ -1,5 +1,5 @@
 ---
-name: Keep It Low
+name: Keep It Low Festival
 slug: keep-it-low
 website: 'https://www.keepitlow.de/'
 isIndoor: true
