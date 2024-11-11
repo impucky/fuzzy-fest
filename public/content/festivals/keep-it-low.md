@@ -1,6 +1,6 @@
 ---
 name: Keep It Low Festival
-slug: keep-it-low
+slug: keep-it-low-festival
 website: 'https://www.keepitlow.de/'
 isIndoor: true
 dates:
