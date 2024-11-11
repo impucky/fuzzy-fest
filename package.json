@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "tinacms dev -c \"vite\"",
     "build": "tinacms build && vite build",
-    "start": "tinacms build && vite preview",
+    "start": "tinacms build && vite build && vite preview",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
