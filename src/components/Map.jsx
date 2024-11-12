@@ -123,15 +123,14 @@ function filterFestivals(festivals, filters, routerLocation) {
     const endFilter = new Date(filters.dateRange.to);
     // Always show if currently viewing
     if (routerLocation.includes(f.slug)) return true;
+    // Filter date range
+    if (startDate < startFilter || startDate > endFilter) {
+      return false;
+    }
     // Filter search
     if (filters.query) {
       return f.name.toLowerCase().includes(filters.query.toLowerCase());
     }
-    // Filter date range
-    if (startDate < startFilter || startDate > endFilter) {
-      return false;
-    } else {
-      return true;
-    }
+    return true;
   });
 }
