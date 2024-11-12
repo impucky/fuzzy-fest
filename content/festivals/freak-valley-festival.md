@@ -1,11 +1,12 @@
 ---
 name: Freak Valley Festival
 slug: freak-valley-festival
-website: https://www.freakvalley.de/
-dates:
-  start: '2025-06-19'
-  end: '2025-06-21'
+website: 'https://www.freakvalley.de/'
+logo: /img/festivals/freak-valley-festival.png
 isIndoor: false
+dates:
+  start: 2025-06-19T00:00:00.000Z
+  end: 2025-06-21T00:00:00.000Z
 location:
   country: Germany
   city: Weiherdamm
@@ -13,3 +14,4 @@ location:
   lon: 8.12708699622017
 lineup: []
 ---
+

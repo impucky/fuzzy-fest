@@ -1,11 +1,12 @@
 ---
 name: Desertfest Berlin
 slug: desertfest-berlin
-website: https://www.desertfest.de/
-dates:
-  start: '2025-05-23'
-  end: '2025-05-25'
+website: "https://www.desertfest.de/"
+logo: /img/festivals/desertfest.png
 isIndoor: true
+dates:
+  start: 2025-05-23T00:00:00.000Z
+  end: 2025-05-25T00:00:00.000Z
 location:
   country: Germany
   city: Berlin

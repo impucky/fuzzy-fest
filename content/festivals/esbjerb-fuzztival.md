@@ -1,11 +1,12 @@
 ---
 name: Esbjerg Fuzztival
 slug: esbjerg-fuzztival
-website: https://www.fuzztival.com/
-dates:
-  start: '2025-06-06'
-  end: '2025-07-07'
+website: 'https://www.fuzztival.com/'
+logo: /img/festivals/esbjerg-fuzztival.png
 isIndoor: true
+dates:
+  start: 2025-06-06T00:00:00.000Z
+  end: 2025-07-07T00:00:00.000Z
 location:
   country: Denmark
   city: Esbjerg
@@ -21,3 +22,4 @@ lineup:
   - jo-quail
   - machukha
 ---
+

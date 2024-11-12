@@ -1,11 +1,12 @@
 ---
 name: Desertfest London
 slug: desertfest-london
-website: https://www.desertfest.co.uk/
-dates:
-  start: '2025-05-16'
-  end: '2025-05-18'
+website: "https://www.desertfest.co.uk/"
+logo: /img/festivals/desertfest.png
 isIndoor: true
+dates:
+  start: 2025-05-16T00:00:00.000Z
+  end: 2025-05-18T00:00:00.000Z
 location:
   country: United Kingdom
   city: London

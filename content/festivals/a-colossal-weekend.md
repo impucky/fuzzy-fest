@@ -2,6 +2,7 @@
 name: A Colossal Weekend
 slug: a-colossal-weekend
 website: 'https://www.acolossalweekend.dk/'
+logo: /img/festivals/a-colossal-weekend.png
 isIndoor: true
 dates:
   start: 2025-05-08T00:00:00.000Z
