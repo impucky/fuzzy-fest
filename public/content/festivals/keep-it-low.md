@@ -1,7 +1,8 @@
 ---
-name: Keep It Low
-slug: keep-it-low
-website: 'https://www.keepitlow.de/'
+name: Keep It Low Festival
+slug: keep-it-low-festival
+website: "https://www.keepitlow.de/"
+logo: /img/festivals/keep-it-low-festival.png
 isIndoor: true
 dates:
   start: 2025-10-09T22:00:00.000Z
@@ -12,6 +13,5 @@ location:
   lat: 48.14516298288267
   lon: 11.521611734201125
 lineup:
-  - ''
+  - ""
 ---
-

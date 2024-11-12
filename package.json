@@ -10,7 +10,7 @@
     "start": "tinacms build && vite build && vite preview",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "tinacms build && npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

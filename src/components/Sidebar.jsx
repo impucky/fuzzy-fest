@@ -3,15 +3,23 @@ import FestivalList from "./FestivalList";
 import Festival from "./Festival";
 import { baseUrl } from "../utils";
 
-export default function Sidebar(props) {
-  const { festivals, bands } = props;
+export default function Sidebar({
+  festivals,
+  bands,
+  highlight,
+  onFestivalHover,
+}) {
   const [location, setLocation] = useLocation();
 
   return (
     <div className="z-[500] w-3/6 overflow-y-auto shadow-sm">
       <Switch>
         <Route path={`${baseUrl}`}>
-          <FestivalList festivals={festivals} />
+          <FestivalList
+            festivals={festivals}
+            highlight={highlight}
+            onFestivalHover={onFestivalHover}
+          />
         </Route>
 
         <Route path={`${baseUrl}:festival`}>

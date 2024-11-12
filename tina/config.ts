@@ -46,6 +46,11 @@ export default defineConfig({
             isTitle: true,
             required: true,
           },
+          {
+            type: "image",
+            name: "photo",
+            label: "Band photo",
+          },
         ],
       },
       {
@@ -70,6 +75,11 @@ export default defineConfig({
             type: "string",
             name: "website",
             label: "Website",
+          },
+          {
+            type: "image",
+            name: "logo",
+            label: "Festival logo",
           },
           {
             type: "boolean",

@@ -1,11 +1,12 @@
 ---
 name: Bearstone Festival
 slug: bearstone-festival
-website: https://bearstonefestival.com/
-dates:
-  start: '2025-07-03'
-  end: '2025-07-06'
+website: 'https://bearstonefestival.com/'
+logo: /img/festivals/bearstone-festival.png
 isIndoor: false
+dates:
+  start: 2025-07-03T00:00:00.000Z
+  end: 2025-07-06T00:00:00.000Z
 location:
   country: Croatia
   city: Donje Primišlje
@@ -30,3 +31,4 @@ lineup:
   - dark-tree-bark
   - atomic-mold
 ---
+

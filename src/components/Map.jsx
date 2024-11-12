@@ -14,6 +14,7 @@ import { useState, useEffect, useRef } from "react";
 import { useLocation } from "wouter";
 import { findCoordsCenter, baseUrl, formatDate } from "../utils";
 
+// TODO Custom markers
 function MapCenterHandler({ center, routerLocation }) {
   const [prevCenter, setPrevCenter] = useState(center);
   const map = useMap();
@@ -28,8 +29,7 @@ const defaultFilters = {
   dateRange: { from: "2025-01-01", to: "2025-12-31" },
 };
 
-export default function Map(props) {
-  const { festivals } = props;
+export default function Map({ festivals, highlight, onFestivalHover }) {
   const [routerLocation, setRouterLocation] = useLocation();
   const [center, setCenter] = useState(null);
   const [filters, setFilters] = useState(defaultFilters);
@@ -83,21 +83,29 @@ export default function Map(props) {
             <Marker
               key={f.name}
               position={position}
-              className="outline"
               eventHandlers={{
                 click: () => {
                   setCenter(position);
                   setRouterLocation(baseUrl + f.slug);
                 },
+                mouseover: () => {
+                  onFestivalHover(f.slug);
+                },
+                mouseout: () => {
+                  onFestivalHover(null);
+                },
               }}
             >
-              <Tooltip direction="top" offset={[-15, -12]}>
-                <div className="text-center">
-                  <span className="font-bold">{f.name}</span>
-                  <br />
-                  {formatDate(f.dates.start)} - {formatDate(f.dates.end)}
-                </div>
-              </Tooltip>
+              {/* permanent tooltip but only renders if matching highlight -- causes some null errors when going to another tab */}
+              {highlight === f.slug && (
+                <Tooltip direction="top" offset={[-15, -12]} permanent={true}>
+                  <div className="text-center">
+                    <span className="font-bold">{f.name}</span>
+                    <br />
+                    {formatDate(f.dates.start)} - {formatDate(f.dates.end)}
+                  </div>
+                </Tooltip>
+              )}
             </Marker>
           );
         })}

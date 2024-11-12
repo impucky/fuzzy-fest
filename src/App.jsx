@@ -8,6 +8,11 @@ import { client } from "../tina/__generated__/client";
 export default function App() {
   const [festivals, setFestivals] = useState(null);
   const [bands, setBands] = useState(null);
+  const [highlight, setHighlight] = useState(null);
+
+  function onFestivalHover(slug) {
+    setHighlight(slug);
+  }
 
   useEffect(() => {
     async function loadContent() {
@@ -17,7 +22,8 @@ export default function App() {
           return festival.node;
         },
       );
-      const bandsResponse = await client.queries.bandConnection();
+      // TODO move band loading to festival page
+      const bandsResponse = await client.queries.bandConnection({ last: 999 });
       const bands = bandsResponse.data.bandConnection.edges.map((band) => {
         return band.node;
       });
@@ -30,8 +36,17 @@ export default function App() {
 
   return festivals && bands ? (
     <main className="flex h-screen flex-row">
-      <Sidebar festivals={festivals} bands={bands} />
-      <Map festivals={festivals} />
+      <Sidebar
+        festivals={festivals}
+        bands={bands}
+        highlight={highlight}
+        onFestivalHover={onFestivalHover}
+      />
+      <Map
+        festivals={festivals}
+        highlight={highlight}
+        onFestivalHover={onFestivalHover}
+      />
     </main>
   ) : (
     <div className="flex h-full items-center justify-center">

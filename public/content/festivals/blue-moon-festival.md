@@ -2,9 +2,10 @@
 name: Bluemoon Festival
 slug: bluemoon-festival
 website: https://www.bluemoonfestival.de/
+logo: /img/festivals/bluemoon-festival.png
 dates:
-  start: '2025-07-25'
-  end: '2025-07-27'
+  start: "2025-07-25"
+  end: "2025-07-27"
 isIndoor: false
 location:
   country: Germany

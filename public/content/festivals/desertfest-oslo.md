@@ -2,9 +2,10 @@
 name: Desertfest Oslo
 slug: desertfest-oslo
 website: https://www.desertfest.de/
+logo: /img/festivals/desertfest.png
 dates:
-  start: '2025-05-09'
-  end: '2025-05-10'
+  start: "2025-05-09"
+  end: "2025-05-10"
 isIndoor: true
 location:
   country: Norway
