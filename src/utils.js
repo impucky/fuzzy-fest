@@ -11,9 +11,9 @@ export function findCoordsCenter(coords) {
 }
 
 export function formatDate(d) {
-  const nth = (d) => {
-    if (d > 3 && d < 21) return "th";
-    switch (d % 10) {
+  const nth = (n) => {
+    if (n > 3 && n < 21) return "th";
+    switch (n % 10) {
       case 1:
         return "st";
       case 2:
@@ -25,12 +25,14 @@ export function formatDate(d) {
     }
   };
 
+  // one day I will understand js dates
   const date = new Date(d).toLocaleDateString("en-US", {
     month: "long",
     day: "numeric",
   });
 
-  return `${date}${nth(d)}`;
+  // ...just kidding
+  return `${date}${nth(date.split(" ")[1])}`;
 }
 
 export async function loadJson(glob) {

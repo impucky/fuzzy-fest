@@ -18,6 +18,10 @@ body {
   min-height: 100vh;
 }
 
+h1 {
+  font-family: "Rammetto One", sans-serif;
+}
+
 #root {
   width: 100%;
 }

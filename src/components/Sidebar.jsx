@@ -12,7 +12,7 @@ export default function Sidebar({
   const [location, setLocation] = useLocation();
 
   return (
-    <div className="z-[500] w-3/6 overflow-y-auto shadow-sm">
+    <div className="z-[500] flex h-3/5 w-full flex-col overflow-hidden bg-gradient-to-t from-neutral-900 to-transparent shadow-[0_0_8px_rgba(0,0,0,0.7)] lg:h-full lg:w-2/5">
       <Switch>
         <Route path={`${baseUrl}`}>
           <FestivalList
@@ -31,7 +31,10 @@ export default function Sidebar({
             }
             return (
               <>
-                <Link href={baseUrl} className="p-2 text-sm hover:underline">
+                <Link
+                  href={baseUrl}
+                  className="text-md p-2 text-center text-[salmon] shadow-md hover:bg-neutral-800 hover:text-white hover:underline"
+                >
                   ← Back to list
                 </Link>
                 <Festival

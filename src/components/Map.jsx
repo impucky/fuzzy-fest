@@ -10,7 +10,8 @@ import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import { useMap } from "react-leaflet/hooks";
 import MapFilters from "./MapFilters";
-import { useState, useEffect, useRef } from "react";
+import Header from "./Header";
+import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import { findCoordsCenter, baseUrl, formatDate } from "../utils";
 
@@ -35,8 +36,9 @@ export default function Map({ festivals, highlight, onFestivalHover }) {
   const [filters, setFilters] = useState(defaultFilters);
 
   const centerOnFestival = () => {
-    // 12 for /fuzzy-fest/
-    const festival = festivals.find((f) => routerLocation.slice(12) === f.slug);
+    const festival = festivals.find(
+      (f) => routerLocation.slice(baseUrl.length) === f.slug,
+    );
     if (festival) {
       setCenter([festival.location.lat, festival.location.lon]);
     }
@@ -60,18 +62,19 @@ export default function Map({ festivals, highlight, onFestivalHover }) {
   if (!center) return;
 
   return (
-    <>
+    <div className="relative h-2/5 w-full lg:order-2 lg:h-full lg:w-3/5">
       <MapFilters
         filters={filters}
         setFilters={setFilters}
         defaultFilters={defaultFilters}
       />
+      <Header />
       <MapContainer
         center={center}
         zoom={5}
         zoomControl={false}
         scrollWheelZoom={true}
-        className="h-full w-4/6"
+        className="h-full w-full"
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -112,7 +115,7 @@ export default function Map({ festivals, highlight, onFestivalHover }) {
         <MapCenterHandler center={center} routerLocation={routerLocation} />
         <ZoomControl position="bottomleft" />
       </MapContainer>
-    </>
+    </div>
   );
 }
 

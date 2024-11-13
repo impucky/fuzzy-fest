@@ -35,7 +35,7 @@ export default function App() {
   }, []);
 
   return festivals && bands ? (
-    <main className="flex h-screen flex-row">
+    <main className="flex h-screen flex-col lg:flex-row">
       <Sidebar
         festivals={festivals}
         bands={bands}
