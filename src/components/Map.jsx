@@ -12,15 +12,15 @@ import { useMap } from "react-leaflet/hooks";
 import MapFilters from "./MapFilters";
 import Header from "./Header";
 import { useState, useEffect } from "react";
-import { useLocation } from "wouter";
-import { findCoordsCenter, baseUrl, formatDate } from "../utils";
+import { useHashLocation } from "wouter/use-hash-location";
+import { findCoordsCenter, formatDate } from "../utils";
 
 // TODO Custom markers
-function MapCenterHandler({ center, routerLocation }) {
+function MapCenterHandler({ center, location }) {
   const [prevCenter, setPrevCenter] = useState(center);
   const map = useMap();
   // Don't recenter when navigating back to list
-  if (routerLocation === baseUrl || center === prevCenter) return;
+  if (location === "" || center === prevCenter) return;
   map.flyTo(center, 10);
   setPrevCenter(center);
 }
@@ -31,14 +31,12 @@ const defaultFilters = {
 };
 
 export default function Map({ festivals, highlight, onFestivalHover }) {
-  const [routerLocation, setRouterLocation] = useLocation();
+  const [location, setLocation] = useHashLocation();
   const [center, setCenter] = useState(null);
   const [filters, setFilters] = useState(defaultFilters);
 
   const centerOnFestival = () => {
-    const festival = festivals.find(
-      (f) => routerLocation.slice(baseUrl.length) === f.slug,
-    );
+    const festival = festivals.find((f) => location === `/${f.slug}`);
     if (festival) {
       setCenter([festival.location.lat, festival.location.lon]);
     }
@@ -54,10 +52,10 @@ export default function Map({ festivals, highlight, onFestivalHover }) {
 
   // Recenter when navigating from sidebar list
   useEffect(() => {
-    if (routerLocation !== baseUrl) {
+    if (location !== "/") {
       centerOnFestival();
     }
-  }, [routerLocation]);
+  }, [location]);
 
   if (!center) return;
 
@@ -80,7 +78,7 @@ export default function Map({ festivals, highlight, onFestivalHover }) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {filterFestivals(festivals, filters, routerLocation).map((f) => {
+        {filterFestivals(festivals, filters, location).map((f) => {
           const position = [f.location.lat, f.location.lon];
           return (
             <Marker
@@ -89,7 +87,7 @@ export default function Map({ festivals, highlight, onFestivalHover }) {
               eventHandlers={{
                 click: () => {
                   setCenter(position);
-                  setRouterLocation(baseUrl + f.slug);
+                  setLocation(f.slug);
                 },
                 mouseover: () => {
                   onFestivalHover(f.slug);
@@ -112,20 +110,20 @@ export default function Map({ festivals, highlight, onFestivalHover }) {
             </Marker>
           );
         })}
-        <MapCenterHandler center={center} routerLocation={routerLocation} />
+        <MapCenterHandler center={center} location={location} />
         <ZoomControl position="bottomleft" />
       </MapContainer>
     </div>
   );
 }
 
-function filterFestivals(festivals, filters, routerLocation) {
+function filterFestivals(festivals, filters, location) {
   return festivals.filter((f) => {
     const startDate = new Date(f.dates.start);
     const startFilter = new Date(filters.dateRange.from);
     const endFilter = new Date(filters.dateRange.to);
     // Always show if currently viewing
-    if (routerLocation.includes(f.slug)) return true;
+    if (location.includes(f.slug)) return true;
     // Filter date range
     if (startDate < startFilter || startDate > endFilter) {
       return false;

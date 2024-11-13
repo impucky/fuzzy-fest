@@ -13,6 +13,11 @@ export default function MapFilters({ filters, setFilters, defaultFilters }) {
     });
   }
 
+  function onFilterReset() {
+    setFilters(defaultFilters);
+    setSliderRange([0, 365]);
+  }
+
   function from365(d) {
     const date = new Date(2025, 0);
     date.setDate(d);
@@ -24,7 +29,7 @@ export default function MapFilters({ filters, setFilters, defaultFilters }) {
       <div>
         <span className="text-lg font-bold">Filter festivals:</span>
         <button
-          onClick={() => setFilters(defaultFilters)}
+          onClick={onFilterReset}
           className="rounded-xl border px-2 text-lg"
         >
           ⟲
