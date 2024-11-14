@@ -1,7 +1,7 @@
 ---
 name: Roadburn
 slug: roadburn
-website: 'https://roadburn.com/'
+website: "https://roadburn.com/"
 logo: /img/festivals/roadburn.png
 isIndoor: true
 dates:
@@ -13,6 +13,25 @@ location:
   lat: 51.5579462421408
   lon: 5.092826165263677
 lineup:
-  - ''
+  - "chat-pile"
+  - "sumac"
+  - "altin-gun"
+  - "oxn"
+  - "de-mannen-broeders"
+  - "kylesa"
+  - "black-curse"
+  - "choke-chain"
+  - "cinder-well"
+  - "concrete-winds"
+  - "denisa"
+  - "faetooth"
+  - "fire"
+  - "human-impact"
+  - "new-age-doom-feat-tuvaband"
+  - "one-leg-one-eye"
+  - "ora-cogan"
+  - "pageninetynine"
+  - "ponte-del-diavolo"
+  - "stress-positions"
+  - "the-hirs-collective"
 ---
-

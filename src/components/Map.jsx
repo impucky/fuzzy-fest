@@ -28,6 +28,8 @@ function MapCenterHandler({ center, location }) {
 const defaultFilters = {
   query: "",
   dateRange: { from: "2025-01-01", to: "2025-12-31" },
+  showIn: true,
+  showOut: true,
 };
 
 export default function Map({ festivals, highlight, onFestivalHover }) {
@@ -119,18 +121,27 @@ export default function Map({ festivals, highlight, onFestivalHover }) {
 
 function filterFestivals(festivals, filters, location) {
   return festivals.filter((f) => {
+    const query = filters.query.toLowerCase();
     const startDate = new Date(f.dates.start);
     const startFilter = new Date(filters.dateRange.from);
     const endFilter = new Date(filters.dateRange.to);
-    // Always show if currently viewing
-    if (location.includes(f.slug)) return true;
-    // Filter date range
+    // Always show if currently viewing and there's no query
+    if (location.includes(f.slug) && !query) return true;
+    // Locale
+    if (f.isIndoor && !filters.showIn) return false;
+    if (!f.isIndoor && !filters.showOut) return false;
+    if (!filters.showIn && !filters.showOut) return false;
+    // Date range
     if (startDate < startFilter || startDate > endFilter) {
       return false;
     }
-    // Filter search
+    // Search
     if (filters.query) {
-      return f.name.toLowerCase().includes(filters.query.toLowerCase());
+      const festivalMatch = f.name.toLowerCase().includes(query);
+      const bandMatch = f.lineup.some((name) => {
+        return name.split("-").join(" ").toLowerCase().includes(query);
+      });
+      return festivalMatch || bandMatch;
     }
     return true;
   });

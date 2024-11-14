@@ -2,6 +2,7 @@
 name: Westill Fest
 slug: westill-fest
 website: 'https://www.facebook.com/westillevenementiel/'
+logo: /img/festivals/westill-fest.png
 isIndoor: true
 dates:
   start: 2025-10-30T23:00:00.000Z
