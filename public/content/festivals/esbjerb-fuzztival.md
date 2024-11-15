@@ -13,13 +13,6 @@ location:
   lat: 55.46497946389984
   lon: 8.459744361489337
 lineup:
-  - elder
-  - god-is-an-astronaut
-  - kylesa
-  - oranssi-pazuzu
-  - bosco-sacro
-  - frail-body
-  - jo-quail
-  - machukha
+  - ''
 ---
 
