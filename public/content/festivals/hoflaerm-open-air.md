@@ -9,7 +9,7 @@ dates:
   end: 2025-08-16T00:00:00.000Z
 location:
   country: Germany
-  city: Hoflärm
+  city: Seelbach bei Hamm
   lat: 50.73718292189523
   lon: 7.673405155188494
 lineup: []
