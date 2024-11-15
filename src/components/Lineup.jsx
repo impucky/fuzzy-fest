@@ -18,7 +18,7 @@ export default function Lineup({ bands }) {
           <ArrowDownIcon
             className={`h-8 w-8 transition ${collapsed ? "-scale-y-100" : ""}`}
           />
-          <span className="font-vk text-center text-3xl font-bold">LINEUP</span>
+          <span className="font-vk text-3xl font-bold">LINEUP</span>
           <ArrowDownIcon
             className={`h-8 w-8 transition ${collapsed ? "-scale-y-100" : ""}`}
           />

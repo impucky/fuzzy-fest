@@ -35,13 +35,32 @@ export function formatDate(d) {
   return `${date}${nth(date.split(" ")[1])}`;
 }
 
-export async function loadJson(glob) {
-  const data = [];
-  for (const path in glob) {
-    const mod = await glob[path]();
-    data.push(mod.default);
-  }
-  return data;
+export function filterFestivals(festivals, filters, location) {
+  return festivals.filter((f) => {
+    const query = filters.query.toLowerCase();
+    const startDate = new Date(f.dates.start);
+    const startFilter = new Date(filters.dateRange.from);
+    const endFilter = new Date(filters.dateRange.to);
+    // Always show if currently viewing and there's no query
+    if (location.includes(f.slug) && !query) return true;
+    // Locale
+    if (f.isIndoor && !filters.showIn) return false;
+    if (!f.isIndoor && !filters.showOut) return false;
+    if (!filters.showIn && !filters.showOut) return false;
+    // Date range
+    if (startDate < startFilter || startDate > endFilter) {
+      return false;
+    }
+    // Search
+    if (filters.query) {
+      const festivalMatch = f.name.toLowerCase().includes(query);
+      const bandMatch = f.lineup.some((name) => {
+        return name.split("-").join(" ").toLowerCase().includes(query);
+      });
+      return festivalMatch || bandMatch;
+    }
+    return true;
+  });
 }
 
 export const isDev = import.meta.env.DEV;

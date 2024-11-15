@@ -13,7 +13,7 @@ import MapFilters from "./MapFilters";
 import Header from "./Header";
 import { useState, useEffect } from "react";
 import { useHashLocation } from "wouter/use-hash-location";
-import { findCoordsCenter, formatDate } from "../utils";
+import { findCoordsCenter, formatDate, filterFestivals } from "../utils";
 
 // TODO Custom markers
 function MapCenterHandler({ center, location }) {
@@ -117,32 +117,4 @@ export default function Map({ festivals, highlight, onFestivalHover }) {
       </MapContainer>
     </div>
   );
-}
-
-function filterFestivals(festivals, filters, location) {
-  return festivals.filter((f) => {
-    const query = filters.query.toLowerCase();
-    const startDate = new Date(f.dates.start);
-    const startFilter = new Date(filters.dateRange.from);
-    const endFilter = new Date(filters.dateRange.to);
-    // Always show if currently viewing and there's no query
-    if (location.includes(f.slug) && !query) return true;
-    // Locale
-    if (f.isIndoor && !filters.showIn) return false;
-    if (!f.isIndoor && !filters.showOut) return false;
-    if (!filters.showIn && !filters.showOut) return false;
-    // Date range
-    if (startDate < startFilter || startDate > endFilter) {
-      return false;
-    }
-    // Search
-    if (filters.query) {
-      const festivalMatch = f.name.toLowerCase().includes(query);
-      const bandMatch = f.lineup.some((name) => {
-        return name.split("-").join(" ").toLowerCase().includes(query);
-      });
-      return festivalMatch || bandMatch;
-    }
-    return true;
-  });
 }

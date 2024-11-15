@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { loadJson } from "./utils";
 import Map from "./components/Map";
 import Sidebar from "./components/Sidebar";
 
