@@ -6,6 +6,7 @@ import FilterIcon from "../icons/filter.svg?react";
 import SearchIcon from "../icons/search.svg?react";
 import TentIcon from "../icons/tent.svg?react";
 import BuildingIcon from "../icons/building.svg?react";
+import CloseIcon from "../icons/close.svg?react";
 
 export default function MapFilters({ filters, setFilters, defaultFilters }) {
   const [sliderRange, setSliderRange] = useState([1, 365]);
@@ -26,25 +27,30 @@ export default function MapFilters({ filters, setFilters, defaultFilters }) {
   }
 
   function onFilterReset() {
-    setFilters(defaultFilters);
+    const resetFilters = defaultFilters;
+    resetFilters.query = filters.query;
+    setFilters(resetFilters);
     setSliderRange([1, 365]);
   }
 
   return (
-    <div className="absolute left-0 top-0 z-[500] m-2 flex flex-col gap-2 sm:m-4">
-      <div className="flex gap-2">
-        <SearchBar filters={filters} setFilters={setFilters} />
+    <div className="absolute right-0 top-0 z-[500] m-2 flex flex-col items-end gap-1 sm:m-4">
+      <div className="flex gap-1">
         <button
           className="grid h-12 w-12 place-items-center rounded-full bg-neutral-800 p-2 hover:bg-neutral-700"
-          onClick={() => setCollapsed(!collapsed)}
+          onClick={() => {
+            if (!collapsed) onFilterReset();
+            setCollapsed(!collapsed);
+          }}
         >
           <FilterIcon
             className={`h-6 w-6 cursor-pointer transition ${collapsed ? "text-neutral-400" : "text-red-400"}`}
           />
         </button>
+        <SearchBar filters={filters} setFilters={setFilters} />
       </div>
       <div
-        className={`flex w-min flex-col gap-2 transition duration-300 ${collapsed ? "invisible opacity-0" : "visible opacity-100"}`}
+        className={`flex w-min flex-col gap-1 transition duration-300 ${collapsed ? "invisible opacity-0" : "visible opacity-100"}`}
       >
         <DateRange
           range={sliderRange}
@@ -69,7 +75,16 @@ function SearchBar({ filters, setFilters }) {
           setFilters({ ...filters, query: e.target.value });
         }}
       />
-      <SearchIcon className="absolute h-6 pl-3 text-[#999] transition-all duration-200 peer-hover:text-white peer-focus:text-white" />
+      <SearchIcon className="pointer-events-none absolute h-6 pl-3 text-[#999] transition-all duration-200 peer-hover:text-white peer-focus:text-white" />
+      <button
+        className="absolute right-4"
+        onClick={() => setFilters({ ...filters, query: "" })}
+        disabled={!filters.query.length}
+      >
+        <CloseIcon
+          className={`w-5 text-neutral-500 transition hover:text-white ${filters.query.length ? "opacity-100" : "pointer-events-none opacity-0"}`}
+        />
+      </button>
     </div>
   );
 }
@@ -86,14 +101,14 @@ function DateRange({ range, onDateChange, from365 }) {
       </div>
       <Slider.Root
         value={range}
-        className="relative mt-2 flex h-6 w-full items-center p-1"
+        className="relative my-1 flex h-6 w-full items-center p-1"
         min={1}
         max={365}
         minStepsBetweenThumbs={1}
         onValueChange={(day) => onDateChange(day)}
       >
-        <Slider.Track className="relative h-full grow rounded-lg bg-neutral-800 shadow-[inset_0_0_5px_rgba(0,0,0,0.4)]">
-          <Slider.Range className="absolute h-full bg-neutral-400 shadow-[inset_0_0_2px_rgba(0,0,0,0.4)]" />
+        <Slider.Track className="relative h-full grow rounded-lg bg-neutral-900">
+          <Slider.Range className="absolute h-full bg-neutral-500 shadow-[inset_0_0_2px_rgba(0,0,0,0.4)]" />
         </Slider.Track>
         <Slider.Thumb className="block h-6 w-6 cursor-pointer rounded-full bg-red-400 hover:bg-red-300" />
         <Slider.Thumb className="block h-6 w-6 cursor-pointer rounded-full bg-red-400 hover:bg-red-300" />

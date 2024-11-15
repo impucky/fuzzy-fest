@@ -37,7 +37,7 @@ export function formatDate(d) {
 
 export function filterFestivals(festivals, filters, location) {
   return festivals.filter((f) => {
-    const query = filters.query.toLowerCase();
+    const query = filters.query.toLowerCase().trim();
     const startDate = new Date(f.dates.start);
     const startFilter = new Date(filters.dateRange.from);
     const endFilter = new Date(filters.dateRange.to);
