@@ -18,10 +18,20 @@ body {
   min-height: 100vh;
 }
 
-h1 {
+.font-logo {
   font-family: "Rammetto One", sans-serif;
+}
+
+.font-vk {
+  font-family: "Vollkorn Variable", serif;
 }
 
 #root {
   width: 100%;
+}
+
+* {
+  scrollbar-gutter: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #555 transparent;
 }

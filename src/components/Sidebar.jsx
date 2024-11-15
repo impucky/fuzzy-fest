@@ -1,4 +1,4 @@
-import { Link, Route, Switch, useLocation } from "wouter";
+import { Route, Switch, Redirect, useLocation } from "wouter";
 import { useHashLocation } from "wouter/use-hash-location";
 import FestivalList from "./FestivalList";
 import Festival from "./Festival";
@@ -30,23 +30,17 @@ export default function Sidebar({
               return;
             }
             return (
-              <>
-                <Link
-                  href="/"
-                  className="text-md p-2 text-center text-[salmon] shadow-md hover:bg-neutral-800 hover:text-white hover:underline"
-                >
-                  ← Back to list
-                </Link>
-                <Festival
-                  info={info}
-                  bands={bands.filter((b) => info.lineup.includes(b.slug))}
-                />
-              </>
+              <Festival
+                info={info}
+                bands={bands.filter((b) => info.lineup.includes(b.slug))}
+              />
             );
           }}
         </Route>
 
-        <Route>404: No such festival!</Route>
+        <Route>
+          <Redirect to="/" />
+        </Route>
       </Switch>
     </div>
   );

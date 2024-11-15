@@ -43,3 +43,5 @@ export async function loadJson(glob) {
   }
   return data;
 }
+
+export const isDev = import.meta.env.DEV;

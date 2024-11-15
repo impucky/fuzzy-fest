@@ -2,6 +2,7 @@ import { useState } from "react";
 import { formatDate } from "../utils";
 import * as Slider from "@radix-ui/react-slider";
 import * as Checkbox from "@radix-ui/react-checkbox";
+import DeleteIcon from "../icons/delete.svg?react";
 
 export default function MapFilters({ filters, setFilters, defaultFilters }) {
   const [sliderRange, setSliderRange] = useState([1, 365]);
@@ -37,12 +38,10 @@ export default function MapFilters({ filters, setFilters, defaultFilters }) {
             setFilters({ ...filters, query: e.target.value });
           }}
         />
-        <button
+        <DeleteIcon
           onClick={onFilterReset}
-          className="rounded-md border bg-neutral-600 px-2 text-lg hover:bg-neutral-500"
-        >
-          ⟲
-        </button>
+          className="h-8 w-8 cursor-pointer transition hover:fill-red-400"
+        />
       </div>
       <div className="flex w-full justify-between">
         <span>{formatDate(from365(sliderRange[0]))}</span>
