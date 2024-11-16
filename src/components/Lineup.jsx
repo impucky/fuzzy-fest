@@ -27,7 +27,7 @@ export default function Lineup({ bands }) {
         className={`font-vk visible z-0 flex origin-top flex-wrap content-start text-center transition ${collapsed ? "invisible -translate-y-16 scale-y-0 pr-2 opacity-0" : "overflow-y-scroll"}`}
       >
         {tba ? (
-          <span className="w-full text-center text-xl">To be announced !</span>
+          <span className="w-full text-center text-xl">To be announced!</span>
         ) : (
           bands
             .sort((a, b) => a.name.localeCompare(b.name))
@@ -52,5 +52,3 @@ export default function Lineup({ bands }) {
     </>
   );
 }
-
-//

@@ -45,7 +45,3 @@ body {
     border-top-color: #262626 !important;
   }
 }
-
-.data-radix-popper-content-wrapper {
-  z-index: 500 !important;
-}
