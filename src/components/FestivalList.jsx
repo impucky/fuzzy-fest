@@ -8,7 +8,7 @@ export default function FestivalList({
   return (
     <>
       <h2 className="font-vk mt-2 border-b border-[salmon] p-1 text-center text-3xl font-bold text-[salmon]">
-        2025
+        Festivals in 2025:
       </h2>
       <ul className="font-vk flex flex-wrap items-start justify-start overflow-y-auto p-2 text-center">
         {festivals

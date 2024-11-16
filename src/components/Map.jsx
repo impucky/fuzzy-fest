@@ -11,6 +11,7 @@ import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import { useMap } from "react-leaflet/hooks";
 import MapFilters from "./MapFilters";
 import Header from "./Header";
+import InfoLink from "./InfoLink";
 import { useState, useEffect } from "react";
 import { useHashLocation } from "wouter/use-hash-location";
 import { findCoordsCenter, formatDate, filterFestivals } from "../utils";
@@ -63,58 +64,63 @@ export default function Map({ festivals, highlight, onFestivalHover }) {
 
   return (
     <div className="relative h-2/5 w-full lg:order-2 lg:h-full lg:w-3/5">
-      <MapFilters
-        filters={filters}
-        setFilters={setFilters}
-        defaultFilters={defaultFilters}
-      />
       <Header />
-      <MapContainer
-        center={center}
-        zoom={5}
-        zoomControl={false}
-        scrollWheelZoom={true}
-        className="h-full w-full"
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      <InfoLink />
+      <>
+        <MapFilters
+          filters={filters}
+          setFilters={setFilters}
+          defaultFilters={defaultFilters}
         />
-        {filterFestivals(festivals, filters, location).map((f) => {
-          const position = [f.location.lat, f.location.lon];
-          return (
-            <Marker
-              key={f.name}
-              position={position}
-              eventHandlers={{
-                click: () => {
-                  setCenter(position);
-                  setLocation(f.slug);
-                },
-                mouseover: () => {
-                  onFestivalHover(f.slug);
-                },
-                mouseout: () => {
-                  onFestivalHover(null);
-                },
-              }}
-            >
-              {/* permanent tooltip but only renders if matching highlight -- causes some null errors when going to another tab */}
-              {highlight === f.slug && (
-                <Tooltip direction="top" offset={[-15, -12]} permanent={true}>
-                  <div className="text-center">
-                    <span className="font-bold">{f.name}</span>
-                    <br />
-                    {formatDate(f.dates.start)} - {formatDate(f.dates.end)}
-                  </div>
-                </Tooltip>
-              )}
-            </Marker>
-          );
-        })}
-        <MapCenterHandler center={center} location={location} />
-        <ZoomControl position="bottomleft" />
-      </MapContainer>
+        <MapContainer
+          center={center}
+          zoom={5}
+          zoomControl={false}
+          scrollWheelZoom={true}
+          className="h-full w-full"
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          {filterFestivals(festivals, filters, location).map((f) => {
+            const position = [f.location.lat, f.location.lon];
+            return (
+              <Marker
+                key={f.name}
+                position={position}
+                eventHandlers={{
+                  click: () => {
+                    setCenter(position);
+                    setLocation(f.slug);
+                  },
+                  mouseover: () => {
+                    onFestivalHover(f.slug);
+                  },
+                  mouseout: () => {
+                    onFestivalHover(null);
+                  },
+                }}
+              >
+                {/* permanent tooltip but only renders if matching highlight -- causes some null errors when going to another tab */}
+                {highlight === f.slug && (
+                  <Tooltip direction="top" offset={[-15, -12]} permanent={true}>
+                    <div className="p-1 text-center text-white">
+                      <span className="font-vk text-md font-bold md:text-lg">
+                        {f.name}
+                      </span>
+                      <br />
+                      {formatDate(f.dates.start)} - {formatDate(f.dates.end)}
+                    </div>
+                  </Tooltip>
+                )}
+              </Marker>
+            );
+          })}
+          <ZoomControl position="bottomleft" />
+          <MapCenterHandler center={center} location={location} />
+        </MapContainer>
+      </>
     </div>
   );
 }

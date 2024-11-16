@@ -35,3 +35,17 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #555 transparent;
 }
+
+.leaflet-tooltip {
+  background: #262626 !important;
+  border-radius: 0.5rem !important;
+  border: none !important;
+  box-shadow: none !important;
+  &:before {
+    border-top-color: #262626 !important;
+  }
+}
+
+.data-radix-popper-content-wrapper {
+  z-index: 500 !important;
+}

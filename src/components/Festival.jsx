@@ -1,5 +1,5 @@
 import { formatDate, isDev } from "../utils";
-import { Link } from "wouter";
+import BackLink from "./BackLink";
 import Lineup from "./Lineup";
 import TentIcon from "../icons/tent.svg?react";
 import BuildingIcon from "../icons/building.svg?react";
@@ -9,12 +9,7 @@ export default function Festival({ info, bands }) {
 
   return (
     <div className="flex h-full flex-col">
-      <Link
-        href="/"
-        className="text-md p-2 text-center text-[salmon] shadow-md hover:bg-neutral-800 hover:text-white hover:underline"
-      >
-        ← Back to list
-      </Link>
+      <BackLink />
       <div className="flex flex-col items-center justify-center text-center">
         <img
           className="mt-2 max-h-64 w-auto p-1"
