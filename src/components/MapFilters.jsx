@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { formatDate } from "../utils";
+import { useAtom } from "jotai";
+import { mapFiltersAtom, defaultFilters } from "../atoms/mapFiltersAtom";
 import * as Slider from "@radix-ui/react-slider";
 import * as Checkbox from "@radix-ui/react-checkbox";
 import FilterIcon from "../icons/filter.svg?react";
@@ -8,29 +10,14 @@ import TentIcon from "../icons/tent.svg?react";
 import BuildingIcon from "../icons/building.svg?react";
 import CloseIcon from "../icons/close.svg?react";
 
-export default function MapFilters({ filters, setFilters, defaultFilters }) {
-  const [sliderRange, setSliderRange] = useState([1, 365]);
+export default function MapFilters() {
+  const [filters, setFilters] = useAtom(mapFiltersAtom);
   const [collapsed, setCollapsed] = useState(true);
-
-  function onDateChange(sliderRange) {
-    setSliderRange(sliderRange);
-    setFilters({
-      ...filters,
-      dateRange: { from: from365(sliderRange[0]), to: from365(sliderRange[1]) },
-    });
-  }
-
-  function from365(d) {
-    const date = new Date(2025, 0);
-    date.setDate(d);
-    return date;
-  }
 
   function onFilterReset() {
     const resetFilters = defaultFilters;
     resetFilters.query = filters.query;
     setFilters(resetFilters);
-    setSliderRange([1, 365]);
   }
 
   return (
@@ -47,23 +34,20 @@ export default function MapFilters({ filters, setFilters, defaultFilters }) {
             className={`h-6 w-6 cursor-pointer transition ${collapsed ? "text-neutral-400" : "text-red-400"}`}
           />
         </button>
-        <SearchBar filters={filters} setFilters={setFilters} />
+        <SearchBar />
       </div>
       <div
         className={`flex w-min flex-col gap-1 transition duration-300 ${collapsed ? "invisible opacity-0" : "visible opacity-100"}`}
       >
-        <DateRange
-          range={sliderRange}
-          onDateChange={onDateChange}
-          from365={from365}
-        />
-        <InOut filters={filters} setFilters={setFilters} />
+        <DateRange />
+        <InOut />
       </div>
     </div>
   );
 }
 
-function SearchBar({ filters, setFilters }) {
+function SearchBar() {
+  const [filters, setFilters] = useAtom(mapFiltersAtom);
   return (
     <div className="relative flex h-12 w-72 items-center">
       <input
@@ -89,7 +73,24 @@ function SearchBar({ filters, setFilters }) {
   );
 }
 
-function DateRange({ range, onDateChange, from365 }) {
+function DateRange() {
+  const [filters, setFilters] = useAtom(mapFiltersAtom);
+  const [range, setRange] = useState(filters.dateRange.range);
+
+  function onDateChange(range) {
+    setRange(range);
+    setFilters({
+      ...filters,
+      dateRange: { from: from365(range[0]), to: from365(range[1]) },
+    });
+  }
+
+  function from365(d) {
+    const date = new Date(2025, 0);
+    date.setDate(d);
+    return date;
+  }
+
   return (
     <div className="w-72 rounded-xl bg-neutral-800 p-2">
       <div className="flex w-full justify-between px-2">
@@ -117,7 +118,9 @@ function DateRange({ range, onDateChange, from365 }) {
   );
 }
 
-function InOut({ filters, setFilters }) {
+function InOut() {
+  const [filters, setFilters] = useAtom(mapFiltersAtom);
+
   return (
     <div className="flex w-72 justify-between overflow-hidden rounded-xl bg-neutral-800">
       <Checkbox.Root

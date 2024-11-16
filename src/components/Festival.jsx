@@ -1,11 +1,18 @@
 import { formatDate, isDev } from "../utils";
+import { useHashLocation } from "wouter/use-hash-location";
+import { useAtomValue } from "jotai";
+import { festivalsAtom } from "../atoms/festivalsAtom";
 import BackLink from "./BackLink";
 import Lineup from "./Lineup";
 import TentIcon from "../icons/tent.svg?react";
 import BuildingIcon from "../icons/building.svg?react";
 
-export default function Festival({ info, bands }) {
-  if (!info) return <>...</>;
+export default function Festival() {
+  const [location, setLocation] = useHashLocation();
+  const festivals = useAtomValue(festivalsAtom);
+  const info = festivals.find((f) => f.slug === location.slice(1));
+
+  if (!info) return setLocation("/");
 
   return (
     <div className="flex h-full flex-col">
@@ -35,7 +42,7 @@ export default function Festival({ info, bands }) {
           Homepage
         </a>
       </div>
-      <Lineup bands={bands} />
+      <Lineup lineup={info.lineup} />
     </div>
   );
 }

@@ -9,12 +9,16 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import { useMap } from "react-leaflet/hooks";
+import { useHashLocation } from "wouter/use-hash-location";
+import { useState, useEffect } from "react";
+import { findCoordsCenter, formatDate, filterFestivals } from "../utils";
+import { useAtom, useAtomValue } from "jotai";
+import { highlightAtom } from "../atoms/highlightAtom";
+import { festivalsAtom } from "../atoms/festivalsAtom";
+import { mapFiltersAtom } from "../atoms/mapFiltersAtom";
 import MapFilters from "./MapFilters";
 import Header from "./Header";
 import InfoLink from "./InfoLink";
-import { useState, useEffect } from "react";
-import { useHashLocation } from "wouter/use-hash-location";
-import { findCoordsCenter, formatDate, filterFestivals } from "../utils";
 
 // TODO Custom markers
 function MapCenterHandler({ center, location }) {
@@ -26,17 +30,12 @@ function MapCenterHandler({ center, location }) {
   setPrevCenter(center);
 }
 
-const defaultFilters = {
-  query: "",
-  dateRange: { from: "2025-01-01", to: "2025-12-31" },
-  showIn: true,
-  showOut: true,
-};
-
-export default function Map({ festivals, highlight, onFestivalHover }) {
+export default function Map() {
   const [location, setLocation] = useHashLocation();
   const [center, setCenter] = useState(null);
-  const [filters, setFilters] = useState(defaultFilters);
+  const [highlight, setHighlight] = useAtom(highlightAtom);
+  const filters = useAtomValue(mapFiltersAtom);
+  const festivals = useAtomValue(festivalsAtom);
 
   const centerOnFestival = () => {
     const festival = festivals.find((f) => location === `/${f.slug}`);
@@ -67,11 +66,7 @@ export default function Map({ festivals, highlight, onFestivalHover }) {
       <Header />
       <InfoLink />
       <>
-        <MapFilters
-          filters={filters}
-          setFilters={setFilters}
-          defaultFilters={defaultFilters}
-        />
+        <MapFilters />
         <MapContainer
           center={center}
           zoom={5}
@@ -95,14 +90,14 @@ export default function Map({ festivals, highlight, onFestivalHover }) {
                     setLocation(f.slug);
                   },
                   mouseover: () => {
-                    onFestivalHover(f.slug);
+                    setHighlight(f.slug);
                   },
                   mouseout: () => {
-                    onFestivalHover(null);
+                    setHighlight(null);
                   },
                 }}
               >
-                {/* permanent tooltip but only renders if matching highlight -- causes some null errors when going to another tab */}
+                {/* permanent tooltip but only renders if matching highlight */}
                 {highlight === f.slug && (
                   <Tooltip direction="top" offset={[-15, -12]} permanent={true}>
                     <div className="p-1 text-center text-white">

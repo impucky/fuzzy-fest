@@ -1,17 +1,14 @@
 import { useState, useEffect } from "react";
+import { client } from "../tina/__generated__/client";
+import { useAtom } from "jotai";
+import { festivalsAtom } from "./atoms/festivalsAtom";
+import { bandsAtom } from "./atoms/bandsAtom";
 import Map from "./components/Map";
 import Sidebar from "./components/Sidebar";
 
-import { client } from "../tina/__generated__/client";
-
 export default function App() {
-  const [festivals, setFestivals] = useState(null);
-  const [bands, setBands] = useState(null);
-  const [highlight, setHighlight] = useState(null);
-
-  function onFestivalHover(slug) {
-    setHighlight(slug);
-  }
+  const [festivals, setFestivals] = useAtom(festivalsAtom);
+  const [bands, setBands] = useAtom(bandsAtom);
 
   useEffect(() => {
     async function loadContent() {
@@ -35,17 +32,8 @@ export default function App() {
 
   return festivals && bands ? (
     <main className="flex h-screen flex-col lg:flex-row">
-      <Sidebar
-        festivals={festivals}
-        bands={bands}
-        highlight={highlight}
-        onFestivalHover={onFestivalHover}
-      />
-      <Map
-        festivals={festivals}
-        highlight={highlight}
-        onFestivalHover={onFestivalHover}
-      />
+      <Sidebar />
+      <Map />
     </main>
   ) : (
     <div className="flex h-full items-center justify-center">

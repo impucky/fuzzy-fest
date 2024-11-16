@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { isDev } from "../utils";
+import { useAtomValue } from "jotai";
+import { bandsAtom } from "../atoms/bandsAtom";
 import ArrowDownIcon from "../icons/arrow-down.svg?react";
 
-export default function Lineup({ bands }) {
+export default function Lineup({ lineup }) {
   const [collapsed, setCollapsed] = useState(false);
+  const allBands = useAtomValue(bandsAtom);
+  const bands = allBands.filter((b) => lineup.includes(b.slug));
   const tba = bands.length === 0;
 
   return (
