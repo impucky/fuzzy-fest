@@ -25,15 +25,17 @@ export default function FestivalList() {
             return (
               <li
                 key={f.name}
-                className="w-full md:w-1/2 lg:w-full"
+                className="w-full sm:w-1/2 lg:w-full"
                 onMouseEnter={() => setHighlight(f.slug)}
                 onMouseLeave={() => setHighlight(null)}
               >
                 <Link
-                  className={`text-center text-2xl font-bold hover:drop-shadow-[2px_2px_0_salmon] ${hl ? "drop-shadow-[2px_2px_0_salmon]" : ""}`}
+                  className={`text-nowrap text-center text-lg font-bold hover:drop-shadow-[2px_2px_0_salmon] md:text-2xl ${hl ? "drop-shadow-[2px_2px_0_salmon]" : ""}`}
                   href={`/${f.slug}`}
                 >
-                  {`${hl ? "- " : ""}${f.name}${hl ? " -" : ""}`}
+                  <span className={`${hl ? "" : "opacity-0"}`}>- </span>
+                  {f.name}
+                  <span className={`${hl ? "" : "opacity-0"}`}> -</span>
                 </Link>
               </li>
             );

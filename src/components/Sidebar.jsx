@@ -7,9 +7,13 @@ import About from "./About";
 
 export default function Sidebar() {
   const [location, setLocation] = useHashLocation();
+  const onFest = location !== "/" && location !== "/about";
+
+  const sidebarStyles = `${onFest ? "lg:!w-1/2" : ""} transition-width transition-duration-100 min-w-min
+  lg:order-last z-[500] flex h-1/2 flex-col bg-gradient-to-t from-neutral-950 to-neutral-800 shadow-[0_0_8px_rgba(0,0,0,0.7)] lg:h-full lg:w-1/3`;
 
   return (
-    <div className="z-[500] flex h-3/5 w-full flex-col overflow-hidden bg-gradient-to-t from-neutral-900 to-neutral-800 shadow-[0_0_8px_rgba(0,0,0,0.7)] lg:h-full lg:w-2/5">
+    <div className={sidebarStyles}>
       <Switch>
         <Route path="/">
           <FestivalList />

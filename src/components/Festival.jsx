@@ -19,10 +19,10 @@ export default function Festival() {
       <BackLink />
       <div className="flex flex-col items-center justify-center text-center">
         <img
-          className="mt-2 max-h-64 w-auto p-1"
+          className="mt-2 h-auto max-h-16 w-auto md:max-h-32"
           src={`${isDev ? "." : ""}${info.logo}`}
         />
-        <h2 className="font-vk text-2xl font-bold sm:text-3xl">{info.name}</h2>
+        <h2 className="font-vk text-xl font-bold sm:text-2xl">{info.name}</h2>
         <p className="text-xl">
           {info.location.city}, {info.location.country}
           {info.isIndoor ? (

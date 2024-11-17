@@ -1,10 +1,4 @@
-import {
-  MapContainer,
-  Marker,
-  TileLayer,
-  Tooltip,
-  ZoomControl,
-} from "react-leaflet";
+import { MapContainer, Marker, TileLayer, Tooltip } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
@@ -62,7 +56,7 @@ export default function Map() {
   if (!center) return;
 
   return (
-    <div className="relative h-2/5 w-full lg:order-2 lg:h-full lg:w-3/5">
+    <div className="relative h-2/5 w-full flex-grow lg:h-full lg:w-3/5">
       <Header />
       <InfoLink />
       <>
@@ -97,8 +91,8 @@ export default function Map() {
                   },
                 }}
               >
-                {/* permanent tooltip but only renders if matching highlight */}
-                {highlight === f.slug && (
+                {/* permanent tooltip but only renders if matching highlight or viewing fest */}
+                {(highlight === f.slug || location.slice(1) === f.slug) && (
                   <Tooltip direction="top" offset={[-15, -12]} permanent={true}>
                     <div className="p-1 text-center text-white">
                       <span className="font-vk text-md font-bold md:text-lg">
@@ -112,7 +106,6 @@ export default function Map() {
               </Marker>
             );
           })}
-          <ZoomControl position="bottomleft" />
           <MapCenterHandler center={center} location={location} />
         </MapContainer>
       </>

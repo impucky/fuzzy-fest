@@ -21,10 +21,10 @@ export default function MapFilters() {
   }
 
   return (
-    <div className="absolute right-0 top-0 z-[500] m-2 flex flex-col items-end gap-1 sm:m-4">
-      <div className="flex gap-1">
+    <div className="pointer-events-none absolute right-0 top-0 z-[500] m-2 flex flex-col items-end gap-1">
+      <div className="pointer-events-auto flex gap-1">
         <button
-          className="grid h-12 w-12 place-items-center rounded-full bg-neutral-800 p-2 hover:bg-neutral-700"
+          className="grid h-10 w-10 place-items-center rounded-full bg-neutral-800 p-2 hover:bg-neutral-700"
           onClick={() => {
             if (!collapsed) onFilterReset();
             setCollapsed(!collapsed);
@@ -37,7 +37,7 @@ export default function MapFilters() {
         <SearchBar />
       </div>
       <div
-        className={`flex w-min flex-col gap-1 transition duration-300 ${collapsed ? "invisible opacity-0" : "visible opacity-100"}`}
+        className={`flex w-min flex-col gap-1 transition duration-300 ${collapsed ? "pointer-events-none invisible opacity-0" : "pointer-events-auto visible opacity-100"}`}
       >
         <DateRange />
         <InOut />
@@ -49,9 +49,9 @@ export default function MapFilters() {
 function SearchBar() {
   const [filters, setFilters] = useAtom(mapFiltersAtom);
   return (
-    <div className="relative flex h-12 w-72 items-center">
+    <div className="relative flex h-10 w-72 items-center">
       <input
-        className="peer absolute h-12 w-full rounded-3xl bg-neutral-800 px-4 pl-12 text-lg outline-none transition-all duration-200 hover:shadow-[0_0_0_1px_#555] focus:shadow-[0_0_0_2px_#f87171]"
+        className="peer absolute h-10 w-full rounded-3xl bg-neutral-800 px-4 pl-10 text-lg outline-none transition-all duration-200 hover:shadow-[0_0_0_1px_#555] focus:shadow-[0_0_0_2px_#f87171]"
         type="text"
         placeholder="Search festivals or bands"
         value={filters.query}
@@ -75,13 +75,15 @@ function SearchBar() {
 
 function DateRange() {
   const [filters, setFilters] = useAtom(mapFiltersAtom);
-  const [range, setRange] = useState(filters.dateRange.range);
 
   function onDateChange(range) {
-    setRange(range);
     setFilters({
       ...filters,
-      dateRange: { from: from365(range[0]), to: from365(range[1]) },
+      dateRange: {
+        from: from365(range[0]),
+        to: from365(range[1]),
+        range: range,
+      },
     });
   }
 
@@ -94,25 +96,27 @@ function DateRange() {
   return (
     <div className="w-72 rounded-xl bg-neutral-800 p-2">
       <div className="flex w-full justify-between px-2">
-        <span className="w-1/2 text-left">{formatDate(from365(range[0]))}</span>
+        <span className="w-1/2 text-left">
+          {formatDate(from365(filters.dateRange.range[0]))}
+        </span>
         <span className="text-neutral-500">|</span>
         <span className="w-1/2 text-right">
-          {formatDate(from365(range[1]))}
+          {formatDate(from365(filters.dateRange.range[1]))}
         </span>
       </div>
       <Slider.Root
-        value={range}
+        value={filters.dateRange.range}
         className="relative my-1 flex h-6 w-full items-center p-1"
         min={1}
         max={365}
         minStepsBetweenThumbs={1}
-        onValueChange={(day) => onDateChange(day)}
+        onValueChange={(range) => onDateChange(range)}
       >
         <Slider.Track className="relative h-full grow rounded-lg bg-neutral-900">
-          <Slider.Range className="absolute h-full bg-neutral-500 shadow-[inset_0_0_2px_rgba(0,0,0,0.4)]" />
+          <Slider.Range className="absolute h-full bg-red-400 shadow-[inset_0_0_8px_rgba(0,0,0,0.8)]" />
         </Slider.Track>
-        <Slider.Thumb className="block h-6 w-6 cursor-pointer rounded-full bg-red-400 hover:bg-red-300" />
-        <Slider.Thumb className="block h-6 w-6 cursor-pointer rounded-full bg-red-400 hover:bg-red-300" />
+        <Slider.Thumb className="block h-6 w-6 cursor-pointer rounded-full bg-[url('/favicon.png')] bg-cover shadow-[2px_2px_3px_rgba(0,0,0,0.6)] hover:shadow-[2px_2px_6px_rgba(0,0,0,0.5)]" />
+        <Slider.Thumb className="block h-6 w-6 cursor-pointer rounded-full bg-[url('/favicon.png')] bg-cover shadow-[2px_2px_3px_rgba(0,0,0,0.6)] hover:shadow-[2px_2px_6px_rgba(0,0,0,0.5)]" />
       </Slider.Root>
     </div>
   );
