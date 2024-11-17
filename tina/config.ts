@@ -101,6 +101,11 @@ export default defineConfig({
                 name: "end",
                 type: "datetime",
               },
+              {
+                label: "Provisional",
+                name: "provisional",
+                type: "string",
+              },
             ],
           },
           {

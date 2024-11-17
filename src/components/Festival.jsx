@@ -15,13 +15,15 @@ export default function Festival() {
   if (!info) return setLocation("/");
 
   return (
-    <div className="flex h-full flex-col">
+    <div className="flex h-full flex-col overflow-y-scroll">
       <BackLink />
       <div className="flex flex-col items-center justify-center text-center">
-        <img
-          className="mt-2 h-auto max-h-16 w-auto md:max-h-32"
-          src={`${isDev ? "." : ""}${info.logo}`}
-        />
+        <div className="h-auto min-h-24">
+          <img
+            className="mt-2 h-auto max-h-16 w-auto md:max-h-32"
+            src={`${isDev ? "." : ""}${info.logo}`}
+          />
+        </div>
         <h2 className="font-vk text-xl font-bold sm:text-2xl">{info.name}</h2>
         <p className="text-xl">
           {info.location.city}, {info.location.country}
@@ -31,9 +33,15 @@ export default function Festival() {
             <TentIcon className="ml-1 inline h-6 w-6 fill-white" />
           )}
         </p>
-        <p>
-          {formatDate(info.dates.start)} - {formatDate(info.dates.end)}, 2025
-        </p>
+        {info.dates.provisional ? (
+          <p>{`${info.dates.provisional} (TBA)`}</p>
+        ) : (
+          <p>
+            {info.dates.start === info.dates.end
+              ? `${formatDate(info.dates.start)}, 2025`
+              : `${formatDate(info.dates.start)} - ${formatDate(info.dates.end)}, 2025`}
+          </p>
+        )}
         <a
           href={info.website}
           target="_blank"
@@ -42,7 +50,11 @@ export default function Festival() {
           Homepage
         </a>
       </div>
-      <Lineup lineup={info.lineup} />
+      {info.lineup && info.lineup.length ? (
+        <Lineup lineup={info.lineup} />
+      ) : (
+        <p className="w-full p-2 text-center text-lg">Lineup TBA</p>
+      )}
     </div>
   );
 }

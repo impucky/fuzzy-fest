@@ -94,12 +94,20 @@ export default function Map() {
                 {/* permanent tooltip but only renders if matching highlight or viewing fest */}
                 {(highlight === f.slug || location.slice(1) === f.slug) && (
                   <Tooltip direction="top" offset={[-15, -12]} permanent={true}>
-                    <div className="p-1 text-center text-white">
-                      <span className="font-vk text-md font-bold md:text-lg">
+                    <div className="text-center text-white">
+                      <span className="font-vk text-[1rem] font-bold sm:text-lg">
                         {f.name}
                       </span>
                       <br />
-                      {formatDate(f.dates.start)} - {formatDate(f.dates.end)}
+                      {f.dates.provisional ? (
+                        <span>{`${f.dates.provisional} (TBA)`}</span>
+                      ) : (
+                        <span className="text-xs">
+                          {f.dates.start === f.dates.end
+                            ? `${formatDate(f.dates.start)}`
+                            : `${formatDate(f.dates.start)} - ${formatDate(f.dates.end)}`}
+                        </span>
+                      )}
                     </div>
                   </Tooltip>
                 )}
