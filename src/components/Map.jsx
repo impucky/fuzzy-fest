@@ -5,7 +5,7 @@ import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import { useMap } from "react-leaflet/hooks";
 import { useHashLocation } from "wouter/use-hash-location";
 import { useState, useEffect } from "react";
-import { findCoordsCenter, formatDate, filterFestivals } from "../utils";
+import { findCoordsCenter, formatDateRange, filterFestivals } from "../utils";
 import { useAtom, useAtomValue } from "jotai";
 import { highlightAtom } from "../atoms/highlightAtom";
 import { festivalsAtom } from "../atoms/festivalsAtom";
@@ -72,19 +72,19 @@ export default function Map() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          {filterFestivals(festivals, filters, location).map((f) => {
-            const position = [f.location.lat, f.location.lon];
+          {filterFestivals(festivals, filters, location).map((festival) => {
+            const position = [festival.location.lat, festival.location.lon];
             return (
               <Marker
-                key={f.name}
+                key={festival.name}
                 position={position}
                 eventHandlers={{
                   click: () => {
                     setCenter(position);
-                    setLocation(f.slug);
+                    setLocation(festival.slug);
                   },
                   mouseover: () => {
-                    setHighlight(f.slug);
+                    setHighlight(festival.slug);
                   },
                   mouseout: () => {
                     setHighlight(null);
@@ -92,24 +92,9 @@ export default function Map() {
                 }}
               >
                 {/* permanent tooltip but only renders if matching highlight or viewing fest */}
-                {(highlight === f.slug || location.slice(1) === f.slug) && (
-                  <Tooltip direction="top" offset={[-15, -12]} permanent={true}>
-                    <div className="text-center text-white">
-                      <span className="font-vk text-[1rem] font-bold sm:text-lg">
-                        {f.name}
-                      </span>
-                      <br />
-                      {f.dates.provisional ? (
-                        <span>{`${f.dates.provisional} (TBA)`}</span>
-                      ) : (
-                        <span className="text-xs">
-                          {f.dates.start === f.dates.end
-                            ? `${formatDate(f.dates.start)}`
-                            : `${formatDate(f.dates.start)} - ${formatDate(f.dates.end)}`}
-                        </span>
-                      )}
-                    </div>
-                  </Tooltip>
+                {(highlight === festival.slug ||
+                  location.slice(1) === festival.slug) && (
+                  <FestivalTooltip festival={festival} />
                 )}
               </Marker>
             );
@@ -118,5 +103,25 @@ export default function Map() {
         </MapContainer>
       </>
     </div>
+  );
+}
+
+function FestivalTooltip({ festival }) {
+  return (
+    <Tooltip direction="top" offset={[-15, -12]} permanent={true}>
+      <div className="text-center text-white">
+        <span className="font-vk text-[1rem] font-bold sm:text-lg">
+          {festival.name}
+        </span>
+        <br />
+        {festival.dates.provisional ? (
+          <span>{`${festival.dates.provisional} (TBA)`}</span>
+        ) : (
+          <span className="text-xs">
+            {formatDateRange(festival.dates, true)}
+          </span>
+        )}
+      </div>
+    </Tooltip>
   );
 }

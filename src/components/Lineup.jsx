@@ -30,23 +30,24 @@ export default function Lineup({ lineup }) {
       >
         {bands
           .sort((a, b) => a.name.localeCompare(b.name))
-          .map((b, i) => {
-            return (
-              <li
-                key={b.name + i}
-                className="group relative flex h-16 w-1/2 items-center justify-center md:h-24 lg:h-32"
-              >
-                <img
-                  className="h-full w-full object-cover brightness-[0.4] transition group-hover:brightness-[0.6]"
-                  src={`${isDev ? "." : ""}${b.photo}`}
-                />
-                <span className="text-md absolute rounded-sm p-1 font-bold leading-snug transition sm:p-2 sm:text-xl sm:outline md:text-2xl">
-                  {b.name}
-                </span>
-              </li>
-            );
+          .map((band, i) => {
+            return <BandItem key={band.name + i} band={band} />;
           })}
       </ul>
     </>
+  );
+}
+
+function BandItem({ band }) {
+  return (
+    <li className="group relative flex h-16 w-1/2 items-center justify-center md:h-24 lg:h-32">
+      <img
+        className="h-full w-full object-cover brightness-[0.4] transition group-hover:brightness-[0.6]"
+        src={`${isDev ? "." : ""}${band.photo}`}
+      />
+      <span className="text-md absolute rounded-sm p-1 font-bold leading-snug transition sm:p-2 sm:text-xl sm:outline md:text-2xl">
+        {band.name}
+      </span>
+    </li>
   );
 }

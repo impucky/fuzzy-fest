@@ -10,8 +10,8 @@ export function findCoordsCenter(coords) {
   return [sumLat / coords.length, sumLon / coords.length];
 }
 
-export function formatDate(d) {
-  const nth = (n) => {
+export function dateStr(date) {
+  function dayOrdinal(n) {
     if (n > 3 && n < 21) return "th";
     switch (n % 10) {
       case 1:
@@ -23,16 +23,31 @@ export function formatDate(d) {
       default:
         return "th";
     }
-  };
-
-  // one day I will understand js dates
-  const date = new Date(d).toLocaleDateString("en-US", {
+  }
+  const string = new Date(date).toLocaleDateString("en-US", {
     month: "long",
     day: "numeric",
   });
+  return `${string}${dayOrdinal(string.split(" ")[1])}`;
+}
 
-  // ...just kidding
-  return `${date}${nth(date.split(" ")[1])}`;
+export function formatDateRange(range, showYear) {
+  const year = showYear ? `, ${new Date(range.start).getFullYear()}` : "";
+  const startStr = dateStr(range.start);
+  const endStr = dateStr(range.end);
+
+  // Single day: July 14th(, 2025)
+  if (range.start === range.end) {
+    return `${startStr}${year}`;
+    // Same month: July 14th - 16th(, 2025)
+  } else if (
+    new Date(range.start).getMonth() === new Date(range.end).getMonth()
+  ) {
+    return `${startStr} - ${endStr.split(" ")[1]}${year}`;
+    // Different month: July 30th - August 1st(, 2025)
+  } else {
+    return `${startStr} - ${endStr}${year}`;
+  }
 }
 
 export function filterFestivals(festivals, filters, location) {

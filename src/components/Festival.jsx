@@ -1,4 +1,4 @@
-import { formatDate, isDev } from "../utils";
+import { formatDateRange, isDev } from "../utils";
 import { useHashLocation } from "wouter/use-hash-location";
 import { useAtomValue } from "jotai";
 import { festivalsAtom } from "../atoms/festivalsAtom";
@@ -36,11 +36,7 @@ export default function Festival() {
         {info.dates.provisional ? (
           <p>{`${info.dates.provisional} (TBA)`}</p>
         ) : (
-          <p>
-            {info.dates.start === info.dates.end
-              ? `${formatDate(info.dates.start)}, 2025`
-              : `${formatDate(info.dates.start)} - ${formatDate(info.dates.end)}, 2025`}
-          </p>
+          <p>{formatDateRange(info.dates, true)}</p>
         )}
         <a
           href={info.website}

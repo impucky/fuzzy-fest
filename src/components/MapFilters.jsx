@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { formatDate } from "../utils";
+import { dateStr } from "../utils";
 import { useAtom } from "jotai";
 import { mapFiltersAtom, defaultFilters } from "../atoms/mapFiltersAtom";
 import * as Slider from "@radix-ui/react-slider";
@@ -97,11 +97,11 @@ function DateRange() {
     <div className="w-72 rounded-xl bg-neutral-800 p-2">
       <div className="flex w-full justify-between px-2">
         <span className="w-1/2 text-left">
-          {formatDate(from365(filters.dateRange.range[0]))}
+          {dateStr(from365(filters.dateRange.range[0]))}
         </span>
         <span className="text-neutral-500">|</span>
         <span className="w-1/2 text-right">
-          {formatDate(from365(filters.dateRange.range[1]))}
+          {dateStr(from365(filters.dateRange.range[1]))}
         </span>
       </div>
       <Slider.Root
