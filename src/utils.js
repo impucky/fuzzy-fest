@@ -54,9 +54,11 @@ export function filterFestivals(festivals, filters, location) {
     // Search
     if (filters.query) {
       const festivalMatch = f.name.toLowerCase().includes(query);
-      const bandMatch = f.lineup.some((name) => {
-        return name.split("-").join(" ").toLowerCase().includes(query);
-      });
+      const bandMatch =
+        f.lineup &&
+        f.lineup.some((name) => {
+          return name.split("-").join(" ").toLowerCase().includes(query);
+        });
       return festivalMatch || bandMatch;
     }
     return true;
