@@ -12,6 +12,4 @@ location:
   city: Munich
   lat: 48.14516298288267
   lon: 11.521611734201125
-lineup:
-  - ""
 ---

@@ -1,7 +1,7 @@
 ---
 name: Up in Smoke Festival
 slug: up-in-smoke-festival
-website: 'https://www.upinsmoke.de/'
+website: "https://www.upinsmoke.de/"
 logo: /img/festivals/up-in-smoke.png
 isIndoor: true
 dates:
@@ -12,7 +12,4 @@ location:
   city: Pratteln
   lat: 47.52739764563815
   lon: 7.694003097998303
-lineup:
-  - ''
 ---
-

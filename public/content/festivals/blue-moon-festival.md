@@ -12,5 +12,4 @@ location:
   city: Cottbus
   lat: 51.751131191225475
   lon: 14.34181493121305
-lineup: []
 ---

@@ -1,7 +1,7 @@
 ---
 name: Westill Fest
 slug: westill-fest
-website: 'https://www.facebook.com/westillevenementiel/'
+website: "https://www.facebook.com/westillevenementiel/"
 logo: /img/festivals/westill-fest.png
 isIndoor: true
 dates:
@@ -12,7 +12,4 @@ location:
   city: Vallet
   lat: 47.166668265973826
   lon: -1.2656138237193584
-lineup:
-  - ''
 ---
-

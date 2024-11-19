@@ -31,12 +31,12 @@ export default function Map() {
   const filters = useAtomValue(mapFiltersAtom);
   const festivals = useAtomValue(festivalsAtom);
 
-  const centerOnFestival = () => {
+  function centerOnFestival() {
     const festival = festivals.find((f) => location === `/${f.slug}`);
     if (festival) {
       setCenter([festival.location.lat, festival.location.lon]);
     }
-  };
+  }
 
   // Center once to average of festivals
   useEffect(() => {
@@ -56,7 +56,9 @@ export default function Map() {
   if (!center) return;
 
   return (
-    <div className="relative h-2/5 w-full flex-grow lg:h-full lg:w-3/5">
+    <>
+      {/* vignette */}
+      <div className="pointer-events-none absolute z-[450] h-full w-full shadow-[inset_0_0_32px_rgba(0,0,0,0.9)]"></div>
       <Header />
       <InfoLink />
       <>
@@ -102,7 +104,7 @@ export default function Map() {
           <MapCenterHandler center={center} location={location} />
         </MapContainer>
       </>
-    </div>
+    </>
   );
 }
 

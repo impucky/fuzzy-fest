@@ -5,6 +5,7 @@ import { festivalsAtom } from "./atoms/festivalsAtom";
 import { bandsAtom } from "./atoms/bandsAtom";
 import Map from "./components/Map";
 import Sidebar from "./components/Sidebar";
+import Spinner from "./components/Spinner/Spinner";
 
 export default function App() {
   const [festivals, setFestivals] = useAtom(festivalsAtom);
@@ -31,13 +32,15 @@ export default function App() {
   }, []);
 
   return festivals && bands ? (
-    <main className="flex h-screen flex-col lg:flex-row">
+    <main className="flex h-dvh w-full flex-col lg:flex-row">
       <Sidebar />
-      <Map />
+      <div className="relative h-2/5 w-full flex-grow lg:h-full lg:w-3/5">
+        <Map />
+      </div>
     </main>
   ) : (
     <div className="flex h-full items-center justify-center">
-      <span>Loading...</span>
+      <Spinner />
     </div>
   );
 }

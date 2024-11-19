@@ -1,0 +1,9 @@
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scaleY(0.8);
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+}

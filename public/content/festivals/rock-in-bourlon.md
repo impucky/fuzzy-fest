@@ -1,7 +1,7 @@
 ---
 name: Rock in Bourlon
 slug: rock-in-bourlon
-website: 'https://www.rockinbourlon.com/'
+website: "https://www.rockinbourlon.com/"
 logo: /img/festivals/rock-in-bourlon.png
 isIndoor: false
 dates:
@@ -12,6 +12,4 @@ location:
   city: Bourlon
   lat: 50.179271456083306
   lon: 3.120282178088326
-lineup: []
 ---
-

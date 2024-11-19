@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "tinacms dev -c \"vite\"",
+    "dev": "tinacms dev -c \"vite --host\"",
     "build": "tinacms build && vite build",
     "start": "tinacms build && vite build && vite preview",
     "lint": "eslint .",

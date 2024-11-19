@@ -1,7 +1,7 @@
 ---
 name: Freak Valley Festival
 slug: freak-valley-festival
-website: 'https://www.freakvalley.de/'
+website: "https://www.freakvalley.de/"
 logo: /img/festivals/freak-valley-festival.png
 isIndoor: false
 dates:
@@ -12,6 +12,15 @@ location:
   city: Weiherdamm
   lat: 50.89062731963505
   lon: 8.12708699622017
-lineup: []
+lineup:
+  - scott-hepple-and-the-sun-band
+  - lurch
+  - travo
+  - wedge
+  - kombynat-robotron
+  - zig-zags
+  - early-moods
+  - pendejo
+  - wucan
+  - the-devil-and-the-almighty-blues
 ---
-
