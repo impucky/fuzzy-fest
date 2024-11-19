@@ -9,7 +9,7 @@ export default function Sidebar() {
   const [location, setLocation] = useHashLocation();
 
   return (
-    <div className="z-[500] flex h-1/2 flex-col bg-gradient-to-t from-neutral-950 to-neutral-800 shadow-[0_0_8px_rgba(0,0,0,0.7)] lg:order-last lg:h-full lg:w-2/5 xl:w-2/5">
+    <div className="z-[500] flex h-2/5 w-full flex-col bg-gradient-to-t from-neutral-950 to-neutral-800 shadow-[0_0_8px_rgba(0,0,0,0.7)] sm:order-last sm:h-full sm:w-2/5">
       <Switch>
         <Route path="/">
           <FestivalList />

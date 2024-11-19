@@ -22,22 +22,22 @@ export default function MapFilters() {
 
   return (
     <div className="pointer-events-none absolute right-0 top-0 z-[500] m-2 flex flex-col items-end gap-1">
-      <div className="pointer-events-auto flex gap-1">
+      <div className="pointer-events-auto flex w-min gap-1">
         <button
-          className="grid h-10 w-10 place-items-center rounded-full bg-neutral-800 p-2 hover:bg-neutral-700"
+          className="grid h-8 w-8 place-items-center rounded-full bg-neutral-800 p-2 hover:bg-neutral-700 sm:h-10 sm:w-10"
           onClick={() => {
             if (!collapsed) onFilterReset();
             setCollapsed(!collapsed);
           }}
         >
           <FilterIcon
-            className={`h-6 w-6 cursor-pointer transition ${collapsed ? "text-neutral-400" : "text-red-400"}`}
+            className={`w-4 cursor-pointer transition sm:w-6 ${collapsed ? "text-neutral-400" : "text-red-400"}`}
           />
         </button>
         <SearchBar />
       </div>
       <div
-        className={`flex w-min flex-col gap-1 transition duration-300 ${collapsed ? "pointer-events-none invisible opacity-0" : "pointer-events-auto visible opacity-100"}`}
+        className={`flex w-min flex-col items-end gap-1 transition duration-300 ${collapsed ? "pointer-events-none invisible opacity-0" : "pointer-events-auto visible opacity-100"}`}
       >
         <DateRange />
         <InOut />
@@ -49,9 +49,9 @@ export default function MapFilters() {
 function SearchBar() {
   const [filters, setFilters] = useAtom(mapFiltersAtom);
   return (
-    <div className="relative flex h-10 w-72 items-center">
+    <div className="relative flex h-8 w-52 items-center sm:h-10 sm:w-64">
       <input
-        className="peer absolute h-10 w-full rounded-3xl bg-neutral-800 px-4 pl-10 text-lg outline-none transition-all duration-200 hover:shadow-[0_0_0_1px_#555] focus:shadow-[0_0_0_2px_#f87171]"
+        className="peer absolute h-full w-full rounded-3xl bg-neutral-800 px-4 pl-8 text-sm outline-none transition-all duration-200 hover:shadow-[0_0_0_1px_#555] focus:shadow-[0_0_0_2px_#f87171] sm:pl-10 sm:text-lg"
         type="text"
         placeholder="Search festivals or bands"
         value={filters.query}
@@ -59,14 +59,14 @@ function SearchBar() {
           setFilters({ ...filters, query: e.target.value });
         }}
       />
-      <SearchIcon className="pointer-events-none absolute h-6 pl-3 text-[#999] transition-all duration-200 peer-hover:text-white peer-focus:text-white" />
+      <SearchIcon className="pointer-events-none absolute h-4 pl-3 text-[#999] transition-all duration-200 peer-hover:text-white peer-focus:text-white sm:h-6" />
       <button
         className="absolute right-4"
         onClick={() => setFilters({ ...filters, query: "" })}
         disabled={!filters.query.length}
       >
         <CloseIcon
-          className={`w-5 text-neutral-500 transition hover:text-white ${filters.query.length ? "opacity-100" : "pointer-events-none opacity-0"}`}
+          className={`w-4 text-neutral-500 transition hover:text-white sm:w-5 ${filters.query.length ? "opacity-100" : "pointer-events-none opacity-0"}`}
         />
       </button>
     </div>
@@ -94,8 +94,8 @@ function DateRange() {
   }
 
   return (
-    <div className="w-72 rounded-xl bg-neutral-800 p-2">
-      <div className="flex w-full justify-between px-2">
+    <div className="w-52 rounded-xl bg-neutral-800 p-2 sm:w-64">
+      <div className="flex w-full justify-between px-0 text-xs sm:px-2 sm:text-sm">
         <span className="w-1/2 text-left">
           {dateStr(from365(filters.dateRange.range[0]))}
         </span>
@@ -126,7 +126,7 @@ function InOut() {
   const [filters, setFilters] = useAtom(mapFiltersAtom);
 
   return (
-    <div className="flex w-72 justify-between overflow-hidden rounded-xl bg-neutral-800">
+    <div className="flex h-10 w-24 justify-between overflow-hidden rounded-xl bg-neutral-800 text-sm sm:w-64">
       <Checkbox.Root
         className="flex w-1/2 items-center justify-center gap-1 bg-neutral-800 p-1 py-2 transition hover:bg-neutral-700"
         checked={filters.showIn}
@@ -138,7 +138,7 @@ function InOut() {
           className={`w-6 transition ${filters.showIn ? "text-red-400" : "text-neutral-400"}`}
         />
         <span
-          className={`transition ${filters.showIn ? "" : "text-neutral-400"}`}
+          className={`transition ${filters.showIn ? "" : "text-neutral-400"} hidden sm:block`}
         >
           Show indoor
         </span>
@@ -154,7 +154,7 @@ function InOut() {
           className={`w-6 transition ${filters.showOut ? "text-red-400" : "text-neutral-400"}`}
         />
         <span
-          className={`transition ${filters.showOut ? "" : "text-neutral-400"}`}
+          className={`transition ${filters.showOut ? "" : "text-neutral-400"} hidden sm:block`}
         >
           Show outdoor
         </span>

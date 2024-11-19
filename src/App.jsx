@@ -32,9 +32,9 @@ export default function App() {
   }, []);
 
   return festivals && bands ? (
-    <main className="flex h-dvh w-full flex-col lg:flex-row">
+    <main className="flex h-dvh w-full flex-col sm:flex-row">
       <Sidebar />
-      <div className="relative h-2/5 w-full flex-grow lg:h-full lg:w-3/5">
+      <div className="relative h-3/5 w-full flex-grow sm:h-full sm:w-3/5">
         <Map />
       </div>
     </main>
