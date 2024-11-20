@@ -1,7 +1,7 @@
 ---
 name: Desertfest Berlin
 slug: desertfest-berlin
-website: "https://www.desertfest.de/"
+website: 'https://www.desertfest.de/'
 logo: /img/festivals/desertfest.png
 isIndoor: true
 dates:
@@ -13,6 +13,12 @@ location:
   lat: 52.49832859718911
   lon: 13.40655235253054
 lineup:
+  - the-hellacopters
+  - slomosa
+  - rickshaw-billies-burger-patrol
+  - green-milk-from-the-planet-orange
+  - daufodt
+  - bismut
   - 24-7-diva-heaven
   - castle-rat
   - elder
@@ -28,3 +34,4 @@ lineup:
   - turbo-moses
   - wine-lips
 ---
+
