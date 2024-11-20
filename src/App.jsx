@@ -3,6 +3,7 @@ import { client } from "../tina/__generated__/client";
 import { useAtom } from "jotai";
 import { festivalsAtom } from "./atoms/festivalsAtom";
 import { bandsAtom } from "./atoms/bandsAtom";
+import { motion } from "motion/react";
 import Map from "./components/Map";
 import Sidebar from "./components/Sidebar";
 import Spinner from "./components/Spinner/Spinner";
@@ -32,12 +33,15 @@ export default function App() {
   }, []);
 
   return festivals && bands ? (
-    <main className="flex h-dvh w-full flex-col sm:flex-row">
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.7 }}
+      className="flex h-dvh w-full flex-col bg-gradient-to-t from-neutral-950 to-neutral-800 sm:flex-row"
+    >
       <Sidebar />
-      <div className="relative h-3/5 w-full flex-grow sm:h-full sm:w-3/5">
-        <Map />
-      </div>
-    </main>
+      <Map />
+    </motion.main>
   ) : (
     <div className="flex h-full items-center justify-center">
       <Spinner />

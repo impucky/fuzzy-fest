@@ -17,7 +17,12 @@ export default function Festival() {
   return (
     <>
       <BackLink />
-      <div className="flex h-full flex-col overflow-y-scroll">
+      <div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.7 }}
+        className="flex h-full flex-col overflow-y-scroll"
+      >
         <div className="flex flex-col items-center justify-center text-center">
           <div className="h-auto min-h-24">
             <img

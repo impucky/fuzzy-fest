@@ -56,7 +56,7 @@ export default function Map() {
   if (!center) return;
 
   return (
-    <>
+    <div className="relative h-3/5 w-full flex-grow sm:h-full sm:w-3/5">
       {/* vignette */}
       <div className="pointer-events-none absolute z-[450] h-full w-full shadow-[inset_0_0_32px_rgba(0,0,0,0.9)]"></div>
       <Header />
@@ -104,7 +104,7 @@ export default function Map() {
           <MapCenterHandler center={center} location={location} />
         </MapContainer>
       </>
-    </>
+    </div>
   );
 }
 

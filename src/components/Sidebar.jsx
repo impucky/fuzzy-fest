@@ -1,6 +1,7 @@
 import { Route, Switch, Redirect, useLocation } from "wouter";
 import { useHashLocation } from "wouter/use-hash-location";
 import { useAtomValue } from "jotai";
+import { AnimatePresence, motion } from "motion/react";
 import FestivalList from "./FestivalList";
 import Festival from "./Festival";
 import About from "./About";
@@ -9,24 +10,44 @@ export default function Sidebar() {
   const [location, setLocation] = useHashLocation();
 
   return (
-    <div className="z-[500] flex h-2/5 w-full flex-col bg-gradient-to-t from-neutral-950 to-neutral-800 shadow-[0_0_8px_rgba(0,0,0,0.7)] sm:order-last sm:h-full sm:w-2/5">
+    <AnimatePresence>
       <Switch>
         <Route path="/">
-          <FestivalList />
+          <SidebarLayout key={location}>
+            <FestivalList />
+          </SidebarLayout>
         </Route>
 
         <Route path="/about">
-          <About />
+          <SidebarLayout key={location}>
+            <About />
+          </SidebarLayout>
         </Route>
 
         <Route path={`:festival`}>
-          <Festival />
+          <SidebarLayout key={location}>
+            <Festival />
+          </SidebarLayout>
         </Route>
 
         <Route>
           <Redirect to="/" />
         </Route>
       </Switch>
-    </div>
+    </AnimatePresence>
+  );
+}
+
+function SidebarLayout({ children }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.7 }}
+      className="z-[500] flex h-2/5 w-full flex-col shadow-[0_0_8px_rgba(0,0,0,0.7)] sm:order-last sm:h-full sm:w-2/5"
+    >
+      {children}
+    </motion.div>
   );
 }
