@@ -11,4 +11,11 @@ location:
   city: Thyrnau
   lat: 48.585752907035385
   lon: 13.556426640740348
+lineup:
+  - stoned-jesus
+  - el-perro
+  - mothers-cake
+  - daily-thompson
+  - einseinseins
+  - acid-row
 ---
