@@ -12,4 +12,7 @@ location:
   city: Eindhoven
   lat: 51.448621302544055
   lon: 5.456991029546806
+lineup:
+  - turbonegro
+  - peter-pan-speedrock
 ---
