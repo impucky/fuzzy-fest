@@ -2,7 +2,7 @@
 name: Roadburn
 slug: roadburn
 website: "https://roadburn.com/"
-logo: /img/festivals/roadburn.png
+logo: /img/festivals/roadburn.webp
 isIndoor: true
 dates:
   start: 2025-04-16T22:00:00.000Z

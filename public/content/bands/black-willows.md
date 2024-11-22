@@ -1,6 +1,6 @@
 ---
 name: Black Willows
 slug: black-willows
-url: ''
-photo: /img/bands/black-willows.jpg
+url: ""
+photo: /img/bands/black-willows.webp
 ---

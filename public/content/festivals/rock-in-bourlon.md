@@ -2,7 +2,7 @@
 name: Rock in Bourlon
 slug: rock-in-bourlon
 website: "https://www.rockinbourlon.com/"
-logo: /img/festivals/rock-in-bourlon.png
+logo: /img/festivals/rock-in-bourlon.webp
 isIndoor: false
 dates:
   start: 2025-06-27T00:00:00.000Z

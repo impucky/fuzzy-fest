@@ -1,6 +1,6 @@
 ---
 name: Denisa
 slug: denisa
-url: ''
-photo: /img/bands/denisa.jpg
+url: ""
+photo: /img/bands/denisa.webp
 ---

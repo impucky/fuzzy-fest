@@ -1,6 +1,6 @@
 ---
-name: Whores
+name: Whores.
 slug: whores
-url: ''
-photo: /img/bands/whores.jpg
+url: ""
+photo: /img/bands/whores.webp
 ---

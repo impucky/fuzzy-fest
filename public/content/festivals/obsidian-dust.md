@@ -1,8 +1,8 @@
 ---
 name: Obsidian Dust
 slug: obsidian-dust
-website: 'https://obsidiandust.be/'
-logo: /img/festivals/obsidian-dust.png
+website: "https://obsidiandust.be/"
+logo: /img/festivals/obsidian-dust.webp
 isIndoor: true
 dates:
   start: 2025-05-14T22:00:00.000Z
@@ -21,4 +21,3 @@ lineup:
   - elder
   - zeal-and-ardor
 ---
-

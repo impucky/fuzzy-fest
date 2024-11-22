@@ -1,8 +1,8 @@
 ---
 name: AquaMaria Festival
 slug: aquamaria-festival
-website: 'https://www.instagram.com/aquamaria_festival/'
-logo: /img/festivals/aquamaria-festival.png
+website: "https://www.instagram.com/aquamaria_festival/"
+logo: /img/festivals/aquamaria-festival.webp
 isIndoor: false
 dates:
   start: 2025-08-07T22:00:00.000Z
@@ -14,4 +14,3 @@ location:
   lat: 52.95822077493347
   lon: 12.0303555745245
 ---
-

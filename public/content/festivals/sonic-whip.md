@@ -1,8 +1,8 @@
 ---
 name: Sonic Whip
 slug: sonic-whip
-website: 'https://www.doornroosje.nl/festival/sonic-whip/'
-logo: /img/festivals/sonic-whip.png
+website: "https://www.doornroosje.nl/festival/sonic-whip/"
+logo: /img/festivals/sonic-whip.webp
 isIndoor: true
 dates:
   start: 2025-05-15T22:00:00.000Z
@@ -13,10 +13,16 @@ location:
   lat: 51.84432425462978
   lon: 5.854116671106721
 lineup:
+  - graveyard
+  - frankie-and-the-witch-fingers
+  - whores
+  - orsak-oslo
+  - lord-buffalo
+  - heath
+  - rats-and-daggers
   - den-der-hale
   - karkara
   - temple-fang
   - the-devil-and-the-almighty-blues
   - elder
 ---
-

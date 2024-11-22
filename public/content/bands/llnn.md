@@ -2,5 +2,5 @@
 name: LLNN
 slug: llnn
 url: ""
-photo: /img/bands/llnn.jpg
+photo: /img/bands/llnn.webp
 ---

@@ -2,7 +2,7 @@
 name: Hoflärm Open Air
 slug: hoflaerm-open-air
 website: "https://www.hoflaerm.de/"
-logo: /img/festivals/hoflaerm-open-air.png
+logo: /img/festivals/hoflaerm-open-air.webp
 isIndoor: false
 dates:
   start: 2025-08-14T00:00:00.000Z

@@ -1,8 +1,8 @@
 ---
 name: Krach am Bach
 slug: krach-am-bach
-website: 'https://krachambach.de/'
-logo: /img/festivals/krach-am-bach.png
+website: "https://krachambach.de/"
+logo: /img/festivals/krach-am-bach.webp
 dates:
   start: 2025-07-31T22:00:00.000Z
   end: 2025-08-01T22:00:00.000Z
@@ -17,4 +17,3 @@ lineup:
   - the-warlocks
   - khan
 ---
-

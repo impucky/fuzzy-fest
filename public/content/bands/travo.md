@@ -1,6 +1,6 @@
 ---
 name: Travo
 slug: travo
-url: ''
-photo: /img/bands/travo.jpg
+url: ""
+photo: /img/bands/travo.webp
 ---

@@ -1,6 +1,6 @@
 ---
 name: Slomosa
 slug: slomosa
-url: ''
-photo: /img/bands/slomosa.jpg
+url: ""
+photo: /img/bands/slomosa.webp
 ---

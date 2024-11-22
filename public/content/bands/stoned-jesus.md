@@ -1,6 +1,6 @@
 ---
 name: Stoned Jesus
 slug: stoned-jesus
-url: ''
-photo: /img/bands/stoned-jesus.jpg
+url: ""
+photo: /img/bands/stoned-jesus.webp
 ---

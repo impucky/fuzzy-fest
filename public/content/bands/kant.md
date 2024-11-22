@@ -1,6 +1,6 @@
 ---
 name: Kant
 slug: kant
-url: ''
-photo: /img/bands/kant.jpg
+url: ""
+photo: /img/bands/kant.webp
 ---

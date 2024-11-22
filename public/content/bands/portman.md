@@ -1,6 +1,6 @@
 ---
 name: Portman
 slug: portman
-url: ''
-photo: /img/bands/portman.jpg
+url: ""
+photo: /img/bands/portman.webp
 ---

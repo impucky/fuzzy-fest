@@ -1,8 +1,8 @@
 ---
 name: Bearstone Festival
 slug: bearstone-festival
-website: 'https://bearstonefestival.com/'
-logo: /img/festivals/bearstone-festival.png
+website: "https://bearstonefestival.com/"
+logo: /img/festivals/bearstone-festival.webp
 isIndoor: false
 dates:
   start: 2025-07-03T00:00:00.000Z
@@ -31,4 +31,3 @@ lineup:
   - dark-tree-bark
   - atomic-mold
 ---
-

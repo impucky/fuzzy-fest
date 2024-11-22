@@ -1,6 +1,6 @@
 ---
 name: Karkara
 slug: karkara
-url: ''
-photo: /img/bands/karkara.jpg
+url: ""
+photo: /img/bands/karkara.webp
 ---

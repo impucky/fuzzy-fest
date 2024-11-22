@@ -2,7 +2,7 @@
 name: Desertfest Oslo
 slug: desertfest-oslo
 website: https://www.desertfest.de/
-logo: /img/festivals/desertfest.png
+logo: /img/festivals/desertfest.webp
 dates:
   start: "2025-05-09"
   end: "2025-05-10"

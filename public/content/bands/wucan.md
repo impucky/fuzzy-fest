@@ -1,6 +1,6 @@
 ---
 name: Wucan
 slug: wucan
-url: ''
-photo: /img/bands/wucan.jpg
+url: ""
+photo: /img/bands/wucan.webp
 ---

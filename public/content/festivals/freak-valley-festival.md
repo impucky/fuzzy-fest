@@ -2,7 +2,7 @@
 name: Freak Valley Festival
 slug: freak-valley-festival
 website: "https://www.freakvalley.de/"
-logo: /img/festivals/freak-valley-festival.png
+logo: /img/festivals/freak-valley-festival.webp
 isIndoor: false
 dates:
   start: 2025-06-19T00:00:00.000Z

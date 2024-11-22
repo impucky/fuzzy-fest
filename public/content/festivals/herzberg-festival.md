@@ -2,7 +2,7 @@
 name: Herzberg Festival
 slug: herzberg-festival
 website: "https://herzberg-festival.com/"
-logo: /img/festivals/herzberg-festival.png
+logo: /img/festivals/herzberg-festival.webp
 isIndoor: false
 dates:
   start: 2025-07-24T00:00:00.000Z

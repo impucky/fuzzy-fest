@@ -2,5 +2,5 @@
 name: pageninetynine
 slug: pageninetynine
 url: ""
-photo: /img/bands/pageninetynine.jpg
+photo: /img/bands/pageninetynine.webp
 ---

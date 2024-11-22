@@ -1,6 +1,6 @@
 ---
 name: Turbo Moses
 slug: turbo-moses
-url: ''
-photo: /img/bands/turbo-moses.jpg
+url: ""
+photo: /img/bands/turbo-moses.webp
 ---

@@ -2,7 +2,7 @@
 name: Desert Rock Fest Münsterland
 slug: desert-rock-fest-munsterland
 website: "https://www.facebook.com/events/1055976089497406/"
-logo: /img/festivals/desert-rock-fest-munsterland.png
+logo: /img/festivals/desert-rock-fest-munsterland.webp
 isIndoor: true
 dates:
   start: 2025-01-23T23:00:00.000Z

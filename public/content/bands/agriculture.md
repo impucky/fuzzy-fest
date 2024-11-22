@@ -1,6 +1,6 @@
 ---
 name: Agriculture
 slug: agriculture
-url: ''
-photo: /img/bands/agriculture.jpg
+url: ""
+photo: /img/bands/agriculture.webp
 ---

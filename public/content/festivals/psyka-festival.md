@@ -1,8 +1,8 @@
 ---
 name: PsyKA Festival
 slug: psyka-festival
-website: 'https://psyka.org/'
-logo: /img/festivals/psyka-festival.png
+website: "https://psyka.org/"
+logo: /img/festivals/psyka-festival.webp
 isIndoor: true
 dates:
   start: 2025-10-31T23:00:00.000Z
@@ -14,4 +14,3 @@ location:
   lat: 49.00490962905796
   lon: 8.431626590579864
 ---
-

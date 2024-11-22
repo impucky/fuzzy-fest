@@ -1,6 +1,6 @@
 ---
 name: King Buffalo
 slug: king-buffalo
-url: ''
-photo: /img/bands/king-buffalo.jpg
+url: ""
+photo: /img/bands/king-buffalo.webp
 ---

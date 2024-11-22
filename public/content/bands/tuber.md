@@ -1,6 +1,6 @@
 ---
 name: Tuber
 slug: tuber
-url: ''
-photo: /img/bands/tuber.jpg
+url: ""
+photo: /img/bands/tuber.webp
 ---

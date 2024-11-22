@@ -1,6 +1,6 @@
 ---
 name: Eyehategod
 slug: eyehategod
-url: ''
-photo: /img/bands/eyehategod.jpg
+url: ""
+photo: /img/bands/eyehategod.webp
 ---

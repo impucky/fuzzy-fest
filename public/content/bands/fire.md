@@ -2,5 +2,5 @@
 name: Fire!
 slug: fire
 url: ""
-photo: /img/bands/fire.jpg
+photo: /img/bands/fire.webp
 ---

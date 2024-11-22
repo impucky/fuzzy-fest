@@ -1,8 +1,8 @@
 ---
 name: Høstsabbat
 slug: hostsabbat
-website: 'https://www.hostsabbat.no/'
-logo: /img/festivals/hostsabbat.png
+website: "https://www.hostsabbat.no/"
+logo: /img/festivals/hostsabbat.webp
 isIndoor: true
 dates:
   start: 2025-10-23T22:00:00.000Z
@@ -14,4 +14,3 @@ location:
   lat: 59.91820831456108
   lon: 10.754424692426477
 ---
-

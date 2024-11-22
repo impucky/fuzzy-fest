@@ -1,6 +1,6 @@
 ---
 name: Orbitron
 slug: orbitron
-url: ''
-photo: /img/bands/orbitron.jpg
+url: ""
+photo: /img/bands/orbitron.webp
 ---

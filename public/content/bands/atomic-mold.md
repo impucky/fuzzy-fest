@@ -1,6 +1,6 @@
 ---
 name: Atomic Mold
 slug: atomic-mold
-url: ''
-photo: /img/bands/atomic-mold.jpg
+url: ""
+photo: /img/bands/atomic-mold.webp
 ---

@@ -1,8 +1,8 @@
 ---
 name: Desertfest Berlin
 slug: desertfest-berlin
-website: 'https://www.desertfest.de/'
-logo: /img/festivals/desertfest.png
+website: "https://www.desertfest.de/"
+logo: /img/festivals/desertfest.webp
 isIndoor: true
 dates:
   start: 2025-05-23T00:00:00.000Z
@@ -34,4 +34,3 @@ lineup:
   - turbo-moses
   - wine-lips
 ---
-

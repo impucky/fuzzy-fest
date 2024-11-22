@@ -1,6 +1,6 @@
 ---
 name: Villenoire
 slug: villenoire
-url: ''
-photo: /img/bands/villenoire.jpg
+url: ""
+photo: /img/bands/villenoire.webp
 ---

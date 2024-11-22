@@ -1,6 +1,6 @@
 ---
 name: Ora Cogan
 slug: ora-cogan
-url: ''
-photo: /img/bands/ora-cogan.jpg
+url: ""
+photo: /img/bands/ora-cogan.webp
 ---

@@ -2,7 +2,7 @@
 name: Desertfest London
 slug: desertfest-london
 website: "https://www.desertfest.co.uk/"
-logo: /img/festivals/desertfest.png
+logo: /img/festivals/desertfest.webp
 isIndoor: true
 dates:
   start: 2025-05-16T00:00:00.000Z

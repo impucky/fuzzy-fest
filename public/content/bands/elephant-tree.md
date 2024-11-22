@@ -1,6 +1,6 @@
 ---
 name: Elephant Tree
 slug: elephant-tree
-url: ''
-photo: /img/bands/elephant-tree.jpg
+url: ""
+photo: /img/bands/elephant-tree.webp
 ---

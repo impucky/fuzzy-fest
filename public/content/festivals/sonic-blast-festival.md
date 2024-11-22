@@ -2,7 +2,7 @@
 name: SonicBlast Festival
 slug: sonic-blast-festival
 website: "https://sonicblastfestival.com/"
-logo: /img/festivals/sonic-blast-festival.png
+logo: /img/festivals/sonic-blast-festival.webp
 isIndoor: false
 dates:
   start: 2025-08-07T00:00:00.000Z

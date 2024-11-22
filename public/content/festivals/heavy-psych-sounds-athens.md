@@ -1,8 +1,8 @@
 ---
 name: Heavy Psych Sounds Fest Athens
 slug: heavy-psych-sounds-athens
-website: 'https://www.heavypsychsounds.com/fests.htm'
-logo: /img/festivals/heavy-psych-sounds-athens.png
+website: "https://www.heavypsychsounds.com/fests.htm"
+logo: /img/festivals/heavy-psych-sounds-athens.webp
 isIndoor: true
 dates:
   start: 2025-03-07T00:00:00.000Z
@@ -19,4 +19,3 @@ lineup:
   - black-rainbows
   - acid-mammoth
 ---
-

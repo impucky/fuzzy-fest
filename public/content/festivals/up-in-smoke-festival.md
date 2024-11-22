@@ -2,7 +2,7 @@
 name: Up in Smoke Festival
 slug: up-in-smoke-festival
 website: "https://www.upinsmoke.de/"
-logo: /img/festivals/up-in-smoke.png
+logo: /img/festivals/up-in-smoke.webp
 isIndoor: true
 dates:
   start: 2025-10-02T22:00:00.000Z

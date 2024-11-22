@@ -1,6 +1,6 @@
 ---
 name: Kylesa
 slug: kylesa
-url: ''
-photo: /img/bands/kylesa.jpg
+url: ""
+photo: /img/bands/kylesa.webp
 ---

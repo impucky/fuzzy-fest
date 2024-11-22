@@ -2,7 +2,7 @@
 name: Tabernas Desert Rock Fest
 slug: tabernas-desert-rock-fest
 website: "https://www.facebook.com/profile.php?id=100057087564915"
-logo: /img/festivals/tabernas-desert-rock-fest.png
+logo: /img/festivals/tabernas-desert-rock-fest.webp
 dates:
   start: 2025-10-01T22:00:00.000Z
   end: 2025-10-03T22:00:00.000Z
