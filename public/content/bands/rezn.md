@@ -1,6 +1,7 @@
 ---
 name: REZN
 slug: rezn
-url: ""
+url: ''
 photo: /img/bands/rezn.webp
+spotifyId: 3pDqLo5LnCyCBxhKZygkfK
 ---

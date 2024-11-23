@@ -1,6 +1,7 @@
 ---
 name: El Perro
 slug: el-perro
-url: ""
+url: ''
 photo: /img/bands/el-perro.webp
+spotifyId: 3Y9wKuwj8yuwt1EhIUxGDG
 ---

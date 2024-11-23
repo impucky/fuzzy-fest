@@ -1,7 +1,7 @@
 ---
 name: Esbjerg Fuzztival
 slug: esbjerg-fuzztival
-website: "https://www.fuzztival.com/"
+website: https://www.fuzztival.com/
 logo: /img/festivals/esbjerg-fuzztival.webp
 isIndoor: true
 dates:
@@ -12,4 +12,5 @@ location:
   city: Esbjerg
   lat: 55.46497946389984
   lon: 8.459744361489337
+year: 2025
 ---

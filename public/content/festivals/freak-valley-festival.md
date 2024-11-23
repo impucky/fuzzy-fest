@@ -1,7 +1,7 @@
 ---
 name: Freak Valley Festival
 slug: freak-valley-festival
-website: "https://www.freakvalley.de/"
+website: https://www.freakvalley.de/
 logo: /img/festivals/freak-valley-festival.webp
 isIndoor: false
 dates:
@@ -23,4 +23,6 @@ lineup:
   - pendejo
   - wucan
   - the-devil-and-the-almighty-blues
+year: 2025
+playlistId: 37utoDS9SI6hKzFh0OGDmF
 ---

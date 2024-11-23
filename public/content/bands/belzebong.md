@@ -1,6 +1,7 @@
 ---
 name: Belzebong
 slug: belzebong
-url: ""
+url: ''
 photo: /img/bands/belzebong.webp
+spotifyId: 3MffQ9fJsgtOEqW8GvzJW8
 ---

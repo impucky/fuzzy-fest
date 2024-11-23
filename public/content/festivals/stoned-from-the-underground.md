@@ -1,7 +1,7 @@
 ---
 name: Stoned from the Underground
 slug: stoned-from-the-underground
-website: "https://www.sftu.de/"
+website: https://www.sftu.de/
 logo: /img/festivals/stoned-from-the-underground.webp
 dates:
   start: 2025-07-10T22:00:00.000Z
@@ -12,4 +12,5 @@ location:
   city: Erfurt
   lat: 51.06952796976761
   lon: 11.037207334071617
+year: 2025
 ---

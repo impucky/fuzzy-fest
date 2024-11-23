@@ -1,7 +1,7 @@
 ---
 name: AquaMaria Festival
 slug: aquamaria-festival
-website: "https://www.instagram.com/aquamaria_festival/"
+website: https://www.instagram.com/aquamaria_festival/
 logo: /img/festivals/aquamaria-festival.webp
 isIndoor: false
 dates:
@@ -13,4 +13,5 @@ location:
   city: Plattenburg
   lat: 52.95822077493347
   lon: 12.0303555745245
+year: 2025
 ---

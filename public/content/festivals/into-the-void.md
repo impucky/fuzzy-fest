@@ -1,7 +1,7 @@
 ---
 name: Into the Void
 slug: into-the-void
-website: "https://intothevoid.nl/"
+website: https://intothevoid.nl/
 logo: /img/festivals/into-the-void.webp
 isIndoor: true
 dates:
@@ -12,4 +12,5 @@ location:
   city: Leeuwarden
   lat: 53.20037408530867
   lon: 5.790178831895955
+year: 2025
 ---

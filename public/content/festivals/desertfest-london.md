@@ -1,7 +1,7 @@
 ---
 name: Desertfest London
 slug: desertfest-london
-website: "https://www.desertfest.co.uk/"
+website: https://www.desertfest.co.uk/
 logo: /img/festivals/desertfest.webp
 isIndoor: true
 dates:
@@ -28,4 +28,6 @@ lineup:
   - stoned-jesus
   - the-devil-and-the-almighty-blues
   - volcanova
+year: 2025
+playlistId: 74AJjNbN0oAzze1BYqBpWQ
 ---

@@ -1,6 +1,7 @@
 ---
 name: Motorpsycho
 slug: motorpsycho
-url: ""
+url: ''
 photo: /img/bands/motorpsycho.webp
+spotifyId: 2bNIAjyL3hFCuQBQqhPN4T
 ---

@@ -26,7 +26,7 @@ export default function Lineup({ lineup }) {
         </button>
       </div>
       <ul
-        className={`font-vk visible z-0 flex origin-top flex-wrap content-start justify-center text-center transition ${collapsed ? "invisible -translate-y-16 scale-y-0 pr-2 opacity-0" : ""}`}
+        className={`font-vk visible z-0 flex origin-top flex-wrap content-start justify-center text-center transition ${collapsed ? "invisible h-0 -translate-y-16 scale-y-0 pr-2 opacity-0" : ""}`}
       >
         {bands
           .sort((a, b) => a.name.localeCompare(b.name))

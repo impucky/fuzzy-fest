@@ -1,7 +1,7 @@
 ---
 name: SonicBlast Festival
 slug: sonic-blast-festival
-website: "https://sonicblastfestival.com/"
+website: https://sonicblastfestival.com/
 logo: /img/festivals/sonic-blast-festival.webp
 isIndoor: false
 dates:
@@ -12,4 +12,5 @@ location:
   city: Âncora
   lat: 41.807307302798684
   lon: -8.861946138134142
+year: 2025
 ---

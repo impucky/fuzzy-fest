@@ -1,6 +1,7 @@
 ---
 name: Sumac
 slug: sumac
-url: ""
+url: ''
 photo: /img/bands/sumac.webp
+spotifyId: 51yGpqOaCT6TlLzV3LefDV
 ---

@@ -1,7 +1,7 @@
 ---
 name: A Colossal Weekend
 slug: a-colossal-weekend
-website: "https://www.acolossalweekend.dk/"
+website: https://www.acolossalweekend.dk/
 logo: /img/festivals/a-colossal-weekend.webp
 isIndoor: true
 dates:
@@ -21,4 +21,6 @@ lineup:
   - frail-body
   - jo-quail
   - machukha
+year: 2025
+playlistId: 58ggFP1mK4bENGdpe4E7Bp
 ---

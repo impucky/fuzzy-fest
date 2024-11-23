@@ -1,6 +1,7 @@
 ---
 name: Rickshaw Billie's Burger Patrol
 slug: rickshaw-billies-burger-patrol
-url: ""
+url: ''
 photo: /img/bands/rickshaw-billies-burger-patrol.webp
+spotifyId: 1iYDBcGNQxjwMivsLeg5vC
 ---

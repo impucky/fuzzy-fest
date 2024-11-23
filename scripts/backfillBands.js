@@ -3,6 +3,7 @@ import path from "path";
 import fm from "front-matter";
 import yaml from "js-yaml";
 import readline from "readline";
+import { saveBand } from "./utils";
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -19,7 +20,6 @@ function confirmPrompt(message) {
 }
 
 async function getAllBands() {
-  console.log("getall");
   const bandList = [];
 
   const festivalFiles = fs.readdirSync("./public/content/festivals");
@@ -51,31 +51,18 @@ async function getMissingBands() {
   return missingBands;
 }
 
-function createBand(band) {
+function createBand(slug) {
   const newBand = {
-    name: band
+    name: slug
       .split("-")
       .map((term) => term.charAt(0).toUpperCase() + term.slice(1))
       .join(" "),
-    slug: band,
+    slug,
     url: "",
-    photo: `/img/bands/${band}.webp`,
+    photo: `/img/bands/${slug}.webp`,
   };
 
-  const toYaml = yaml.dump(newBand, { indent: 2 });
-  const toMarkdown = `---\n${toYaml}---\n`;
-
-  fs.writeFile(
-    path.join(process.cwd(), `/public/content/bands/${band}.md`),
-    toMarkdown,
-    (err) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
-      console.log(`Saved ${band}.md`);
-    },
-  );
+  saveBand(newBand);
 }
 
 (async () => {

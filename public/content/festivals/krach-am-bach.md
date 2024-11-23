@@ -1,7 +1,7 @@
 ---
 name: Krach am Bach
 slug: krach-am-bach
-website: "https://krachambach.de/"
+website: https://krachambach.de/
 logo: /img/festivals/krach-am-bach.webp
 dates:
   start: 2025-07-31T22:00:00.000Z
@@ -16,4 +16,6 @@ lineup:
   - the-cosmic-dead
   - the-warlocks
   - khan
+year: 2025
+playlistId: 0qWzZX7Sb8J50thm899xjL
 ---

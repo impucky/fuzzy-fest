@@ -1,7 +1,7 @@
 ---
 name: Sonic Whip
 slug: sonic-whip
-website: "https://www.doornroosje.nl/festival/sonic-whip/"
+website: https://www.doornroosje.nl/festival/sonic-whip/
 logo: /img/festivals/sonic-whip.webp
 isIndoor: true
 dates:
@@ -25,4 +25,6 @@ lineup:
   - temple-fang
   - the-devil-and-the-almighty-blues
   - elder
+year: 2025
+playlistId: 1IRUKTc9cBj1EMnAumRS1Y
 ---

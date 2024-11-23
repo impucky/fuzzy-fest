@@ -141,6 +141,16 @@ export default defineConfig({
             type: "string",
             list: true,
           },
+          {
+            label: "Year",
+            name: "year",
+            type: "number",
+          },
+          {
+            label: "Playlist ID",
+            name: "playlistId",
+            type: "string",
+          },
         ],
       },
     ],

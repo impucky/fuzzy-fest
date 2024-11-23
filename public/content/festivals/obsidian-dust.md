@@ -1,7 +1,7 @@
 ---
 name: Obsidian Dust
 slug: obsidian-dust
-website: "https://obsidiandust.be/"
+website: https://obsidiandust.be/
 logo: /img/festivals/obsidian-dust.webp
 isIndoor: true
 dates:
@@ -20,4 +20,6 @@ lineup:
   - pallbearer
   - elder
   - zeal-and-ardor
+year: 2025
+playlistId: 5EVNPfLpSJNAkQrpOAiolS
 ---

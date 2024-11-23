@@ -1,6 +1,7 @@
 ---
 name: The Warlocks
 slug: the-warlocks
-url: ""
+url: ''
 photo: /img/bands/the-warlocks.webp
+spotifyId: 3ihmiCsHK3zqlZRIZRubev
 ---

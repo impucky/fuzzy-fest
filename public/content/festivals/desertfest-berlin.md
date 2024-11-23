@@ -1,7 +1,7 @@
 ---
 name: Desertfest Berlin
 slug: desertfest-berlin
-website: "https://www.desertfest.de/"
+website: https://www.desertfest.de/
 logo: /img/festivals/desertfest.webp
 isIndoor: true
 dates:
@@ -33,4 +33,6 @@ lineup:
   - the-devil-and-the-almighty-blues
   - turbo-moses
   - wine-lips
+year: 2025
+playlistId: 3Pr9vwjD04A1NjX2DsYxSq
 ---

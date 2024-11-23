@@ -1,6 +1,7 @@
 ---
 name: Stoned Jesus
 slug: stoned-jesus
-url: ""
+url: ''
 photo: /img/bands/stoned-jesus.webp
+spotifyId: 23lyMLxYNPS15hpVvFNptR
 ---

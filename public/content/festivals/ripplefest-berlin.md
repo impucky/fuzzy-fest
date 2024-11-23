@@ -1,7 +1,7 @@
 ---
 name: Ripplefest Berlin
 slug: ripplefest-berlin
-website: "https://ripplefest.de/berlin.html"
+website: https://ripplefest.de/berlin.html
 logo: /img/festivals/ripplefest.webp
 isIndoor: true
 dates:
@@ -13,4 +13,5 @@ location:
   city: Berlin
   lat: 52.50146425555067
   lon: 13.388859045628186
+year: 2025
 ---

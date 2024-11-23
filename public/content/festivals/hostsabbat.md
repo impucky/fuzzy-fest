@@ -1,7 +1,7 @@
 ---
 name: Høstsabbat
 slug: hostsabbat
-website: "https://www.hostsabbat.no/"
+website: https://www.hostsabbat.no/
 logo: /img/festivals/hostsabbat.webp
 isIndoor: true
 dates:
@@ -13,4 +13,5 @@ location:
   city: Oslo
   lat: 59.91820831456108
   lon: 10.754424692426477
+year: 2025
 ---

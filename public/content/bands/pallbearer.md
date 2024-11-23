@@ -1,6 +1,7 @@
 ---
 name: Pallbearer
 slug: pallbearer
-url: ""
+url: ''
 photo: /img/bands/pallbearer.webp
+spotifyId: 2yeEmsTQMNHBlS5dhWtuD1
 ---

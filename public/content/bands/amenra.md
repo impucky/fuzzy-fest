@@ -1,6 +1,7 @@
 ---
 name: Amenra
 slug: amenra
-url: ""
+url: ''
 photo: /img/bands/amenra.webp
+spotifyId: 0N1jE1EIrhZjvQSfuLupUu
 ---

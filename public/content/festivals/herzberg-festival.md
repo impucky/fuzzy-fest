@@ -1,7 +1,7 @@
 ---
 name: Herzberg Festival
 slug: herzberg-festival
-website: "https://herzberg-festival.com/"
+website: https://herzberg-festival.com/
 logo: /img/festivals/herzberg-festival.webp
 isIndoor: false
 dates:
@@ -12,4 +12,5 @@ location:
   city: Breitenbach am Herzberg
   lat: 50.77515517573324
   lon: 9.438569517949654
+year: 2025
 ---

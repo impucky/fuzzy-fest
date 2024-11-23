@@ -1,6 +1,7 @@
 ---
 name: Volcanova
 slug: volcanova
-url: ""
+url: ''
 photo: /img/bands/volcanova.webp
+spotifyId: 5PxsSQ4uYOq6svb417ravK
 ---

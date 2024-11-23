@@ -1,7 +1,7 @@
 ---
 name: Truckfighters' Fuzz Festival
 slug: truckfighters-fuzz-festival
-website: "https://www.truckfighters.com/festival/"
+website: https://www.truckfighters.com/festival/
 logo: /img/festivals/truckfighters-fuzz-festival.webp
 isIndoor: true
 dates:
@@ -13,4 +13,5 @@ location:
   city: Stockholm
   lat: 59.314527512626405
   lon: 18.032458290319482
+year: 2025
 ---

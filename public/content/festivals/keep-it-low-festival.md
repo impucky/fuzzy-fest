@@ -1,7 +1,7 @@
 ---
 name: Keep It Low Festival
 slug: keep-it-low-festival
-website: "https://www.keepitlow.de/"
+website: https://www.keepitlow.de/
 logo: /img/festivals/keep-it-low-festival.webp
 isIndoor: true
 dates:
@@ -12,4 +12,5 @@ location:
   city: Munich
   lat: 48.14516298288267
   lon: 11.521611734201125
+year: 2025
 ---

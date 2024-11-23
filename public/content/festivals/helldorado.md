@@ -1,7 +1,7 @@
 ---
 name: Helldorado
 slug: helldorado
-website: "https://helldorado.nl/"
+website: https://helldorado.nl/
 logo: /img/festivals/helldorado.webp
 isIndoor: true
 dates:
@@ -15,4 +15,6 @@ location:
 lineup:
   - turbonegro
   - peter-pan-speedrock
+year: 2025
+playlistId: 1dVPMUpp2SaVocEcLqZt95
 ---

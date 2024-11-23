@@ -4,8 +4,8 @@ slug: desertfest-oslo
 website: https://www.desertfest.de/
 logo: /img/festivals/desertfest.webp
 dates:
-  start: "2025-05-09"
-  end: "2025-05-10"
+  start: '2025-05-09'
+  end: '2025-05-10'
 isIndoor: true
 location:
   country: Norway
@@ -22,4 +22,6 @@ lineup:
   - help
   - hippie-death-cult
   - magmakammer
+year: 2025
+playlistId: 3PtlocImqseqOG4vkzkr45
 ---

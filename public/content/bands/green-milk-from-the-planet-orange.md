@@ -1,6 +1,7 @@
 ---
-name: Green Milk From The Planet Orange
+name: Green Milk from the Planet Orange
 slug: green-milk-from-the-planet-orange
-url: ""
+url: ''
 photo: /img/bands/green-milk-from-the-planet-orange.webp
+spotifyId: 2AXviraxeIepIRnqhjwmH0
 ---

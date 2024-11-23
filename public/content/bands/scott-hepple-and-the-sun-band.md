@@ -1,6 +1,7 @@
 ---
 name: Scott Hepple and the Sun Band
 slug: scott-hepple-and-the-sun-band
-url: ""
+url: ''
 photo: /img/bands/scott-hepple-and-the-sun-band.webp
+spotifyId: 4LgJglIOrFelNyLpX134Gf
 ---

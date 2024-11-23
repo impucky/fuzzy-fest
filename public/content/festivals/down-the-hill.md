@@ -1,7 +1,7 @@
 ---
 name: Down the Hill
 slug: down-the-hill
-website: "https://www.downthehill.be/"
+website: https://www.downthehill.be/
 logo: /img/festivals/down-the-hill.webp
 dates:
   start: 2025-08-29T22:00:00.000Z
@@ -12,4 +12,5 @@ location:
   city: Aarschot
   lat: 50.963219001562685
   lon: 4.932501940729927
+year: 2025
 ---

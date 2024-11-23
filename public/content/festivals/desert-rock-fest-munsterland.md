@@ -1,7 +1,7 @@
 ---
 name: Desert Rock Fest Münsterland
 slug: desert-rock-fest-munsterland
-website: "https://www.facebook.com/events/1055976089497406/"
+website: https://www.facebook.com/events/1055976089497406/
 logo: /img/festivals/desert-rock-fest-munsterland.webp
 isIndoor: true
 dates:
@@ -21,4 +21,6 @@ lineup:
   - convoy
   - eremit
   - daily-thompson
+year: 2025
+playlistId: 73gNg911TO4NK8REq8ixva
 ---

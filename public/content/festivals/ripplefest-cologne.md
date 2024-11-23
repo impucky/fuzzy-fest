@@ -1,7 +1,7 @@
 ---
 name: Ripplefest Cologne
 slug: ripplefest-cologne
-website: "https://ripplefest.de/cologne.html"
+website: https://ripplefest.de/cologne.html
 logo: /img/festivals/ripplefest.webp
 isIndoor: true
 dates:
@@ -13,4 +13,5 @@ location:
   city: Köln
   lat: 50.965382909870726
   lon: 7.012521805197049
+year: 2025
 ---

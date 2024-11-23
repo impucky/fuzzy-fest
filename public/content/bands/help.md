@@ -1,6 +1,7 @@
 ---
 name: Help
 slug: help
-url: ""
+url: ''
 photo: /img/bands/help.webp
+spotifyId: 3eEPtgROSVNpGwjSyxjuue
 ---

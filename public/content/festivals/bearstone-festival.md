@@ -1,7 +1,7 @@
 ---
 name: Bearstone Festival
 slug: bearstone-festival
-website: "https://bearstonefestival.com/"
+website: https://bearstonefestival.com/
 logo: /img/festivals/bearstone-festival.webp
 isIndoor: false
 dates:
@@ -30,4 +30,6 @@ lineup:
   - marcel-gidotes-holy-crab
   - dark-tree-bark
   - atomic-mold
+year: 2025
+playlistId: 5bJpgRlJEuXXqB7NVAplmJ
 ---

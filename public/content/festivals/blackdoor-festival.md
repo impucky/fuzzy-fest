@@ -1,7 +1,7 @@
 ---
 name: Blackdoor Festival
 slug: blackdoor-festival
-website: "https://blackdoor-festival.com/"
+website: https://blackdoor-festival.com/
 logo: /img/festivals/blackdoor-festival.webp
 dates:
   start: 2025-06-25T22:00:00.000Z
@@ -18,4 +18,6 @@ lineup:
   - daily-thompson
   - einseinseins
   - acid-row
+year: 2025
+playlistId: 0CsWRBHbB9tmFq8xNHkS4U
 ---

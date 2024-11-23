@@ -1,6 +1,7 @@
 ---
 name: Portman
 slug: portman
-url: ""
+url: ''
 photo: /img/bands/portman.webp
+spotifyId: 3sIkINl38kxuuLskOpdQtZ
 ---

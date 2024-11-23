@@ -1,7 +1,7 @@
 ---
 name: Dome of Rock
 slug: dome-of-rock
-website: "https://www.facebook.com/domeofrockfestival/"
+website: https://www.facebook.com/domeofrockfestival/
 logo: /img/festivals/dome-of-rock.webp
 isIndoor: true
 dates:
@@ -13,4 +13,5 @@ location:
   city: Salzburg
   lat: 47.80722001002131
   lon: 13.058969847365278
+year: 2025
 ---

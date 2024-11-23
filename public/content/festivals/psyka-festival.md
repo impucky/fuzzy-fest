@@ -1,7 +1,7 @@
 ---
 name: PsyKA Festival
 slug: psyka-festival
-website: "https://psyka.org/"
+website: https://psyka.org/
 logo: /img/festivals/psyka-festival.webp
 isIndoor: true
 dates:
@@ -13,4 +13,5 @@ location:
   city: Karlsruhe
   lat: 49.00490962905796
   lon: 8.431626590579864
+year: 2025
 ---

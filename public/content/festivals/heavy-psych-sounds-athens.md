@@ -1,7 +1,7 @@
 ---
 name: Heavy Psych Sounds Fest Athens
 slug: heavy-psych-sounds-athens
-website: "https://www.heavypsychsounds.com/fests.htm"
+website: https://www.heavypsychsounds.com/fests.htm
 logo: /img/festivals/hps.webp
 isIndoor: true
 dates:
@@ -18,4 +18,6 @@ lineup:
   - belzebong
   - black-rainbows
   - acid-mammoth
+year: 2025
+playlistId: 4SDRKjhwh9LATfO2FhRLui
 ---

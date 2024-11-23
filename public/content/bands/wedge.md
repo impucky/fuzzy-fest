@@ -1,6 +1,7 @@
 ---
 name: Wedge
 slug: wedge
-url: ""
+url: ''
 photo: /img/bands/wedge.webp
+spotifyId: 7Mwv1npCpS1E6RcmHmxxFs
 ---

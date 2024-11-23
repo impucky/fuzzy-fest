@@ -44,11 +44,37 @@ export default function Festival() {
           Homepage
         </a>
       </div>
+
       {info.lineup && info.lineup.length > 0 ? (
         <Lineup lineup={info.lineup} />
       ) : (
         <p className="w-full p-2 text-center text-lg">Lineup TBA</p>
       )}
+      {info.playlistId && <Playlist id={info.playlistId} />}
+    </div>
+  );
+}
+
+function Playlist({ id }) {
+  return (
+    <div className="flex min-h-96 w-full flex-col items-center p-2">
+      <span className="font-vk mt-4 pb-8 text-center text-xl font-bold md:text-3xl">
+        PLAYLIST
+      </span>
+      <iframe
+        style={{
+          borderRadius: "12px",
+          width: "100%",
+          height: "100%",
+          minHeight: "500px",
+          paddingBottom: "1rem",
+        }}
+        src={`https://open.spotify.com/embed/playlist/${id}?theme=0`}
+        frameBorder="0"
+        allowFullScreen={false}
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
     </div>
   );
 }
