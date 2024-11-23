@@ -20,7 +20,7 @@ function MapCenterHandler({ center, location }) {
   const map = useMap();
   // Don't recenter when navigating back to list
   if (location === "" || center === prevCenter) return;
-  map.flyTo(center, 10);
+  map.flyTo(center, 9);
   setPrevCenter(center);
 }
 
@@ -56,7 +56,7 @@ export default function Map() {
   if (!center) return;
 
   return (
-    <div className="relative h-3/5 w-full flex-grow sm:h-full sm:w-3/5">
+    <div className="relative h-3/5 w-full flex-grow md:h-full md:w-3/5">
       {/* vignette */}
       <div className="pointer-events-none absolute z-[450] h-full w-full shadow-[inset_0_0_32px_rgba(0,0,0,0.9)]"></div>
       <Header />
@@ -65,7 +65,7 @@ export default function Map() {
         <MapFilters />
         <MapContainer
           center={center}
-          zoom={5}
+          zoom={window.innerWidth < 1024 ? 4 : 5}
           zoomControl={false}
           scrollWheelZoom={true}
           className="h-full w-full"

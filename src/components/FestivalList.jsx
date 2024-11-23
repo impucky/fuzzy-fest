@@ -15,7 +15,7 @@ export default function FestivalList() {
 
   return (
     <>
-      <h2 className="font-vk mt-2 border-b border-[salmon] p-1 text-center text-2xl font-bold text-[salmon] sm:text-3xl">
+      <h2 className="font-vk border-b border-t border-[salmon] p-1 pt-2 text-center text-xl font-bold text-[salmon] sm:text-2xl lg:text-3xl">
         Festivals in 2025
       </h2>
       <ul className="font-vk flex flex-wrap items-start justify-start overflow-y-scroll p-2 text-center">
@@ -27,17 +27,16 @@ export default function FestivalList() {
               return (
                 <motion.li
                   key={f.name}
-                  initial={{ opacity: 0, y: 5 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -5 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.2 }}
                   layout
                   className="w-full"
                   onMouseEnter={() => setHighlight(f.slug)}
                   onMouseLeave={() => setHighlight(null)}
                 >
                   <Link
-                    className={`text-center text-lg font-bold transition hover:text-[salmon] md:text-2xl ${hl ? "text-[salmon]" : ""}`}
+                    className={`text-center text-lg font-bold transition hover:text-[salmon] md:text-xl lg:text-2xl ${hl ? "text-[salmon]" : ""}`}
                     href={`/${f.slug}`}
                   >
                     {f.name}

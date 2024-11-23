@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "motion/react";
 import FestivalList from "./FestivalList";
 import Festival from "./Festival";
 import About from "./About";
+import BackLink from "./BackLink";
 
 export default function Sidebar() {
   const [location, setLocation] = useHashLocation();
@@ -20,12 +21,14 @@ export default function Sidebar() {
 
         <Route path="/about">
           <SidebarLayout key={location}>
+            <BackLink />
             <About />
           </SidebarLayout>
         </Route>
 
         <Route path={`:festival`}>
           <SidebarLayout key={location}>
+            <BackLink />
             <Festival />
           </SidebarLayout>
         </Route>
@@ -45,7 +48,7 @@ function SidebarLayout({ children }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.7 }}
-      className="z-[500] flex h-2/5 w-full flex-col shadow-[0_0_8px_rgba(0,0,0,0.7)] sm:order-last sm:h-full sm:w-2/5"
+      className="relative z-[500] flex h-2/5 w-full flex-col shadow-[0_0_8px_rgba(0,0,0,0.7)] md:h-full md:w-2/5"
     >
       {children}
     </motion.div>

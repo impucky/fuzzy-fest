@@ -1,12 +1,13 @@
 import { Link } from "wouter";
+import CloseIcon from "../icons/close.svg?react";
 
 export default function BackLink() {
   return (
     <Link
       href="/"
-      className="text-md sticky top-0 z-[500] bg-neutral-800 p-0 text-center text-[salmon] shadow-md transition hover:bg-neutral-700 hover:text-white hover:underline sm:p-2"
+      className="absolute right-0 top-0 p-2 text-neutral-400 transition hover:text-white lg:p-4"
     >
-      ← Back to list
+      <CloseIcon className="w-6 md:w-8" />
     </Link>
   );
 }
