@@ -16,7 +16,7 @@ export default function Festival() {
   return (
     <div className="flex h-full flex-col overflow-y-scroll">
       <div className="flex flex-col items-center justify-center text-center">
-        <div className="h-auto min-h-24">
+        <div className="h-auto min-h-fit">
           <img
             className="mt-2 h-auto max-h-20 w-auto max-w-64 md:max-h-32 lg:max-w-80 xl:max-w-full"
             src={`${isDev ? "." : ""}${info.logo}`}
@@ -58,7 +58,7 @@ export default function Festival() {
 function Playlist({ id }) {
   return (
     <div className="flex min-h-96 w-full flex-col items-center p-2">
-      <span className="font-vk mt-4 pb-8 text-center text-xl font-bold md:text-3xl">
+      <span className="font-vk mt-2 pb-4 text-center text-xl font-bold md:text-3xl">
         PLAYLIST
       </span>
       <iframe
@@ -70,7 +70,6 @@ function Playlist({ id }) {
           paddingBottom: "1rem",
         }}
         src={`https://open.spotify.com/embed/playlist/${id}?theme=0`}
-        frameBorder="0"
         allowFullScreen={false}
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"

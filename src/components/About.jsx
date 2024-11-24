@@ -1,6 +1,11 @@
 export default function About() {
   return (
-    <div className="text-md w-full p-6">
+    <div className="text-md mt-4 w-full p-6">
+      <p>
+        <span className="font-logo text-lg text-[salmon]">FUZZY FEST</span> is
+        my attempt at mapping out the many festivals featuring heavy psych,
+        stoner, doom... in Europe.
+      </p>
       <p>
         Please let me know if you spot something wrong or a missing festival!
       </p>

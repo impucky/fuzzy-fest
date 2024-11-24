@@ -40,7 +40,7 @@ export default function Lineup({ lineup }) {
 
 function BandItem({ band }) {
   return (
-    <li className="group relative flex h-16 w-1/2 items-center justify-center md:h-24 lg:h-32">
+    <li className="group relative flex h-20 w-1/2 items-center justify-center md:h-24 lg:h-32">
       <img
         className="h-full w-full object-cover brightness-[0.4] transition group-hover:brightness-[0.6]"
         src={`${isDev ? "." : ""}${band.photo}`}

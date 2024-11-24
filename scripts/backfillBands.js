@@ -3,7 +3,7 @@ import path from "path";
 import fm from "front-matter";
 import yaml from "js-yaml";
 import readline from "readline";
-import { saveBand } from "./utils";
+import { saveBand } from "./utils.js";
 
 const rl = readline.createInterface({
   input: process.stdin,

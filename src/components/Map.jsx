@@ -20,7 +20,7 @@ function MapCenterHandler({ center, location }) {
   const map = useMap();
   // Don't recenter when navigating back to list
   if (location === "" || center === prevCenter) return;
-  map.flyTo(center, 9);
+  map.flyTo(center, 8);
   setPrevCenter(center);
 }
 

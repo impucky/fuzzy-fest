@@ -35,5 +35,5 @@ lineup:
   - stress-positions
   - the-hirs-collective
 year: 2025
-playlistId: 6hebOY6t38n3HUiiTdgWHe
+playlistId: 4VDQ0PYPbuFqjA84cTlSMI
 ---

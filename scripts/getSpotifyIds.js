@@ -48,7 +48,6 @@ async function getSpotifyId(bandName) {
     });
 
     const resultNames = results.map((r) => r.name.toLowerCase());
-    console.log(resultNames);
 
     const closest = cmpstr.diceClosest(bandName, resultNames);
 
