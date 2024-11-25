@@ -23,7 +23,7 @@ export default function Festival() {
           />
         </div>
         <h2 className="font-vk text-xl font-bold sm:text-2xl">{info.name}</h2>
-        <p className="text-xl">
+        <p className="text-lg sm:text-xl">
           {info.location.city}, {info.location.country}
           {info.isIndoor ? (
             <BuildingIcon className="ml-1 inline h-6 w-6 fill-white" />

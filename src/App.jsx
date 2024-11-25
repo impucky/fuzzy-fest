@@ -14,7 +14,9 @@ export default function App() {
 
   useEffect(() => {
     async function loadContent() {
-      const festivalsResponse = await client.queries.festivalConnection();
+      const festivalsResponse = await client.queries.festivalConnection({
+        last: 999,
+      });
       const festivals = festivalsResponse.data.festivalConnection.edges.map(
         (festival) => {
           return festival.node;
