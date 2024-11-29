@@ -1,12 +1,12 @@
 ---
 name: Stoned from the Underground
 slug: stoned-from-the-underground
-website: https://www.sftu.de/
+website: 'https://www.sftu.de/'
 logo: /img/festivals/stoned-from-the-underground.webp
 dates:
-  start: 2025-07-10T22:00:00.000Z
-  end: 2025-07-12T22:00:00.000Z
-  provisional: July
+  start: 2025-07-09T22:00:00.000Z
+  end: 2025-07-11T22:00:00.000Z
+  provisional: ''
 location:
   country: Germany
   city: Erfurt
@@ -14,3 +14,4 @@ location:
   lon: 11.037207334071617
 year: 2025
 ---
+
