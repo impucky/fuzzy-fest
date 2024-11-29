@@ -13,21 +13,42 @@ location:
   lat: 51.51
   lon: -0.12
 lineup:
-  - 10000-years
-  - amenra
-  - barbarian-hermit
-  - black-willows
-  - bobbie-dazzle
+  - zeal-and-ardor
+  - earth
   - elder
-  - erronaut
-  - josiah
-  - planet-of-zeus
-  - rickshaw-billies-burger-patrol
-  - scott-hepple-and-the-sun-band
-  - sons-of-alpha-centauri
+  - amenra
+  - pallbearer
   - stoned-jesus
+  - conan
   - the-devil-and-the-almighty-blues
+  - planet-of-zeus
+  - elephant-tree
+  - chod
+  - hippie-death-cult
+  - castle-rat
+  - rickshaw-billies-burger-patrol
+  - sons-of-alpha-centauri
+  - avon
+  - green-milk-from-the-planet-orange
+  - servo
+  - josiah
+  - mr-bison
+  - kind
+  - el-moono
+  - the-hazytones
   - volcanova
+  - black-willows
+  - 10000-years
+  - scott-hepple-and-the-sun-band
+  - barbarian-hermit
+  - king-blotfly
+  - lust-ritual
+  - erronaut
+  - bobbie-dazzle
+  - slump
+  - witchorious
+  - the-summit-fever
+  - dresden-wolves
 year: 2025
-playlistId: 74AJjNbN0oAzze1BYqBpWQ
+playlistId: 1jYWt4mgOXUBjlwihF0Gkl
 ---

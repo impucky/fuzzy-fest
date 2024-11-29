@@ -2,22 +2,7 @@ import fs from "fs";
 import path from "path";
 import fm from "front-matter";
 import yaml from "js-yaml";
-import readline from "readline";
-import { saveBand } from "./utils.js";
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-function confirmPrompt(message) {
-  return new Promise((resolve) => {
-    rl.question(`${message} (y/n): `, (answer) => {
-      rl.close();
-      resolve(answer.toLowerCase() === "y");
-    });
-  });
-}
+import { saveBand, confirmPrompt } from "./utils.js";
 
 async function getAllBands() {
   const bandList = [];

@@ -1,7 +1,7 @@
 ---
 name: Palp Rocklette
 slug: palp-rocklette
-website: 'https://palpfestival.ch/'
+website: https://palpfestival.ch/
 logo: /img/festivals/palp-rocklette.webp
 dates:
   start: 2025-08-01T22:00:00.000Z
@@ -17,5 +17,5 @@ lineup:
   - fu-manchu
   - earthless
 year: 2025
+playlistId: 1fBsHAj1o2OfYTkUsxfZ1U
 ---
-

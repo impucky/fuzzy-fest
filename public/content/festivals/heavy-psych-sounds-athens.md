@@ -14,10 +14,16 @@ location:
   lon: 23.711932194015564
 lineup:
   - orange-goblin
-  - tuber
+  - nightstalker
   - belzebong
   - black-rainbows
+  - margarita-witch-cult
   - acid-mammoth
+  - tuber
+  - mr-bison
+  - puta-volcano
+  - fvzz-popvli
+  - birds-of-vale
 year: 2025
-playlistId: 4SDRKjhwh9LATfO2FhRLui
+playlistId: 52YWYVS3VVtLBWmKdWK9XN
 ---

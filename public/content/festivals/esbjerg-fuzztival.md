@@ -12,5 +12,13 @@ location:
   city: Esbjerg
   lat: 55.46497946389984
   lon: 8.459744361489337
+lineup:
+  - skyjoggers
+  - karkara
+  - wyatt-e
+  - djiin
+  - green-milk-from-the-planet-orange
+  - vestjysk-orken
 year: 2025
+playlistId: 35MfkecjqBbRRmAAkNvgDC
 ---

@@ -1,7 +1,7 @@
 ---
 name: Hoflärm Open Air
 slug: hoflaerm-open-air
-website: 'https://www.hoflaerm.de/'
+website: https://www.hoflaerm.de/
 logo: /img/festivals/hoflaerm-open-air.webp
 isIndoor: false
 dates:
@@ -28,5 +28,5 @@ lineup:
   - rezn
   - graveyard
 year: 2025
+playlistId: 4QFK9oScm6ddoFMMoo14rL
 ---
-
