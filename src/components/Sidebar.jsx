@@ -25,13 +25,9 @@ export default function Sidebar() {
     <AnimatePresence>
       <Switch>
         <Route path="/">
-          {showLanding ? (
-            <SidebarLayout key={location}>
-              <Landing />
-            </SidebarLayout>
-          ) : (
-            <Redirect to="/festivals" />
-          )}
+          <SidebarLayout key={location}>
+            {showLanding ? <Landing /> : <FestivalList />}
+          </SidebarLayout>
         </Route>
 
         <Route path="/festivals">
