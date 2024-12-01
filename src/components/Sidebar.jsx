@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "motion/react";
 import FestivalList from "./FestivalList";
 import Festival from "./Festival";
 import About from "./About";
+import Landing from "./Landing";
 import BackLink from "./BackLink";
 
 export default function Sidebar() {
@@ -14,6 +15,12 @@ export default function Sidebar() {
     <AnimatePresence>
       <Switch>
         <Route path="/">
+          <SidebarLayout key={location}>
+            <Landing />
+          </SidebarLayout>
+        </Route>
+
+        <Route path="/festivals">
           <SidebarLayout key={location}>
             <FestivalList />
           </SidebarLayout>

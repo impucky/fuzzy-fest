@@ -13,7 +13,7 @@ export default function Festival() {
   const festivals = useAtomValue(festivalsAtom);
   const info = festivals.find((f) => f.slug === params.festival);
 
-  if (!info) return <Redirect to="/" />;
+  if (!info) return <Redirect to="/2025" />;
 
   return (
     <div className="flex h-full flex-col overflow-y-scroll">

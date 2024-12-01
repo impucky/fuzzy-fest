@@ -1,16 +1,20 @@
 export default function About() {
   return (
-    <div className="text-md mt-4 w-full p-6">
+    <div className="text-md flex w-full flex-col gap-2 overflow-y-auto p-6 pt-12">
       <p>
         <span className="font-logo text-lg text-[salmon]">FUZZY FEST</span> is
         my attempt at mapping out the many festivals featuring heavy psych,
-        stoner, doom... in Europe.
+        desert rock, stoner, doom... in Europe. It's a reflection of my personal
+        tastes and is by no means exhaustive.
       </p>
       <p>
-        Please let me know if you spot something wrong or a missing festival!
+        I do my best to keep the info up to date, but when in doubt always trust
+        the events' official websites and social media.
       </p>
       <p>
-        I'm particularly interested in smaller festivals featuring local bands.
+        Please let me know if you spot something wrong or a missing festival.
+        I'm particularly interested in smaller fests featuring local bands, as I
+        have limited means of searching outside of French and English content.
       </p>
       <p>
         You can leave a comment on the{" "}
