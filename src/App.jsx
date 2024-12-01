@@ -39,7 +39,7 @@ export default function App() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
-      className="flex h-dvh w-full flex-col bg-gradient-to-t from-neutral-950 to-neutral-800 md:flex-row"
+      className="flex h-dvh w-full flex-col bg-gradient-to-t from-neutral-950 to-neutral-800 lg:flex-row"
     >
       <Map />
       <Sidebar />

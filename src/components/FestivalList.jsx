@@ -15,10 +15,10 @@ export default function FestivalList() {
 
   return (
     <>
-      <h2 className="font-vk border-b border-t border-[salmon] p-1 pt-2 text-center text-xl font-bold text-[salmon] sm:text-2xl lg:text-3xl">
+      <h2 className="font-vk z-[1] border-b border-t border-[salmon] p-1 pt-2 text-center text-xl font-bold text-[salmon] shadow-[0_6px_16px_rgba(0,0,0,0.5)] sm:text-2xl lg:text-3xl">
         Festivals in 2025
       </h2>
-      <ul className="font-vk flex flex-wrap items-start justify-start overflow-y-scroll p-2 text-center">
+      <ul className="font-vk relative flex flex-wrap items-start justify-start overflow-y-scroll p-2 text-center">
         <AnimatePresence>
           {filterFestivals(festivals, filters, location)
             .sort((a, b) => a.name.localeCompare(b.name))

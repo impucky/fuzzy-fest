@@ -48,7 +48,7 @@ function SidebarLayout({ children }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.7 }}
-      className="relative z-[500] flex h-2/5 w-full flex-col shadow-[0_0_8px_rgba(0,0,0,0.7)] md:h-full md:w-2/5"
+      className="relative z-[500] flex h-2/5 w-full flex-col shadow-[0_0_8px_rgba(0,0,0,0.7)] lg:h-full lg:w-2/5"
     >
       {children}
     </motion.div>
