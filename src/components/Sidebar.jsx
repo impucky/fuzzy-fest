@@ -1,6 +1,6 @@
+import { useState, useEffect } from "react";
 import { Route, Switch, Redirect, useLocation } from "wouter";
 import { useHashLocation } from "wouter/use-hash-location";
-import { useAtomValue } from "jotai";
 import { AnimatePresence, motion } from "motion/react";
 import FestivalList from "./FestivalList";
 import Festival from "./Festival";
@@ -10,14 +10,28 @@ import BackLink from "./BackLink";
 
 export default function Sidebar() {
   const [location, setLocation] = useHashLocation();
+  const [showLanding, setShowLanding] = useState(true);
+
+  useEffect(() => {
+    const returningUser = localStorage.getItem("returningUser");
+    if (returningUser) {
+      setShowLanding(false);
+    } else if (location !== "/") {
+      localStorage.setItem("returningUser", "true");
+    }
+  }, [location]);
 
   return (
     <AnimatePresence>
       <Switch>
         <Route path="/">
-          <SidebarLayout key={location}>
-            <Landing />
-          </SidebarLayout>
+          {showLanding ? (
+            <SidebarLayout key={location}>
+              <Landing />
+            </SidebarLayout>
+          ) : (
+            <Redirect to="/festivals" />
+          )}
         </Route>
 
         <Route path="/festivals">
@@ -41,7 +55,7 @@ export default function Sidebar() {
         </Route>
 
         <Route>
-          <Redirect to="/" />
+          <Redirect to="/festivals" />
         </Route>
       </Switch>
     </AnimatePresence>
