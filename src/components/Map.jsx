@@ -97,7 +97,7 @@ export default function Map() {
               >
                 {/* permanent tooltip but only renders if matching highlight or viewing fest */}
                 {(highlight === festival.slug ||
-                  location.slice(1) === festival.slug) && (
+                  location.includes(festival.slug)) && (
                   <FestivalTooltip festival={festival} />
                 )}
               </Marker>

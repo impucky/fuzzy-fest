@@ -2,8 +2,8 @@ import { Link } from "wouter";
 
 export default function Landing() {
   return (
-    <div className="flex w-full flex-col gap-2 p-6 text-center">
-      <h2 className="font-vk mb-4 text-center text-3xl font-bold">
+    <div className="flex w-full flex-col gap-2 overflow-y-auto p-6 px-2 text-center">
+      <h2 className="font-vk mb-4 text-center text-2xl font-bold sm:text-3xl">
         Welcome to{" "}
         <span className="font-logo text-2xl text-[salmon]">FUZZY FEST</span> !
       </h2>

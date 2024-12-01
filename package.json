@@ -2,7 +2,7 @@
   "name": "fuzzy-fest",
   "homepage": "https://impucky.github.io/fuzzy-fest/",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "tinacms dev -c \"vite\"",
