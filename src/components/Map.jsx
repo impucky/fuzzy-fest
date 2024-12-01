@@ -4,6 +4,7 @@ import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import { useMap } from "react-leaflet/hooks";
 import { useHashLocation } from "wouter/use-hash-location";
+import { useParams } from "wouter";
 import { useState, useEffect } from "react";
 import { findCoordsCenter, formatDateRange, filterFestivals } from "../utils";
 import { useAtom, useAtomValue } from "jotai";
@@ -26,13 +27,14 @@ function MapCenterHandler({ center, location }) {
 
 export default function Map() {
   const [location, setLocation] = useHashLocation();
+  const params = useParams();
   const [center, setCenter] = useState(null);
   const [highlight, setHighlight] = useAtom(highlightAtom);
   const filters = useAtomValue(mapFiltersAtom);
   const festivals = useAtomValue(festivalsAtom);
 
   function centerOnFestival() {
-    const festival = festivals.find((f) => location === `/${f.slug}`);
+    const festival = festivals.find((f) => location.includes(f.slug));
     if (festival) {
       setCenter([festival.location.lat, festival.location.lon]);
     }
@@ -48,7 +50,7 @@ export default function Map() {
 
   // Recenter when navigating from sidebar list
   useEffect(() => {
-    if (location !== "/") {
+    if (location.includes("/festival/")) {
       centerOnFestival();
     }
   }, [location]);
@@ -83,7 +85,7 @@ export default function Map() {
                 eventHandlers={{
                   click: () => {
                     setCenter(position);
-                    setLocation(festival.slug);
+                    setLocation(`/festival/${festival.slug}`);
                   },
                   mouseover: () => {
                     setHighlight(festival.slug);

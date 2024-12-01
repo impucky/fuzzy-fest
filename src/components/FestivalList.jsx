@@ -37,7 +37,7 @@ export default function FestivalList() {
                 >
                   <Link
                     className={`text-center text-lg font-bold transition hover:text-[salmon] md:text-xl lg:text-2xl ${hl ? "text-[salmon]" : ""}`}
-                    href={`/${f.slug}`}
+                    href={`/festival/${f.slug}`}
                   >
                     {f.name}
                   </Link>

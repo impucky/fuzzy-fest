@@ -1,5 +1,6 @@
 import { formatDateRange, isDev } from "../utils";
 import { useHashLocation } from "wouter/use-hash-location";
+import { Redirect, useParams } from "wouter";
 import { useAtomValue } from "jotai";
 import { festivalsAtom } from "../atoms/festivalsAtom";
 import Lineup from "./Lineup";
@@ -8,10 +9,11 @@ import BuildingIcon from "../icons/building.svg?react";
 
 export default function Festival() {
   const [location, setLocation] = useHashLocation();
+  const params = useParams();
   const festivals = useAtomValue(festivalsAtom);
-  const info = festivals.find((f) => f.slug === location.slice(1));
+  const info = festivals.find((f) => f.slug === params.festival);
 
-  if (!info) return setLocation("/");
+  if (!info) return <Redirect to="/" />;
 
   return (
     <div className="flex h-full flex-col overflow-y-scroll">

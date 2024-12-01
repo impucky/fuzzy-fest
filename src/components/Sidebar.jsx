@@ -26,7 +26,7 @@ export default function Sidebar() {
           </SidebarLayout>
         </Route>
 
-        <Route path={`:festival`}>
+        <Route path={`/festival/:festival`}>
           <SidebarLayout key={location}>
             <BackLink />
             <Festival />
