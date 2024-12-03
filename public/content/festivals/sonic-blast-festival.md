@@ -12,5 +12,20 @@ location:
   city: Âncora
   lat: 41.807307302798684
   lon: -8.861946138134142
+lineup:
+  - fu-manchu
+  - amenra
+  - circle-jerks
+  - earthless
+  - emma-ruth-rundle
+  - my-sleeping-karma
+  - dopethrone
+  - slomosa
+  - jjuujjuu
+  - patriarchy
+  - gnome
+  - dame-area
+  - daevar
+  - spoon-benders
 year: 2025
 ---
