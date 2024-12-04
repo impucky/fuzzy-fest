@@ -3,11 +3,9 @@ import { Link } from "wouter";
 export default function Landing() {
   return (
     <div className="flex w-full flex-col gap-2 overflow-y-auto p-6 px-2 text-center">
-      <h2 className="font-vk mb-4 text-center text-2xl font-bold sm:text-3xl">
-        Welcome to{" "}
-        <span className="font-logo text-2xl text-[salmon]">FUZZY FEST</span> !
-      </h2>
-      <p className="text-xl">
+      <LandingHeader />
+      <h3 className="mt-6 text-center text-lg sm:text-2xl">Welcome !</h3>
+      <p className="text-md sm:text-xl">
         You can get started by looking around the map and using the filters, or
         go straight to the{" "}
         <Link
@@ -29,5 +27,18 @@ export default function Landing() {
         .
       </p>
     </div>
+  );
+}
+
+function LandingHeader() {
+  return (
+    <>
+      <h1 className="font-logo mt-4 text-4xl font-bold text-[#fc9084] drop-shadow-[0px_5px_0_#bf4e4e] sm:text-5xl xl:text-6xl">
+        FUZZY FEST
+      </h1>
+      <h2 className="font-vk text-lg sm:text-xl xl:text-2xl">
+        Heavy music festivals across Europe
+      </h2>
+    </>
   );
 }
