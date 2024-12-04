@@ -24,6 +24,7 @@ const inputFiles = fs.readdirSync(inputPath).filter((file) => {
 
 if (inputFiles.length === 0) {
   console.log("Wrong path or no files to process, exiting...");
+  process.exit();
 }
 
 (async () => {
@@ -54,4 +55,5 @@ if (inputFiles.length === 0) {
   }
 
   console.log("All done, exiting...");
+  process.exit();
 })();
