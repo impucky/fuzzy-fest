@@ -1,13 +1,13 @@
 ---
 name: Truckfighters' Fuzz Festival
 slug: truckfighters-fuzz-festival
-website: https://www.truckfighters.com/festival/
+website: 'https://www.truckfighters.com/festival/'
 logo: /img/festivals/truckfighters-fuzz-festival.webp
 isIndoor: true
 dates:
-  start: 2025-11-21T23:00:00.000Z
-  end: 2025-11-22T23:00:00.000Z
-  provisional: November
+  start: 2025-11-13T23:00:00.000Z
+  end: 2025-11-14T23:00:00.000Z
+  provisional: ''
 location:
   country: Sweden
   city: Stockholm
@@ -15,3 +15,4 @@ location:
   lon: 18.032458290319482
 year: 2025
 ---
+
