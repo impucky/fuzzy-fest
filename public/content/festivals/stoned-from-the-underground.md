@@ -12,6 +12,11 @@ location:
   city: Erfurt
   lat: 51.06952796976761
   lon: 11.037207334071617
+lineup:
+  - monolord
+  - brant-bjork-trio
+  - splinter
+  - el-perro
+  - stonerhead
 year: 2025
 ---
-

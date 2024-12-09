@@ -86,6 +86,11 @@ export default defineConfig({
             label: "Indoor",
           },
           {
+            type: "boolean",
+            name: "partialLineup",
+            label: "Partial lineup",
+          },
+          {
             label: "Dates",
             name: "dates",
             type: "object",

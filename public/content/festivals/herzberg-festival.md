@@ -12,5 +12,13 @@ location:
   city: Breitenbach am Herzberg
   lat: 50.77515517573324
   lon: 9.438569517949654
+lineup:
+  - weather-systems
+  - dewolff
+  - rpwl
+  - my-sleeping-karma
+  - delving
+  - leif-de-leeuw-band
+  - birth-control
 year: 2025
 ---

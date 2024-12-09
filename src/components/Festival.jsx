@@ -48,7 +48,9 @@ export default function Festival() {
       </div>
 
       {info.lineup && info.lineup.length > 0 ? (
-        <Lineup lineup={info.lineup} />
+        <>
+          <Lineup lineup={info.lineup} partial={info.partialLineup} />
+        </>
       ) : (
         <p className="w-full p-2 text-center text-lg">Lineup TBA</p>
       )}

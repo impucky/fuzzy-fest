@@ -10,8 +10,7 @@
     "start": "tinacms build && vite build && vite preview",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "tinacms build && npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "npm run build && netlify deploy --prod",
     "backfill": "node scripts/backfillBands.js",
     "imgbands": "node scripts/optimizeImages.js ./public/img/bands 80",
     "imgfests": "node scripts/optimizeImages.js ./public/img/festivals 100"

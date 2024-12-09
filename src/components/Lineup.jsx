@@ -4,7 +4,7 @@ import { useAtomValue } from "jotai";
 import { bandsAtom } from "../atoms/bandsAtom";
 import ArrowDownIcon from "../icons/arrow-down.svg?react";
 
-export default function Lineup({ lineup }) {
+export default function Lineup({ lineup, partial }) {
   const [collapsed, setCollapsed] = useState(false);
   const allBands = useAtomValue(bandsAtom);
   const bands = allBands.filter((b) => lineup.includes(b.slug));
@@ -33,6 +33,11 @@ export default function Lineup({ lineup }) {
           .map((band, i) => {
             return <BandItem key={band.name + i} band={band} />;
           })}
+        {partial && (
+          <p className="font-vk mt-1 w-full p-2 text-center text-lg sm:text-xl">
+            + many more...
+          </p>
+        )}
       </ul>
     </>
   );
