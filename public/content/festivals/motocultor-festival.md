@@ -3,7 +3,7 @@ name: Motocultor Festival
 slug: motocultor-festival
 website: https://www.motocultor-festival.com/
 logo: /img/festivals/motocultor-festival.webp
-isIndoor: true
+isIndoor: false
 partialLineup: true
 dates:
   start: 2025-08-14T23:00:00.000Z
