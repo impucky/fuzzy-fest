@@ -13,6 +13,15 @@ location:
   city: Stockholm
   lat: 59.314527512626405
   lon: 18.032458290319482
+lineup:
+  - truckfighters
+  - brant-bjork-trio
+  - gnome
+  - domkraft
+  - craneium
+  - carson
+  - stonus
+  - hellroom-projectors
 year: 2025
 ---
 
