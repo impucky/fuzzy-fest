@@ -1,7 +1,7 @@
 ---
 name: Dunajam
 slug: dunajam
-website: http://www.quadorb.com/dunajam/
+website: 'http://www.quadorb.com/dunajam/'
 logo: /img/festivals/dunajam.webp
 dates:
   start: 2025-06-19T22:00:00.000Z
@@ -10,7 +10,8 @@ dates:
 location:
   country: Italy
   city: '???'
-  lat: 39.37373500935011
-  lon: 8.379705116023821
+  lat: 40.133
+  lon: 9.099
 year: 2025
 ---
+
