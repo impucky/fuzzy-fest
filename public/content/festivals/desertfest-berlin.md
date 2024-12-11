@@ -33,6 +33,14 @@ lineup:
   - the-devil-and-the-almighty-blues
   - turbo-moses
   - wine-lips
+  - dinosaur-jr
+  - dozer
+  - my-sleeping-karma
+  - pallbearer
+  - temple-fang
+  - coogans-bluff
+  - stinking-lizaveta
+  - darsombra
 year: 2025
 playlistId: 3Pr9vwjD04A1NjX2DsYxSq
 ---

@@ -5,9 +5,8 @@ website: 'https://barcelonapsychfest.com/ '
 logo: /img/festivals/barcelona-psych-fest.webp
 isIndoor: true
 dates:
-  start: 2025-04-17T22:00:00.000Z
-  end: 2025-04-19T22:00:00.000Z
-  provisional: April
+  start: 2025-04-03T22:00:00.000Z
+  end: 2025-04-05T22:00:00.000Z
 location:
   country: Spain
   city: Barcelona
