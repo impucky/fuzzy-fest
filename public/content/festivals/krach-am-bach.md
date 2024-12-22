@@ -16,6 +16,9 @@ lineup:
   - the-cosmic-dead
   - the-warlocks
   - khan
+  - to-yo
+  - god-is-an-astronaut
+
 year: 2025
 playlistId: 0qWzZX7Sb8J50thm899xjL
 ---

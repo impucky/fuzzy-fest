@@ -15,16 +15,20 @@ location:
 lineup:
   - graveyard
   - frankie-and-the-witch-fingers
+  - elder
+  - the-devil-and-the-almighty-blues
+  - slomosa
   - whores
+  - temple-fang
+  - the-janitors
   - orsak-oslo
   - lord-buffalo
+  - rickshaw-billies-burger-patrol
+  - khan
+  - help
+  - karkara
   - heath
   - rats-and-daggers
-  - den-der-hale
-  - karkara
-  - temple-fang
-  - the-devil-and-the-almighty-blues
-  - elder
 year: 2025
 playlistId: 1IRUKTc9cBj1EMnAumRS1Y
 ---

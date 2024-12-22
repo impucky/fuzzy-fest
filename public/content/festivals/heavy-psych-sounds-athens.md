@@ -24,6 +24,12 @@ lineup:
   - puta-volcano
   - fvzz-popvli
   - birds-of-vale
+  - truckfighters
+  - alunah
+  - wyatt-e
+  - warlung
+  - sadhus
+  - congulus
 year: 2025
 playlistId: 52YWYVS3VVtLBWmKdWK9XN
 ---

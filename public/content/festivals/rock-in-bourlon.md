@@ -13,4 +13,9 @@ location:
   lat: 50.179271456083306
   lon: 3.120282178088326
 year: 2025
+lineup:
+  - health
+  - brat
+  - hellripper
+  - coilguns
 ---

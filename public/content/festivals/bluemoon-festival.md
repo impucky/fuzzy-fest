@@ -13,4 +13,9 @@ location:
   lat: 51.751131191225475
   lon: 14.34181493121305
 year: 2025
+lineup:
+  - melvins
+  - the-atomic-bitchwax
+  - spirit-mother
+  - nalar
 ---

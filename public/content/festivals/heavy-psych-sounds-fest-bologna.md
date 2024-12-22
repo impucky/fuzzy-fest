@@ -12,4 +12,19 @@ location:
   lat: 44.50493834639429
   lon: 11.32797808656109
 year: 2025
+lineup:
+  - stoned-jesus
+  - conan
+  - monkey3
+  - mars-red-sky
+  - margarita-witch-cult
+  - hippie-death-cult
+  - the-cosmic-dead
+  - tons
+  - wyatt-e
+  - alunah
+  - ananda-mida
+  - fvzz-popvli
+  - humulus
+  - skyjoggers
 ---

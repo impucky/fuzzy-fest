@@ -23,6 +23,12 @@ lineup:
   - pendejo
   - wucan
   - the-devil-and-the-almighty-blues
+  - motorpsycho
+  - dead-meadow
+  - my-sleeping-karma
+  - the-thing
+  - the-polvos
+  - sarkh
 year: 2025
 playlistId: 37utoDS9SI6hKzFh0OGDmF
 ---

@@ -19,6 +19,10 @@ lineup:
   - djiin
   - green-milk-from-the-planet-orange
   - vestjysk-orken
+  - daevar
+  - daily-thompson
+  - dunes
+  - aptera
 year: 2025
 playlistId: 35MfkecjqBbRRmAAkNvgDC
 ---

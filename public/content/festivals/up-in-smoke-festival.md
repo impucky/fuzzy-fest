@@ -13,4 +13,10 @@ location:
   lat: 47.52739764563815
   lon: 7.694003097998303
 year: 2025
+lineup:
+  - the-obsessed
+  - the-vintage-caravan
+  - sienna-root
+  - heckspoiler
+  - zerre
 ---
