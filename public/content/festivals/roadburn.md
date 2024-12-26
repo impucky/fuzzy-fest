@@ -36,4 +36,5 @@ lineup:
   - the-hirs-collective
 year: 2025
 playlistId: 4VDQ0PYPbuFqjA84cTlSMI
+partialLineup: true
 ---

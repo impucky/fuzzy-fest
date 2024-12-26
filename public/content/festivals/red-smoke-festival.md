@@ -13,5 +13,7 @@ location:
   lat: 51.88404406751484
   lon: 17.793200089966014
 year: 2025
+lineup:
+  - brant-bjork-trio
 ---
 

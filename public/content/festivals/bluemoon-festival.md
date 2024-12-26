@@ -15,7 +15,11 @@ location:
 year: 2025
 lineup:
   - melvins
+  - slomosa
   - the-atomic-bitchwax
+  - gnome
+  - earthbong
   - spirit-mother
   - nalar
+  - methuselian
 ---

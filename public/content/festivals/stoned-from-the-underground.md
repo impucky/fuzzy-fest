@@ -18,5 +18,9 @@ lineup:
   - splinter
   - el-perro
   - stonerhead
+  - king-buffalo
+  - skyjoggers
+  - sacri-monti
+  - elephant-tree
 year: 2025
 ---

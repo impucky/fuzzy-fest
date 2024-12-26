@@ -1,5 +1,5 @@
 ---
-name: Atmoersphere
+name: atMOERSphere
 slug: atmoersphere
 website: 'https://atmoersphere-festival.de/'
 logo: /img/festivals/atmoersphere.webp
@@ -12,5 +12,7 @@ location:
   city: Moers
   lat: 51.45157175041066
   lon: 6.63121887328665
+lineup:
+  - swan-valley-heights
 ---
 
