@@ -24,7 +24,6 @@ async function createAll() {
     const filePath = path.join("./public/content/festivals", file);
     const data = fm(fs.readFileSync(filePath, "utf-8"));
     const { lineup, name, year, playlistId } = data.attributes;
-    if (playlistId) continue;
     if (!lineup) continue;
     // Get top track for every band
     for (const band of lineup) {
@@ -34,8 +33,14 @@ async function createAll() {
         trackUris.push(topTrack);
       }
     }
-    const newPlaylistId = await createPlaylist(name, year, trackUris);
-    await saveFestival({ ...data.attributes, playlistId: newPlaylistId });
+    if (playlistId) {
+      console.log("Updating existing playlist for", name);
+      await updatePlaylist(playlistId, trackUris);
+    } else {
+      console.log("Creating a new playlist for", name);
+      const newPlaylistId = await createPlaylist(name, year, trackUris);
+      await saveFestival({ ...data.attributes, playlistId: newPlaylistId });
+    }
   }
 }
 
@@ -44,6 +49,59 @@ async function getBandId(slug) {
     fs.readFileSync(`./public/content/bands/${slug}.md`, "utf-8"),
   );
   return data.attributes.spotifyId;
+}
+
+async function updatePlaylist(playlistId, trackUris) {
+  try {
+    const isOwnPlaylist = await checkOwnership(playlistId);
+    if (!isOwnPlaylist) {
+      console.log("Not my playlist, skipping...");
+      return;
+    }
+    await clearPlaylist(playlistId);
+    console.log("Updating playlist", playlistId);
+
+    await addTracks(playlistId, trackUris);
+    console.log("Updated " + playlistId);
+  } catch (error) {
+    console.error(`Failed to update playlist: ${error.message}`);
+    throw error;
+  }
+}
+
+async function checkOwnership(playlistId) {
+  try {
+    const response = await axios.get(
+      `https://api.spotify.com/v1/playlists/${playlistId}`,
+      {
+        headers: headers(clientToken),
+      },
+    );
+    console.log("playlist owner:", response.data.owner.id);
+    if (response.data.owner.id !== userId) {
+      return false;
+    } else return true;
+  } catch (error) {
+    console.error(`Couldn't check ownership: ${error.message}`);
+  }
+}
+
+async function clearPlaylist(playlistId) {
+  console.log("Clearing playlist", playlistId);
+  try {
+    const response = await axios.put(
+      `https://api.spotify.com/v1/playlists/${playlistId}/tracks`,
+      {
+        uris: [],
+      },
+      {
+        headers: headers(userToken),
+      },
+    );
+    console.log(`Cleared`);
+  } catch (error) {
+    console.error(`Failed to clear playlist: ${error.message}`);
+  }
 }
 
 async function createPlaylist(festivalName, festivalYear, trackUris) {
@@ -58,6 +116,7 @@ async function createPlaylist(festivalName, festivalYear, trackUris) {
       headers: headers(userToken),
     },
   );
+
   await addTracks(playlistResponse.data.id, trackUris);
   console.log("Created " + title);
   return playlistResponse.data.id;

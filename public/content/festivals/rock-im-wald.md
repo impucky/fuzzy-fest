@@ -12,10 +12,11 @@ location:
   lat: 50.18117490532942
   lon: 11.1174404019055
 year: 2025
-lineup: 
+lineup:
   - mothers-cake
   - nightstalker
   - slomosa
   - velvet-two-stripes
   - wine-lips
+playlistId: 5KZD3LOI391rvXd8iff4We
 ---

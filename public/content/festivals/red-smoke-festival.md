@@ -1,7 +1,7 @@
 ---
 name: Red Smoke Festival
 slug: red-smoke-festival
-website: 'https://redsmokefestival.com/'
+website: https://redsmokefestival.com/
 logo: /img/festivals/red-smoke-festival.webp
 dates:
   start: 2025-07-10T22:00:00.000Z
@@ -15,5 +15,5 @@ location:
 year: 2025
 lineup:
   - brant-bjork-trio
+playlistId: 6QaVB6sDhOdoM3XX2DEgAV
 ---
-

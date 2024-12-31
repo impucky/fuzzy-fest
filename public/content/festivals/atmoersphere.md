@@ -1,7 +1,7 @@
 ---
 name: atMOERSphere
 slug: atmoersphere
-website: 'https://atmoersphere-festival.de/'
+website: https://atmoersphere-festival.de/
 logo: /img/festivals/atmoersphere.webp
 isIndoor: true
 dates:
@@ -14,5 +14,6 @@ location:
   lon: 6.63121887328665
 lineup:
   - swan-valley-heights
+playlistId: 55boljenqDkzA7li07quut
+year: 2025
 ---
-

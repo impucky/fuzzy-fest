@@ -1,7 +1,7 @@
 ---
 name: SoL Psych Out Karlsruhe
 slug: sol-psych-out-karlsruhe
-website: 'https://www.facebook.com/events/374465175689735/'
+website: https://www.facebook.com/events/374465175689735/
 logo: /img/festivals/sol-sonic-ride-cologne.webp
 isIndoor: true
 dates:
@@ -19,5 +19,5 @@ lineup:
   - greenleaf
   - colour-haze
 year: 2025
+playlistId: 2dSF0mFDQKJ3rgwTDvhxeD
 ---
-

@@ -1,7 +1,7 @@
 ---
 name: Stoned from the Underground
 slug: stoned-from-the-underground
-website: 'https://www.sftu.de/'
+website: https://www.sftu.de/
 logo: /img/festivals/stoned-from-the-underground.webp
 dates:
   start: 2025-07-09T22:00:00.000Z
@@ -23,4 +23,5 @@ lineup:
   - sacri-monti
   - elephant-tree
 year: 2025
+playlistId: 1voTOycmK2uDoNTyhHKfye
 ---

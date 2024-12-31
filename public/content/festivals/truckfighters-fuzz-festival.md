@@ -1,7 +1,7 @@
 ---
 name: Truckfighters' Fuzz Festival
 slug: truckfighters-fuzz-festival
-website: 'https://www.truckfighters.com/festival/'
+website: https://www.truckfighters.com/festival/
 logo: /img/festivals/truckfighters-fuzz-festival.webp
 isIndoor: true
 dates:
@@ -23,5 +23,5 @@ lineup:
   - stonus
   - hellroom-projectors
 year: 2025
+playlistId: 2FYLbe8SqMtjZG9GjpVN4S
 ---
-
