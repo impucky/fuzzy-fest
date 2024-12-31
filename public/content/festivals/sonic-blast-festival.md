@@ -28,5 +28,5 @@ lineup:
   - daevar
   - spoon-benders
 year: 2025
-playlistId: 69zS7Or2hht7t05xyKvT2q
+playlistId: 0tF7O5FQkFY8NgZ97AkjWn
 ---

@@ -23,5 +23,5 @@ lineup:
   - sacri-monti
   - elephant-tree
 year: 2025
-playlistId: 1voTOycmK2uDoNTyhHKfye
+playlistId: 3g7nUPKncyQ8RXzDu46u60
 ---

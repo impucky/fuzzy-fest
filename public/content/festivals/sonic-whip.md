@@ -30,5 +30,5 @@ lineup:
   - heath
   - rats-and-daggers
 year: 2025
-playlistId: 1IRUKTc9cBj1EMnAumRS1Y
+playlistId: 0xQ4RW9cGUTplIlJNeuzqy
 ---

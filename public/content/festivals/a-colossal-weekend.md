@@ -28,6 +28,6 @@ lineup:
   - jo-quail
   - machukha
 year: 2025
-playlistId: 58ggFP1mK4bENGdpe4E7Bp
+playlistId: 0vfVEYp9Zsius2eADqnOhr
 ---
 

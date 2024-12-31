@@ -20,5 +20,5 @@ lineup:
   - monolord
   - pelican
 year: 2025
-playlistId: 2V8Ige2lc0hJ7nKAmrIf7n
+playlistId: 103CAy9r7KFnf9VbXngGqS
 ---
