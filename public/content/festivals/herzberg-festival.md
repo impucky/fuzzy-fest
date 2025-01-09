@@ -13,12 +13,18 @@ location:
   lat: 50.77515517573324
   lon: 9.438569517949654
 lineup:
-  - weather-systems
+  - il-civetto
+  - motorpsycho
+  - the-magic-mumble-jumble
   - dewolff
+  - weather-systems
   - rpwl
+  - ahmed-eid-and-ilyf
   - my-sleeping-karma
-  - delving
   - leif-de-leeuw-band
+  - delving
+  - dirty-sound-magnet
+  - weite
   - birth-control
 year: 2025
 playlistId: 4394PgGlOjGxNePJRgWmPG

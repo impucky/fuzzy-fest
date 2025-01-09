@@ -4,8 +4,8 @@ slug: lazy-bones-festival
 website: https://www.soundofliberation.com/festivals/lazy-bones-festival
 logo: /img/festivals/lazy-bones-festival.webp
 dates:
-  start: 2025-10-25T22:00:00.000Z
-  end: 2025-10-25T22:00:00.000Z
+  start: 2025-10-24T22:00:00.000Z
+  end: 2025-10-24T22:00:00.000Z
 location:
   country: Germany
   city: Hamburg

@@ -29,6 +29,7 @@ lineup:
   - the-thing
   - the-polvos
   - sarkh
+  - windhand
 year: 2025
 playlistId: 37utoDS9SI6hKzFh0OGDmF
 ---

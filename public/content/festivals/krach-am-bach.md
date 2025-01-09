@@ -12,13 +12,19 @@ location:
   lat: 51.91839860165112
   lon: 8.097309672737138
 lineup:
-  - rezn
-  - the-cosmic-dead
-  - the-warlocks
-  - khan
-  - to-yo
+  - osees
   - god-is-an-astronaut
-
+  - rezn
+  - elephant-tree
+  - the-warlocks
+  - the-cosmic-dead
+  - full-earth
+  - to-yo
+  - khan
+  - feedy
+  - desert-smoke
+  - oakfarm
+  - kalamata
 year: 2025
 playlistId: 5qeitPLHMH7iPZdJaUvKqp
 ---

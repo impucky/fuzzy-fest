@@ -39,6 +39,7 @@
     "@vitejs/plugin-react": "^4.3.3",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.7",
+    "bandcamp-fetch": "^2.0.0",
     "cmpstr": "^1.0.3",
     "dotenv": "^16.4.5",
     "eslint": "^9.13.0",

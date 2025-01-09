@@ -13,19 +13,25 @@ location:
   lat: 51.54680520786811
   lon: -0.10391086141521237
 lineup:
-  - circus-cannon
-  - flamebearer
-  - outback
-  - alunah
-  - wormsand
-  - novere
-  - witchfinder
-  - wyatt-e
+  - valley-of-the-sun
+  - monkey3
+  - sons-of-arrakis
+  - mars-red-sky
   - red-sun-atacama
   - moonstone
-  - mars-red-sky
-  - sons-of-arrakis
-  - monkey3
+  - wormsand
+  - witchfinder
+  - sunnata
+  - spaceslug
+  - wyatt-e
+  - the-cosmic-dead
+  - flamebearer
+  - sleeping-mountain
+  - circus-cannon
+  - alunah
+  - outback
+  - novere
+  - goat-major
 year: 2024
 playlistId: 2d4etZvJf8gjMlFZZkLNSn
 ---

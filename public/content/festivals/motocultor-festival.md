@@ -1,12 +1,12 @@
 ---
 name: Motocultor Festival
 slug: motocultor-festival
-website: https://www.motocultor-festival.com/
+website: 'https://www.motocultor-festival.com/'
 logo: /img/festivals/motocultor-festival.webp
 isIndoor: false
 partialLineup: true
 dates:
-  start: 2025-08-14T23:00:00.000Z
+  start: 2025-08-13T22:00:00.000Z
   end: 2025-08-16T23:00:00.000Z
 location:
   country: France
@@ -22,3 +22,4 @@ lineup:
 year: 2025
 playlistId: 103CAy9r7KFnf9VbXngGqS
 ---
+
