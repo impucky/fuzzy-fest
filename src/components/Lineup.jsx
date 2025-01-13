@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { isDev } from "../utils";
-import { useAtomValue } from "jotai";
+import { useAtom, useSetAtom, useAtomValue } from "jotai";
 import { bandsAtom } from "../atoms/bandsAtom";
+import { triggerRecenterAtom } from "../atoms/triggerRecenterAtom";
+import { mapFiltersAtom } from "../atoms/mapFiltersAtom";
+import { defaultFilters } from "../atoms/mapFiltersAtom";
 import ArrowDownIcon from "../icons/arrow-down.svg?react";
+import SearchIcon from "../icons/search.svg?react";
 
 export default function Lineup({ lineup, partial }) {
   const [collapsed, setCollapsed] = useState(false);
@@ -44,15 +48,27 @@ export default function Lineup({ lineup, partial }) {
 }
 
 function BandItem({ band }) {
+  const [filters, setFilters] = useAtom(mapFiltersAtom);
+  const recenter = useSetAtom(triggerRecenterAtom);
+
+  function onBandClick() {
+    setFilters({ ...defaultFilters, query: band.slug.replaceAll("-", " ") });
+    recenter(true);
+  }
+
   return (
     <li className="group relative flex h-24 w-1/2 items-center justify-center lg:h-32">
       <img
         className="h-full w-full object-cover brightness-[0.4] transition group-hover:brightness-[0.6]"
         src={`${isDev ? "." : ""}${band.photo}`}
       />
-      <span className="text-md absolute rounded-sm p-1 font-bold leading-snug transition sm:text-xl md:text-2xl">
+      <span className="text-md absolute rounded-sm p-1 font-bold leading-snug sm:text-xl md:text-2xl">
         {band.name}
       </span>
+      <SearchIcon
+        onClick={onBandClick}
+        className="absolute right-2 top-2 ml-2 inline size-8 cursor-pointer text-neutral-400 opacity-0 transition hover:text-white group-hover:opacity-100"
+      />
     </li>
   );
 }

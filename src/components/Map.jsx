@@ -11,17 +11,18 @@ import { useAtom, useAtomValue } from "jotai";
 import { highlightAtom } from "../atoms/highlightAtom";
 import { festivalsAtom } from "../atoms/festivalsAtom";
 import { mapFiltersAtom } from "../atoms/mapFiltersAtom";
+import { triggerRecenterAtom } from "../atoms/triggerRecenterAtom";
 import MapFilters from "./MapFilters";
 import Header from "./Header";
 import InfoLink from "./InfoLink";
 
 // TODO Custom markers
-function MapCenterHandler({ center, location }) {
+function MapCenterHandler({ center, location, zoom }) {
   const [prevCenter, setPrevCenter] = useState(center);
   const map = useMap();
   // Don't recenter when navigating back to list
   if (location === "" || center === prevCenter) return;
-  map.flyTo(center, 8);
+  map.flyTo(center, zoom);
   setPrevCenter(center);
 }
 
@@ -29,7 +30,9 @@ export default function Map() {
   const [location, setLocation] = useHashLocation();
   const params = useParams();
   const [center, setCenter] = useState(null);
+  const [zoom, setZoom] = useState(window.innerWidth < 1024 ? 4 : 5);
   const [highlight, setHighlight] = useAtom(highlightAtom);
+  const [recenter, setRecenter] = useAtom(triggerRecenterAtom);
   const filters = useAtomValue(mapFiltersAtom);
   const festivals = useAtomValue(festivalsAtom);
 
@@ -38,6 +41,18 @@ export default function Map() {
     if (festival) {
       setCenter([festival.location.lat, festival.location.lon]);
     }
+  }
+
+  function centerOnSearch() {
+    const matches = filterFestivals(festivals, filters, location);
+    if (matches.length === 0) {
+      setRecenter(false);
+      return;
+    }
+    const newCenter = matches.map((f) => [f.location.lat, f.location.lon]);
+    setZoom(5);
+    setCenter(findCoordsCenter(newCenter));
+    setRecenter(false);
   }
 
   // Center once to average of festivals
@@ -55,6 +70,14 @@ export default function Map() {
     }
   }, [location]);
 
+  // Recenter when clicking a band
+  useEffect(() => {
+    if (recenter) {
+      console.log("recenter is true");
+      centerOnSearch();
+    }
+  }, [recenter]);
+
   if (!center) return;
 
   return (
@@ -67,7 +90,7 @@ export default function Map() {
         <MapFilters />
         <MapContainer
           center={center}
-          zoom={window.innerWidth < 1024 ? 4 : 5}
+          zoom={zoom}
           zoomControl={false}
           scrollWheelZoom={true}
           className="h-full w-full"
@@ -85,6 +108,7 @@ export default function Map() {
                 eventHandlers={{
                   click: () => {
                     setCenter(position);
+                    setZoom(8);
                     setLocation(`/festival/${festival.slug}`);
                   },
                   mouseover: () => {
@@ -103,7 +127,7 @@ export default function Map() {
               </Marker>
             );
           })}
-          <MapCenterHandler center={center} location={location} />
+          <MapCenterHandler center={center} location={location} zoom={zoom} />
         </MapContainer>
       </>
     </div>
