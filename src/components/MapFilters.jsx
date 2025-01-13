@@ -46,6 +46,7 @@ export default function MapFilters() {
   );
 }
 
+// TODO make this a combobox
 function SearchBar() {
   const [filters, setFilters] = useAtom(mapFiltersAtom);
   return (

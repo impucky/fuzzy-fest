@@ -39,6 +39,7 @@ export default function Map() {
   function centerOnFestival() {
     const festival = festivals.find((f) => location.includes(f.slug));
     if (festival) {
+      setZoom(8);
       setCenter([festival.location.lat, festival.location.lon]);
     }
   }
@@ -71,6 +72,7 @@ export default function Map() {
   }, [location]);
 
   // Recenter when clicking a band
+  // Try out: recenter on query change ?
   useEffect(() => {
     if (recenter) {
       centerOnSearch();
