@@ -73,7 +73,6 @@ export default function Map() {
   // Recenter when clicking a band
   useEffect(() => {
     if (recenter) {
-      console.log("recenter is true");
       centerOnSearch();
     }
   }, [recenter]);
