@@ -1,12 +1,12 @@
 ---
 name: Pietra Sonica Festival
 slug: pietra-sonica-festival
-website: http://www.pietrasonica.com/
+website: 'http://www.pietrasonica.com/'
 logo: /img/festivals/pietra-sonica-festival.webp
 dates:
-  start: 2025-08-01T22:00:00.000Z
-  end: 2025-08-02T22:00:00.000Z
-  provisional: August
+  start: 2025-07-31T22:00:00.000Z
+  end: 2025-08-01T22:00:00.000Z
+  provisional: ''
 location:
   country: Italy
   city: Osoppo
@@ -14,3 +14,4 @@ location:
   lon: 13.076819963958808
 year: 2025
 ---
+
