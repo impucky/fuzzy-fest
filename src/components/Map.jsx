@@ -39,7 +39,7 @@ export default function Map() {
   function centerOnFestival() {
     const festival = festivals.find((f) => location.includes(f.slug));
     if (festival) {
-      setZoom(8);
+      setZoom(7);
       setCenter([festival.location.lat, festival.location.lon]);
     }
   }
@@ -50,10 +50,14 @@ export default function Map() {
       setRecenter(false);
       return;
     }
-    const newCenter = matches.map((f) => [f.location.lat, f.location.lon]);
-    setZoom(5);
-    setCenter(findCoordsCenter(newCenter));
+    const newCenter = findCoordsCenter(
+      matches.map((f) => [f.location.lat, f.location.lon]),
+    );
+    // No need to zoom out if there is only one match
+    if (matches.length > 1) setZoom(5);
+    setCenter(newCenter);
     setRecenter(false);
+    setLocation(`/`);
   }
 
   // Center once to average of festivals
@@ -109,7 +113,7 @@ export default function Map() {
                 eventHandlers={{
                   click: () => {
                     setCenter(position);
-                    setZoom(8);
+                    setZoom(7);
                     setLocation(`/festival/${festival.slug}`);
                   },
                   mouseover: () => {

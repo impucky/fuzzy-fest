@@ -22,7 +22,6 @@ export default function App() {
           return festival.node;
         },
       );
-      // TODO move band loading to festival page
       const bandsResponse = await client.queries.bandConnection({ last: 999 });
       const bands = bandsResponse.data.bandConnection.edges.map((band) => {
         return band.node;
