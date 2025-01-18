@@ -15,5 +15,8 @@ location:
 year: 2025
 lineup:
   - brant-bjork-trio
+  - sunnata
+  - daevar
+  - el-perro
 playlistId: 6QaVB6sDhOdoM3XX2DEgAV
 ---
