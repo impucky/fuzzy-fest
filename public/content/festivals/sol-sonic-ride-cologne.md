@@ -1,7 +1,7 @@
 ---
 name: SoL Sonic Ride Cologne
 slug: sol-sonic-ride-cologne
-website: https://www.soundofliberation.com/festivals/sol-sonic-ride-cologne
+website: 'https://www.soundofliberation.com/festivals/sol-sonic-ride-cologne'
 logo: /img/festivals/sol-sonic-ride-cologne.webp
 isIndoor: true
 dates:
@@ -24,5 +24,6 @@ lineup:
   - 1000mods
   - colour-haze
 year: 2025
-playlistId: 1bkmNHJzbSN3dnN1BzFD3l
+playlistId: 5QtfjdsMWcVhqGEANUT4Pk
 ---
+
