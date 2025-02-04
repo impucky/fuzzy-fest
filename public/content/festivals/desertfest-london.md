@@ -13,42 +13,56 @@ location:
   lat: 51.51
   lon: -0.12
 lineup:
-  - zeal-and-ardor
-  - earth
-  - elder
-  - amenra
-  - pallbearer
-  - stoned-jesus
-  - conan
-  - the-devil-and-the-almighty-blues
-  - planet-of-zeus
-  - elephant-tree
-  - chod
-  - hippie-death-cult
-  - castle-rat
-  - rickshaw-billies-burger-patrol
-  - sons-of-alpha-centauri
-  - avon
-  - green-milk-from-the-planet-orange
-  - servo
-  - josiah
-  - mr-bison
-  - kind
-  - el-moono
-  - the-hazytones
-  - volcanova
-  - black-willows
   - 10000-years
-  - scott-hepple-and-the-sun-band
+  - amenra
+  - avon
   - barbarian-hermit
-  - king-blotfly
-  - lust-ritual
-  - erronaut
+  - black-elephant
+  - black-willows
   - bobbie-dazzle
-  - slump
-  - witchorious
-  - the-summit-fever
+  - castle-rat
+  - chod
+  - conan
+  - deville
+  - dopelord
   - dresden-wolves
+  - dunbarrow
+  - earth
+  - el-moono
+  - elder
+  - elephant-tree
+  - erronaut
+  - free-ride
+  - froglord
+  - green-milk-from-the-planet-orange
+  - hippie-death-cult
+  - josiah
+  - khan
+  - kind
+  - king-blotfly
+  - longheads
+  - lowrider
+  - lust-ritual
+  - maha-sohona
+  - mr-bison
+  - pallbearer
+  - planet-of-zeus
+  - rickshaw-billies-burger-patrol
+  - scott-hepple-and-the-sun-band
+  - slift
+  - slump
+  - sons-of-alpha-centauri
+  - stoned-jesus
+  - the-devil-and-the-almighty-blues
+  - the-hazytones
+  - the-summit-fever
+  - torus
+  - verminthrone
+  - volcanova
+  - witchorious
+  - worshipper
+  - yetii
+  - zeal-and-ardor
 year: 2025
 playlistId: 1jYWt4mgOXUBjlwihF0Gkl
 ---

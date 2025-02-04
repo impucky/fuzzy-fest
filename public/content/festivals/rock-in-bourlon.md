@@ -15,8 +15,15 @@ location:
 year: 2025
 lineup:
   - health
-  - brat
-  - hellripper
   - coilguns
+  - hellripper
+  - brat
+  - thou
+  - the-midnight-ghost-train
+  - spaced
+  - couch-slut
+  - furia
+  - zig-zags
+  - false-reality
 playlistId: 3Ro3Jd34s8sz8qmSR6EBe0
 ---

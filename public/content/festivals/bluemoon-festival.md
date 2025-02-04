@@ -16,11 +16,15 @@ year: 2025
 lineup:
   - melvins
   - slomosa
+  - my-sleeping-karma
   - the-atomic-bitchwax
   - gnome
+  - heckspoiler
+  - praise-the-plague
   - earthbong
   - spirit-mother
   - nalar
   - methuselian
+  - rifftree
 playlistId: 2IKBWwrL3dm04lpO2keWDn
 ---

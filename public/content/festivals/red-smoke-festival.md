@@ -18,5 +18,8 @@ lineup:
   - sunnata
   - daevar
   - el-perro
+  - kannabinoid
+  - bikini-beach
+  - kadavar
 playlistId: 6QaVB6sDhOdoM3XX2DEgAV
 ---
