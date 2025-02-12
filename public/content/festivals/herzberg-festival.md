@@ -13,19 +13,26 @@ location:
   lat: 50.77515517573324
   lon: 9.438569517949654
 lineup:
-  - il-civetto
+  - ahmed-eid-and-ilyf
+  - bcuc
+  - birth-control
+  - dirty-sound-magnet
+  - devon-allmans-blues-summit
+  - einseinseins
+  - marleys-ghost
   - motorpsycho
+  - leif-de-leeuw-band
+  - spirit-mother
+  - pelagic-zone
+  - rpwl
+  - yin-yin
+  - weite
   - the-magic-mumble-jumble
+  - il-civetto
   - dewolff
   - weather-systems
-  - rpwl
-  - ahmed-eid-and-ilyf
   - my-sleeping-karma
-  - leif-de-leeuw-band
   - delving
-  - dirty-sound-magnet
-  - weite
-  - birth-control
 year: 2025
 playlistId: 4394PgGlOjGxNePJRgWmPG
 ---
