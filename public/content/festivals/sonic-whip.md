@@ -13,20 +13,24 @@ location:
   lat: 51.84432425462978
   lon: 5.854116671106721
 lineup:
+  - osees
   - graveyard
-  - frankie-and-the-witch-fingers
   - elder
+  - frankie-and-the-witch-fingers
   - the-devil-and-the-almighty-blues
   - slomosa
   - whores
-  - temple-fang
+  - psychic-graveyard
   - the-janitors
-  - orsak-oslo
-  - lord-buffalo
+  - temple-fang
   - rickshaw-billies-burger-patrol
   - khan
+  - orsak-oslo
+  - lord-buffalo
+  - green-milk-from-the-planet-orange
   - help
   - karkara
+  - skyjoggers
   - heath
   - rats-and-daggers
 year: 2025

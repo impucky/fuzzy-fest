@@ -13,16 +13,16 @@ location:
   lat: 41.807307302798684
   lon: -8.861946138134142
 lineup:
+  - circle-jerks
   - fu-manchu
   - amenra
-  - circle-jerks
+  - my-sleeping-karma
   - earthless
   - emma-ruth-rundle
-  - my-sleeping-karma
+  - patriarchy
   - dopethrone
   - slomosa
   - jjuujjuu
-  - patriarchy
   - gnome
   - dame-area
   - daevar

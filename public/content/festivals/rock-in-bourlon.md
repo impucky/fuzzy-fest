@@ -25,5 +25,7 @@ lineup:
   - furia
   - zig-zags
   - false-reality
+  - wormsand
+partialLineup: true
 playlistId: 3Ro3Jd34s8sz8qmSR6EBe0
 ---

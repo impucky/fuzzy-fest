@@ -27,11 +27,7 @@ async function getAllBands() {
         const { name: resultName, imageUrl } = bcResult.items[0];
         const match = cmpstr.diceCoefficient(bandName, resultName);
         if (match > 0.8) {
-          await downloadImage(
-            imageUrl,
-            `./public/img/bands/${slug}.jpg`,
-            bandName,
-          );
+          await downloadImage(imageUrl, `./public/img/${slug}.jpg`, bandName);
         } else noMatch.push(bandName);
       } else noMatch.push(bandName);
     }

@@ -1,7 +1,7 @@
 ---
 name: Black Bass Festival
 slug: black-bass-festival
-website: https://www.blackbassfestival.com/
+website: https://www.instagram.com/blackbassfestival/
 logo: /img/festivals/blackbass-festival.webp
 dates:
   start: 2025-08-21T22:00:00.000Z

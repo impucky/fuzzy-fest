@@ -29,5 +29,6 @@ lineup:
   - machukha
 year: 2025
 playlistId: 0vfVEYp9Zsius2eADqnOhr
+partialLineup: true
 ---
 

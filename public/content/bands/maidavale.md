@@ -1,5 +1,5 @@
 ---
-name: Maidavale
+name: MaidaVale
 slug: maidavale
 url: ''
 photo: /img/bands/maidavale.webp

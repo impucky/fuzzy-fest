@@ -11,5 +11,13 @@ location:
   city: Hamburg
   lat: 53.549484259580886
   lon: 10.006832283918726
+lineup:
+  - elder
+  - king-buffalo
+  - greenleaf
+  - the-atomic-bitchwax
+  - slomosa
+  - daily-thompson
+  - gnome
 year: 2025
 ---

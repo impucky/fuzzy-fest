@@ -7,7 +7,6 @@ isIndoor: true
 dates:
   start: 2025-11-26T23:00:00.000Z
   end: 2025-11-28T23:00:00.000Z
-  provisional: ''
 location:
   country: Austria
   city: Salzburg

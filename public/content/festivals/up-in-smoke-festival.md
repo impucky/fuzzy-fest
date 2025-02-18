@@ -14,10 +14,16 @@ location:
   lon: 7.694003097998303
 year: 2025
 lineup:
+  - orange-goblin
+  - masters-of-reality
   - the-obsessed
+  - conan
   - the-vintage-caravan
+  - bongzilla
   - sienna-root
   - heckspoiler
   - zerre
+  - lurch
+partialLineup: true
 playlistId: 7a3AvzsHHIvfhfPRasSBTt
 ---

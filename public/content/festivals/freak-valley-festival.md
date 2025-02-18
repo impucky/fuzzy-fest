@@ -30,6 +30,7 @@ lineup:
   - the-polvos
   - sarkh
   - windhand
+partialLineup: true
 year: 2025
 playlistId: 37utoDS9SI6hKzFh0OGDmF
 ---

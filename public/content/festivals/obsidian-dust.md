@@ -13,13 +13,15 @@ location:
   lat: 50.85470323966327
   lon: 4.366298097308854
 lineup:
-  - villenoire
-  - green-milk-from-the-planet-orange
-  - rickshaw-billies-burger-patrol
-  - llnn
-  - pallbearer
-  - elder
   - zeal-and-ardor
+  - elder
+  - pallbearer
+  - llnn
+  - rickshaw-billies-burger-patrol
+  - green-milk-from-the-planet-orange
+  - villenoire
+  - liturgy
+  - wiegedood
 year: 2025
 playlistId: 5EVNPfLpSJNAkQrpOAiolS
 ---

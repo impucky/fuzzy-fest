@@ -6,7 +6,6 @@ logo: /img/festivals/stoned-from-the-underground.webp
 dates:
   start: 2025-07-09T22:00:00.000Z
   end: 2025-07-11T22:00:00.000Z
-  provisional: ''
 location:
   country: Germany
   city: Erfurt

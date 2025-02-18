@@ -1,7 +1,7 @@
 ---
 name: SoL Psych Out Karlsruhe
 slug: sol-psych-out-karlsruhe
-website: https://www.facebook.com/events/374465175689735/
+website: https://www.soundofliberation.com/festivals/sol-psych-out-karlsruhe
 logo: /img/festivals/sol-sonic-ride-cologne.webp
 isIndoor: true
 dates:

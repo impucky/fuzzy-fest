@@ -32,7 +32,7 @@ if (inputFiles.length === 0) {
   const confirmProcess = await confirmPrompt("Proceed?");
 
   if (confirmProcess) {
-    await imagemin([`${inputPath}/*.{jpg,png}`], {
+    await imagemin([`${inputPath}/*.{jpg,jpeg,png}`], {
       destination: inputPath,
       plugins: [imageminWebp({ quality })],
     });

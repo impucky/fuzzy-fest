@@ -6,7 +6,6 @@ logo: /img/festivals/pietra-sonica-festival.webp
 dates:
   start: 2025-07-31T22:00:00.000Z
   end: 2025-08-01T22:00:00.000Z
-  provisional: ''
 location:
   country: Italy
   city: Osoppo

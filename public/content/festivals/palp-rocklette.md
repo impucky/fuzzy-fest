@@ -1,7 +1,7 @@
 ---
 name: Palp Rocklette
 slug: palp-rocklette
-website: https://palpfestival.ch/
+website: https://palpfestival.ch/en/evenements/rocklette-2/
 logo: /img/festivals/palp-rocklette.webp
 dates:
   start: 2025-08-01T22:00:00.000Z

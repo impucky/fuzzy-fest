@@ -15,14 +15,18 @@ location:
 year: 2025
 lineup:
   - melvins
+  - mantar
   - slomosa
   - my-sleeping-karma
   - the-atomic-bitchwax
   - gnome
+  - valley-of-the-sun
   - heckspoiler
   - praise-the-plague
+  - beehoover
   - earthbong
   - spirit-mother
+  - zhaat
   - nalar
   - methuselian
   - rifftree

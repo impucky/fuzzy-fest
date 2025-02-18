@@ -11,9 +11,12 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "npm run build && netlify deploy --prod",
-    "backfill": "node scripts/backfillBands.js",
-    "imgbands": "node scripts/optimizeImages.js ./public/img/bands 80",
-    "imgfests": "node scripts/optimizeImages.js ./public/img/festivals 100"
+    "content:bands": "node scripts/backfillBands.js",
+    "content:spotify": "node scripts/getSpotifyIds.js",
+    "content:playlists": "node scripts/generatePlaylists.js",
+    "img:fetch": "node scripts/getImages.js",
+    "img:bands": "node scripts/optimizeImages.js ./public/img/bands 80",
+    "img:fests": "node scripts/optimizeImages.js ./public/img/festivals 100"
   },
   "dependencies": {
     "@fontsource-variable/vollkorn": "^5.1.1",

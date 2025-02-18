@@ -13,14 +13,26 @@ location:
   lon: 4.932501940729927
 year: 2025
 lineup:
-  - monkey3
+  - the-atomic-bitchwax
+  - pendejo
+  - atonia
   - hemelbestormer
   - godsleep
+  - neptunian-maximalism
   - capitan
   - apex-ten
+  - modder
+  - astodan
+  - gong
+  - focus
+  - monkey3
   - the-bevis-frond
+  - hedvig-mollestad-trio
+  - skyjoggers
   - seven-that-spells
   - travo
   - wheel-of-smoke
   - motorik
+  - ronker
+  - tangled-horns
 ---

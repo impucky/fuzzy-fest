@@ -13,34 +13,37 @@ location:
   lat: 52.49832859718911
   lon: 13.40655235253054
 lineup:
-  - the-hellacopters
-  - slomosa
-  - rickshaw-billies-burger-patrol
-  - green-milk-from-the-planet-orange
-  - daufodt
-  - bismut
   - 24-7-diva-heaven
+  - bismut
   - castle-rat
+  - coogans-bluff
+  - darsombra
+  - daufodt
+  - dinosaur-jr
+  - dozer
   - elder
   - elephant-tree
   - eyehategod
   - frankie-and-the-witch-fingers
+  - green-milk-from-the-planet-orange
+  - hippie-death-cult
   - kant
   - khan
   - lowrider
   - margaritas-podridas
-  - skyjoggers
-  - the-devil-and-the-almighty-blues
-  - turbo-moses
-  - wine-lips
-  - dinosaur-jr
-  - dozer
   - my-sleeping-karma
   - pallbearer
-  - temple-fang
-  - coogans-bluff
+  - rickshaw-billies-burger-patrol
+  - scott-hepple-and-the-sun-band
+  - skyjoggers
+  - slomosa
   - stinking-lizaveta
-  - darsombra
+  - temple-fang
+  - the-devil-and-the-almighty-blues
+  - the-hellacopters
+  - the-mystery-lights
+  - turbo-moses
+  - wine-lips
 year: 2025
 playlistId: 3Pr9vwjD04A1NjX2DsYxSq
 ---
