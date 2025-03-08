@@ -13,20 +13,25 @@ location:
   lat: 50.73718292189523
   lon: 7.673405155188494
 lineup:
-  - vug
-  - coltaine
-  - spirit-mother
-  - vinnum-sabbathi
-  - maidavale
-  - elephant-tree
-  - monolord
-  - lurch
-  - piece
-  - khan
-  - annie-taylor
-  - the-warlocks
-  - rezn
   - graveyard
+  - rezn
+  - the-warlocks
+  - annie-taylor
+  - khan
+  - piece
+  - lurch
+  - mantar
+  - battlesnake
+  - deathchant
+  - zerre
+  - eremit
+  - monolord
+  - elephant-tree
+  - maidavale
+  - vinnum-sabbathi
+  - spirit-mother
+  - coltaine
+  - vug
 year: 2025
 playlistId: 4QFK9oScm6ddoFMMoo14rL
 ---

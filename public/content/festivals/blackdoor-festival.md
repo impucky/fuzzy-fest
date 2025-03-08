@@ -12,23 +12,25 @@ location:
   lat: 48.585752907035385
   lon: 13.556426640740348
 lineup:
-  - planet-of-zeus
-  - stoned-jesus
-  - greenleaf
-  - el-perro
-  - mothers-cake
-  - daily-thompson
-  - margarita-witch-cult
   - cone
+  - margarita-witch-cult
+  - acid-row
+  - the-sonic-brewery
+  - kudos-to-kosmos
+  - einseinseins
+  - greenleaf
+  - stoned-jesus
+  - el-perro
+  - daily-thompson
+  - flokati
+  - the-delayed
+  - planet-of-zeus
+  - puta-volcano
+  - mothers-cake
   - mary-janes-soundgarden
   - the-lunar-effect
-  - acid-row
-  - the-delayed
-  - shiveringfit
-  - einseinseins
-  - flokati
   - white-noise-generator
-  - the-sonic-brewery
+  - shiveringfit
 year: 2025
 playlistId: 0CsWRBHbB9tmFq8xNHkS4U
 ---

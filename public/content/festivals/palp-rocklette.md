@@ -12,10 +12,23 @@ location:
   lat: 46.08037535923256
   lon: 7.214465901391112
 lineup:
-  - green-lung
-  - my-sleeping-karma
+  - melvins
+  - monkey3
+  - hooveriii
   - fu-manchu
   - earthless
+  - puta-volcano
+  - me-and-that-man
+  - my-sleeping-karma
+  - yo-diablo
+  - heartworms
+  - iguana-death-cult
+  - green-lung
+  - maidavale
+  - black-willows
+  - diiv
+  - slomosa
+  - ghostwoman
 year: 2025
 playlistId: 1fBsHAj1o2OfYTkUsxfZ1U
 ---

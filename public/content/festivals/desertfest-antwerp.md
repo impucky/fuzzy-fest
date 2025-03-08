@@ -13,4 +13,20 @@ location:
   lat: 51.21945399706157
   lon: 4.448409736036981
 year: 2025
+lineup:
+  - alber-jupiter
+  - blue-heron
+  - bongripper
+  - bongzilla
+  - colour-haze
+  - graveyard
+  - hedonist
+  - lowrider
+  - mars-red-sky
+  - masters-of-reality
+  - monkey3
+  - negative-blast
+  - oranssi-pazuzu
+  - psychlona
+  - the-obsessed
 ---

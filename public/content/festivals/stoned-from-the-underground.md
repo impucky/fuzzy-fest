@@ -13,14 +13,19 @@ location:
   lon: 11.037207334071617
 lineup:
   - monolord
-  - brant-bjork-trio
-  - splinter
-  - el-perro
-  - stonerhead
+  - slift
   - king-buffalo
-  - skyjoggers
-  - sacri-monti
+  - brant-bjork-trio
   - elephant-tree
+  - el-perro
+  - sacri-monti
+  - coogans-bluff
+  - ahab
+  - skyjoggers
+  - splinter
+  - stonerhead
+  - kant
+  - convoy
 year: 2025
 playlistId: 3g7nUPKncyQ8RXzDu46u60
 ---

@@ -15,6 +15,7 @@ location:
 lineup:
   - swan-valley-heights
   - drive-by-wire
+  - rovar
 playlistId: 55boljenqDkzA7li07quut
 year: 2025
 ---
