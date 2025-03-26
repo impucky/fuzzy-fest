@@ -12,4 +12,7 @@ location:
   lat: 45.47172449288895
   lon: 3.9140821686883487
 year: 2025
+lineup:
+  - grandmas-ashes
+  - temple-fang
 ---
