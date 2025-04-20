@@ -21,7 +21,7 @@ export default function About() {
         <a
           className="text-[salmon] hover:text-white"
           target="_blank"
-          href="https://docs.google.com/spreadsheets/d/1aEpZeCXN2CNiriD6nmHzKdiZtbndUAsIdvdfdBw8c_I/"
+          href="https://docs.google.com/spreadsheets/d/1ZbkEVOblQ4XB5X0U7SiMGprFHVpIZtLCvX5E6wf8MwI/"
         >
           spreadsheet
         </a>{" "}
