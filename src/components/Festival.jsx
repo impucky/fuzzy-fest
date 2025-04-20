@@ -54,7 +54,7 @@ export default function Festival() {
       ) : (
         <p className="w-full p-2 text-center text-lg">Lineup TBA</p>
       )}
-      {info.playlistId && <Playlist id={info.playlistId} />}
+      {/* {info.playlistId && <Playlist id={info.playlistId} />} */}
     </div>
   );
 }

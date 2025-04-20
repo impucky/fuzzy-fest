@@ -57,10 +57,13 @@ function BandItem({ band }) {
   }
 
   return (
-    <li className="group relative flex h-24 w-1/2 items-center justify-center lg:h-32">
+    <li className="group relative flex h-24 w-1/2 items-center justify-center shadow-[inset_0_0_32px_rgba(0,0,0,0.9)] lg:h-32">
       <img
         className="h-full w-full object-cover brightness-[0.4] transition group-hover:brightness-[0.6]"
         src={`${isDev ? "." : ""}${band.photo}`}
+        onError={(e) => {
+          e.target.style.display = "none";
+        }}
       />
       <span className="text-md absolute rounded-sm p-1 font-bold leading-snug sm:text-xl md:text-2xl">
         {band.name}
