@@ -14,6 +14,6 @@ location:
   lon: -1.2656138237193584
 year: 2025
 lineup:
-  - mefistofeles
+  - mephistofeles
   - iah
 ---

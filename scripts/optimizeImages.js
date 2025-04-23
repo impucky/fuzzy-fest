@@ -19,7 +19,7 @@ if (
 
 const inputFiles = fs.readdirSync(inputPath).filter((file) => {
   const ext = path.extname(file);
-  return ext === ".jpg" || ext === ".png";
+  return ext === ".jpg" || ext === ".png" || ext === ".jpeg";
 });
 
 if (inputFiles.length === 0) {
