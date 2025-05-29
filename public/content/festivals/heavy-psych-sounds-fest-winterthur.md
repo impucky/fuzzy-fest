@@ -1,7 +1,7 @@
 ---
 name: Heavy Psych Sounds Fest Winterthur
-slug: hheavy-psych-sounds-fest-winterthur
-website: https://www.heavypsychsounds.com/fests.htm
+slug: heavy-psych-sounds-fest-winterthur
+website: 'https://www.heavypsychsounds.com/fests.htm'
 logo: /img/festivals/hps.webp
 isIndoor: true
 dates:
@@ -25,3 +25,4 @@ lineup:
   - castle-rat
 year: 2025
 ---
+
