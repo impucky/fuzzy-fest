@@ -11,6 +11,27 @@ location:
   city: Gagnef
   lat: 60.58435785661078
   lon: 15.081631637650242
+lineup:
+  - abramis-brama
+  - greenleaf
+  - gaupa
+  - morpholith
+  - kaiser
+  - mushroom-caravan-overdrive
+  - moon-coven
+  - flowers-must-die
+  - bautastor
+  - craneium
+  - cavern-deep
+  - steinsopp
+  - slodder
+  - terra-black
+  - a
+  - krakslott
+  - gosta-berglings-saga
+  - hexjakt
+  - king-coyote
+  - homegrown
 year: 2025
 ---
 
