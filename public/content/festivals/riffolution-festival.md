@@ -1,7 +1,7 @@
 ---
 name: Riffolution Festival
 slug: riffolution-festival
-website: https://riffolution-promotions.com/festival
+website: 'https://www.instagram.com/riffolutionpromotions/'
 logo: /img/festivals/riffolution-festival.webp
 dates:
   start: 2025-09-26T22:00:00.000Z
@@ -14,3 +14,4 @@ location:
   lon: -2.2314462711355403
 year: 2025
 ---
+
