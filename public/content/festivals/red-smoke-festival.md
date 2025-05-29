@@ -1,7 +1,7 @@
 ---
 name: Red Smoke Festival
 slug: red-smoke-festival
-website: https://redsmokefestival.com/
+website: 'https://redsmokefestival.com/'
 logo: /img/festivals/red-smoke-festival.webp
 dates:
   start: 2025-07-10T22:00:00.000Z
@@ -11,8 +11,15 @@ location:
   city: Pleszew
   lat: 51.88404406751484
   lon: 17.793200089966014
-year: 2025
 lineup:
+  - bikini-beach
+  - ixzhilion
+  - taraban
+  - tet
+  - susy
+  - acidsloth
+  - astral-nomad
+  - snakes-snakes-snakes
   - brant-bjork-trio
   - sunnata
   - el-perro
@@ -28,5 +35,7 @@ lineup:
   - elephant-tree
   - goblinsmoker
   - pult
+year: 2025
 playlistId: 6QaVB6sDhOdoM3XX2DEgAV
 ---
+
