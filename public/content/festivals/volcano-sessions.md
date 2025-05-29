@@ -12,6 +12,12 @@ location:
   lat: 45.47172449288895
   lon: 3.9140821686883487
 lineup:
+  - slobber
+  - smooth-motion
+  - motorik
+  - wormsand
+  - iron-jinn
+  - frankie-and-the-witch-fingers
   - coogans-bluff
   - fuzzy-grass
   - decasia
