@@ -9,7 +9,7 @@ import { filterFestivals } from "../utils";
 
 export default function FestivalList() {
   const [highlight, setHighlight] = useAtom(highlightAtom);
-  const [location, setLocation] = useHashLocation();
+  const [location] = useHashLocation();
   const filters = useAtomValue(mapFiltersAtom);
   const festivals = useAtomValue(festivalsAtom);
 
@@ -24,6 +24,7 @@ export default function FestivalList() {
             .sort((a, b) => a.name.localeCompare(b.name))
             .map((f) => {
               const hl = highlight === f.slug;
+              const expired = new Date(f.dates.end) < new Date();
               return (
                 <motion.li
                   key={f.name}
@@ -36,7 +37,7 @@ export default function FestivalList() {
                   onMouseLeave={() => setHighlight(null)}
                 >
                   <Link
-                    className={`text-center text-lg font-bold transition hover:text-[salmon] md:text-xl lg:text-2xl ${hl ? "text-[salmon]" : ""}`}
+                    className={`text-center text-lg font-bold transition hover:text-[salmon] md:text-xl lg:text-2xl ${hl ? "text-[salmon]" : ""} ${expired ? "opacity-40" : ""}`}
                     href={`/festival/${f.slug}`}
                   >
                     {f.name}
