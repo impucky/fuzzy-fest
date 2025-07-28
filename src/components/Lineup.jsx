@@ -1,36 +1,22 @@
-import { useState } from "react";
 import { isDev } from "../utils";
 import { useAtom, useSetAtom, useAtomValue } from "jotai";
 import { bandsAtom } from "../atoms/bandsAtom";
 import { triggerRecenterAtom } from "../atoms/triggerRecenterAtom";
 import { mapFiltersAtom } from "../atoms/mapFiltersAtom";
 import { defaultFilters } from "../atoms/mapFiltersAtom";
-import ArrowDownIcon from "../icons/arrow-down.svg?react";
 import SearchIcon from "../icons/search.svg?react";
 
 export default function Lineup({ lineup, partial }) {
-  const [collapsed, setCollapsed] = useState(false);
   const allBands = useAtomValue(bandsAtom);
   const bands = allBands.filter((b) => lineup.includes(b.slug));
 
   return (
     <>
       <div className="z-10 my-2 flex w-full items-center justify-center">
-        <button
-          className="flex cursor-pointer items-center p-1 hover:underline"
-          onClick={() => setCollapsed(!collapsed)}
-        >
-          <ArrowDownIcon
-            className={`h-8 w-8 transition ${collapsed ? "-scale-y-100" : ""}`}
-          />
-          <span className="font-vk text-xl font-bold md:text-3xl">LINEUP</span>
-          <ArrowDownIcon
-            className={`h-8 w-8 transition ${collapsed ? "-scale-y-100" : ""}`}
-          />
-        </button>
+        <span className="font-vk text-xl font-bold md:text-2xl">LINEUP :</span>
       </div>
       <ul
-        className={`font-vk visible z-0 flex origin-top flex-wrap content-start justify-center text-center transition ${collapsed ? "invisible h-0 -translate-y-16 scale-y-0 pr-2 opacity-0" : ""}`}
+        className={`font-vk visible z-0 flex origin-top flex-wrap content-start justify-center text-center`}
       >
         {bands
           .sort((a, b) => a.name.localeCompare(b.name))

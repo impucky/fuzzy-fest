@@ -22,6 +22,9 @@ export default function Festival() {
           <img
             className="mt-2 h-auto max-h-20 w-auto max-w-64 md:max-h-32 lg:max-w-80 xl:max-w-full"
             src={`${isDev ? "." : ""}${info.logo}`}
+            onError={(e) => {
+              e.target.style.display = "none";
+            }}
           />
         </div>
         <h2 className="font-vk text-xl font-bold sm:text-2xl">{info.name}</h2>
