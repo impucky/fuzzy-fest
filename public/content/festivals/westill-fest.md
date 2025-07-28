@@ -16,4 +16,15 @@ year: 2025
 lineup:
   - mephistofeles
   - iah
+  - wytch-hazel
+  - elder
+  - brant-bjork-trio
+  - planet-of-zeus
+  - monkeys-on-mars
+  - wormsand
+  - castle-rat
+  - redstone
+  - dvne
+  - orange-goblin
+  - graveyard
 ---
