@@ -1,24 +1,11 @@
 import { atom } from "jotai";
 
-function todayOutOf365(date) {
-  return (
-    (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) -
-      Date.UTC(date.getFullYear(), 0, 0)) /
-    24 /
-    60 /
-    60 /
-    1000
-  );
-}
-
-const now = new Date();
-
 export const defaultFilters = {
   query: "",
   dateRange: {
-    from: now,
+    from: "2025-01-01",
     to: "2025-12-31",
-    range: [todayOutOf365(now), 365],
+    range: [1, 365],
   },
   showIn: true,
   showOut: true,

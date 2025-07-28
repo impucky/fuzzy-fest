@@ -106,10 +106,12 @@ export default function Map() {
           />
           {filterFestivals(festivals, filters, location).map((festival) => {
             const position = [festival.location.lat, festival.location.lon];
+            const expired = new Date(festival.dates.end) < new Date();
             return (
               <Marker
                 key={festival.name}
                 position={position}
+                opacity={expired ? 0.5 : 1}
                 eventHandlers={{
                   click: () => {
                     setCenter(position);

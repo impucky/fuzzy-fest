@@ -5,20 +5,24 @@ import yaml from "js-yaml";
 import { saveBand, confirmPrompt } from "./utils.js";
 
 async function getAllBands() {
-  const bandList = [];
+  const bandList = new Set();
 
   const festivalFiles = fs.readdirSync("./public/content/festivals");
 
   festivalFiles.forEach((file) => {
     const filePath = path.join("./public/content/festivals", file);
     const data = fm(fs.readFileSync(filePath, "utf-8"));
-    if (data.attributes.lineup) bandList.push(...data.attributes.lineup);
+    if (data.attributes.lineup) {
+      data.attributes.lineup.forEach((band) => {
+        bandList.add(band);
+      });
+    }
   });
   return bandList;
 }
 
 async function getMissingBands() {
-  const fullBandList = await getAllBands();
+  const fullBandList = Array.from(await getAllBands());
   const bandFiles = fs.readdirSync("./public/content/bands");
   const existingBandNames = [];
   const missingBands = [];

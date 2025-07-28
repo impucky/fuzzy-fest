@@ -37,7 +37,7 @@ export default function FestivalList() {
                   onMouseLeave={() => setHighlight(null)}
                 >
                   <Link
-                    className={`text-center text-lg font-bold transition hover:text-[salmon] md:text-xl lg:text-2xl ${hl ? "text-[salmon]" : ""} ${expired ? "opacity-40" : ""}`}
+                    className={`text-center text-lg font-bold transition hover:text-[salmon] md:text-xl lg:text-2xl ${hl ? "text-[salmon]" : ""} ${expired ? "line-through opacity-40" : ""}`}
                     href={`/festival/${f.slug}`}
                   >
                     {f.name}
