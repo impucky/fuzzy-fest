@@ -63,9 +63,7 @@ export function filterFestivals(festivals, filters, location) {
     if (!f.isIndoor && !filters.showOut) return false;
     if (!filters.showIn && !filters.showOut) return false;
     // Date range
-    if (startDate < startFilter || startDate > endFilter) {
-      return false;
-    }
+    if (startDate < startFilter || startDate > endFilter) return false;
     // Search
     if (filters.query) {
       const festivalMatch = f.name.toLowerCase().includes(query);
@@ -81,3 +79,14 @@ export function filterFestivals(festivals, filters, location) {
 }
 
 export const isDev = import.meta.env.DEV;
+
+export function todayOutOf365(date) {
+  return (
+    (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) -
+      Date.UTC(date.getFullYear(), 0, 0)) /
+    24 /
+    60 /
+    60 /
+    1000
+  );
+}

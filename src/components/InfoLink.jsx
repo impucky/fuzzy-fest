@@ -10,9 +10,9 @@ export default function InfoLink() {
   return (
     <Link
       to="/about"
-      className="absolute bottom-6 right-2 z-[500] flex h-8 w-8 items-center justify-center rounded-full bg-neutral-800 hover:bg-neutral-700"
+      className="absolute bottom-5 right-1 z-[500] flex size-6 items-center justify-center rounded-full bg-neutral-800 hover:bg-neutral-700 sm:size-8"
     >
-      <InfoIcon className="h-6 w-6 cursor-pointer text-neutral-400 transition hover:text-white" />
+      <InfoIcon className="size-5 cursor-pointer text-neutral-400 transition hover:text-white sm:size-6" />
     </Link>
   );
 }

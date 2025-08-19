@@ -15,7 +15,7 @@
 body {
   margin: 0;
   display: flex;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .font-logo {
@@ -41,6 +41,7 @@ body {
   border-radius: 0.5rem !important;
   border: none !important;
   box-shadow: none !important;
+
   &:before {
     border-top-color: #262626 !important;
   }

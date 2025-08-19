@@ -12,6 +12,7 @@ location:
   lat: 43.25011233837861
   lon: -2.899657471150406
 year: 2025
+isIndoor: true
 lineup:
   - colour-haze
   - motorpsycho

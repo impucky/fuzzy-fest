@@ -12,7 +12,6 @@ import CloseIcon from "../icons/close.svg?react";
 
 export default function MapFilters() {
   const [filters, setFilters] = useAtom(mapFiltersAtom);
-  const [collapsed, setCollapsed] = useState(true);
 
   function onFilterReset() {
     const resetFilters = defaultFilters;
@@ -21,24 +20,9 @@ export default function MapFilters() {
   }
 
   return (
-    <div className="pointer-events-none absolute right-0 top-0 z-[500] m-2 flex flex-col items-end gap-1">
-      <div className="pointer-events-auto flex w-min gap-1">
-        <button
-          className="grid h-8 w-8 place-items-center rounded-full bg-neutral-800 p-2 hover:bg-neutral-700 sm:h-10 sm:w-10"
-          onClick={() => {
-            if (!collapsed) onFilterReset();
-            setCollapsed(!collapsed);
-          }}
-        >
-          <FilterIcon
-            className={`w-4 cursor-pointer transition sm:w-6 ${collapsed ? "text-neutral-400" : "text-red-400"}`}
-          />
-        </button>
-        <SearchBar />
-      </div>
-      <div
-        className={`flex w-min flex-col items-end gap-1 transition duration-300 ${collapsed ? "pointer-events-none invisible opacity-0" : "pointer-events-auto visible opacity-100"}`}
-      >
+    <div className="absolute right-0 top-0 z-[500] m-0.5 flex flex-col items-end gap-0.5 sm:m-2 sm:gap-1">
+      <SearchBar />
+      <div className="flex w-min flex-col items-end gap-0.5 transition duration-300 sm:gap-1">
         <DateRange />
         <InOut />
       </div>
@@ -50,7 +34,7 @@ export default function MapFilters() {
 function SearchBar() {
   const [filters, setFilters] = useAtom(mapFiltersAtom);
   return (
-    <div className="relative flex h-8 w-52 items-center sm:h-10 sm:w-64">
+    <div className="relative flex h-8 w-56 items-center sm:h-10 sm:w-64">
       <input
         className="peer absolute h-full w-full rounded-3xl bg-neutral-800 px-4 pl-8 text-sm outline-none transition-all duration-200 hover:shadow-[0_0_0_1px_#555] focus:shadow-[0_0_0_2px_#f87171] sm:pl-10 sm:text-lg"
         type="text"
@@ -95,7 +79,7 @@ function DateRange() {
   }
 
   return (
-    <div className="w-52 rounded-xl bg-neutral-800 p-2 sm:w-64">
+    <div className="w-56 rounded-xl bg-neutral-800 px-2 py-1 sm:w-64 sm:py-2">
       <div className="flex w-full justify-between px-0 text-xs sm:px-2 sm:text-sm">
         <span className="w-1/2 text-left">
           {dateStr(from365(filters.dateRange.range[0]))}
@@ -113,7 +97,7 @@ function DateRange() {
         minStepsBetweenThumbs={1}
         onValueChange={(range) => onDateChange(range)}
       >
-        <Slider.Track className="relative h-full grow rounded-lg bg-neutral-900">
+        <Slider.Track className="relative h-full grow rounded-lg bg-neutral-700">
           <Slider.Range className="absolute h-full bg-red-400 shadow-[inset_0_0_8px_rgba(0,0,0,0.8)]" />
         </Slider.Track>
         <Slider.Thumb className="block h-6 w-6 cursor-pointer rounded-full bg-[url('/favicon.png')] bg-cover shadow-[2px_2px_3px_rgba(0,0,0,0.6)] hover:shadow-[2px_2px_6px_rgba(0,0,0,0.5)]" />
@@ -127,7 +111,7 @@ function InOut() {
   const [filters, setFilters] = useAtom(mapFiltersAtom);
 
   return (
-    <div className="flex h-10 w-24 justify-between overflow-hidden rounded-xl bg-neutral-800 text-sm sm:w-64">
+    <div className="flex h-8 w-full justify-between overflow-hidden rounded-xl bg-neutral-800 text-xs leading-tight sm:text-sm">
       <Checkbox.Root
         className="flex w-1/2 items-center justify-center gap-1 bg-neutral-800 p-1 py-2 transition hover:bg-neutral-700"
         checked={filters.showIn}
@@ -139,13 +123,13 @@ function InOut() {
           className={`w-6 transition ${filters.showIn ? "text-red-400" : "text-neutral-400"}`}
         />
         <span
-          className={`transition ${filters.showIn ? "" : "text-neutral-400"} hidden sm:block`}
+          className={`transition ${filters.showIn ? "" : "text-neutral-400"}`}
         >
           Show indoor
         </span>
       </Checkbox.Root>
       <Checkbox.Root
-        className="flex w-1/2 items-center justify-center gap-1 bg-neutral-800 p-1 py-2 transition hover:bg-neutral-700"
+        className="flex w-1/2 items-center justify-center gap-1 bg-neutral-800 py-2 transition hover:bg-neutral-700"
         checked={filters.showOut}
         onCheckedChange={() =>
           setFilters({ ...filters, showOut: !filters.showOut })
@@ -155,7 +139,7 @@ function InOut() {
           className={`w-6 transition ${filters.showOut ? "text-red-400" : "text-neutral-400"}`}
         />
         <span
-          className={`transition ${filters.showOut ? "" : "text-neutral-400"} hidden sm:block`}
+          className={`transition ${filters.showOut ? "" : "text-neutral-400"}`}
         >
           Show outdoor
         </span>

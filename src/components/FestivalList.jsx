@@ -15,7 +15,7 @@ export default function FestivalList() {
 
   return (
     <>
-      <h2 className="font-vk z-[1] border-b border-t border-[salmon] p-1 pt-2 text-center text-xl font-bold text-[salmon] shadow-[0_6px_16px_rgba(0,0,0,0.5)] sm:text-2xl lg:text-3xl">
+      <h2 className="font-vk z-[1] border-b border-t border-[salmon] pt-1 text-center text-xl font-bold text-[salmon] shadow-[0_6px_16px_rgba(0,0,0,0.5)] sm:p-1 sm:pt-2 sm:text-2xl lg:text-3xl">
         Festivals in 2025
       </h2>
       <ul className="font-vk relative flex flex-wrap items-start justify-start overflow-y-scroll p-2 text-center">
@@ -37,7 +37,7 @@ export default function FestivalList() {
                   onMouseLeave={() => setHighlight(null)}
                 >
                   <Link
-                    className={`text-center text-lg font-bold transition hover:text-[salmon] md:text-xl lg:text-2xl ${hl ? "text-[salmon]" : ""} ${expired ? "line-through opacity-40" : ""}`}
+                    className={`text-center text-base font-bold transition hover:text-[salmon] sm:text-xl md:text-xl lg:text-2xl ${hl ? "text-[salmon]" : ""} ${expired ? "opacity-40" : ""}`}
                     href={`/festival/${f.slug}`}
                   >
                     {f.name}
