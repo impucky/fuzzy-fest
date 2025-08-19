@@ -16,6 +16,7 @@ export default function App() {
     async function loadContent() {
       const festivalsResponse = await client.queries.festivalConnection({
         last: 999,
+        filter: { year: { eq: 2025 } },
       });
       const festivals = festivalsResponse.data.festivalConnection.edges.map(
         (festival) => {

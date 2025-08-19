@@ -111,9 +111,9 @@ function InOut() {
   const [filters, setFilters] = useAtom(mapFiltersAtom);
 
   return (
-    <div className="flex h-8 w-full justify-between overflow-hidden rounded-xl bg-neutral-800 text-xs leading-tight sm:text-sm">
+    <div className="flex w-fit flex-col gap-0.5 text-xs leading-tight sm:gap-1 sm:text-sm">
       <Checkbox.Root
-        className="flex w-1/2 items-center justify-center gap-1 bg-neutral-800 p-1 py-2 transition hover:bg-neutral-700"
+        className="flex items-center justify-center gap-1 rounded-xl bg-neutral-800 p-1 transition hover:bg-neutral-700 sm:p-2"
         checked={filters.showIn}
         onCheckedChange={() =>
           setFilters({ ...filters, showIn: !filters.showIn })
@@ -129,7 +129,7 @@ function InOut() {
         </span>
       </Checkbox.Root>
       <Checkbox.Root
-        className="flex w-1/2 items-center justify-center gap-1 bg-neutral-800 py-2 transition hover:bg-neutral-700"
+        className="flex items-center justify-center gap-1 rounded-xl bg-neutral-800 p-1 transition hover:bg-neutral-700 sm:p-2"
         checked={filters.showOut}
         onCheckedChange={() =>
           setFilters({ ...filters, showOut: !filters.showOut })
