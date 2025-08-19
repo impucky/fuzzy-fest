@@ -17,27 +17,27 @@ export default function About() {
         have limited means of searching outside of French and English content.
       </p>
       <p>
-        You can leave a comment on the{" "}
-        <a
-          className="text-[salmon] hover:text-white"
-          target="_blank"
-          href="https://docs.google.com/spreadsheets/d/1ZbkEVOblQ4XB5X0U7SiMGprFHVpIZtLCvX5E6wf8MwI/"
-        >
-          spreadsheet
-        </a>{" "}
-        or message me on discord <span className="text-[salmon]">@pucky</span>.
+        You can reach me on{" "}
+        <Link
+          url="https://discord.com/users/170272843525783552"
+          text="Discord"
+        />{" "}
+        or <Link url="https://instagram.com/raphael.pucky/" text="Instagram" />.
       </p>
       <p>
         The project is also on{" "}
-        <a
-          className="text-[salmon] hover:text-white"
-          target="_blank"
-          href="https://github.com/impucky/fuzzy-fest"
-        >
-          Github
-        </a>
-        .
+        <Link url="https://github.com/impucky/fuzzy-fest" text="GitHub" />.
       </p>
     </div>
   );
 }
+
+const Link = ({ url, text }) => (
+  <a
+    className="text-[salmon] underline transition-all hover:text-white"
+    target="_blank"
+    href={url}
+  >
+    {text}
+  </a>
+);
