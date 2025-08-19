@@ -22,6 +22,13 @@ lineup:
   - carson
   - stonus
   - hellroom-projectors
+  - dozer
+  - abramis-brama
+  - langfinger
+  - wizzerd
+  - astroqueen
+  - the-big-rip
+  - caboose
 year: 2025
 playlistId: 2FYLbe8SqMtjZG9GjpVN4S
 ---

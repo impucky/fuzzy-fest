@@ -12,5 +12,5 @@ location:
   city: Clermont
   lat: 49.380553769049556
   lon: 2.4194468854867415
-year: 2025
+year: 2026
 ---

@@ -13,5 +13,5 @@ location:
   city: Plattenburg
   lat: 52.95822077493347
   lon: 12.0303555745245
-year: 2025
+year: 2026
 ---

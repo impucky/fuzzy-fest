@@ -13,5 +13,9 @@ location:
   lat: 47.80722001002131
   lon: 13.058969847365278
 year: 2025
+lineup:
+  - ellende
+  - belzebong
+  - coltaine
 ---
 

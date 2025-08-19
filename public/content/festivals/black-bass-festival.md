@@ -12,5 +12,5 @@ location:
   city: Braud-et-St-Louis
   lat: 45.2430132911258
   lon: -0.6266363122687644
-year: 2025
+year: 2026
 ---

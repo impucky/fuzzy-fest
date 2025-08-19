@@ -12,4 +12,17 @@ location:
   lat: 51.100098469627575
   lon: 11.58288871161322
 year: 2025
+lineup:
+  - long-distance-calling
+  - ufomammut
+  - dyse
+  - new-candys
+  - mad-foxes
+  - glasgow-coma-scale
+  - kaskadeur
+  - methadone-skies
+  - motorowl
+  - zolle
+  - dead-myrick
+  - lazar
 ---

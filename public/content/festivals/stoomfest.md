@@ -32,7 +32,7 @@ lineup:
   - outback
   - novere
   - goat-major
-year: 2024
+year: 2025
 playlistId: 2d4etZvJf8gjMlFZZkLNSn
 ---
 

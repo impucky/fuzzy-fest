@@ -12,15 +12,21 @@ location:
   lat: 37.05273591245333
   lon: -2.3902286328881943
 year: 2025
+isIndoor: false
 lineup:
+  - mondo-generator
+  - unida
   - nightstalker
+  - kal-el
   - rotor
   - godsleep
   - ritual-king
   - high-desert-queen
-  - luna-sol
   - temple-fang
   - tankzilla
+  - psychogarden
   - convoy
   - balate
+  - scrotem
+  - xispa-and-the-wild-pigs
 ---

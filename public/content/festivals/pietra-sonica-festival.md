@@ -12,5 +12,16 @@ location:
   lat: 46.26196748226936
   lon: 13.076819963958808
 year: 2025
+lineup:
+  - the-atomic-bitchwax
+  - the-myrrors
+  - kaleidobolt
+  - karkara
+  - maragda
+  - huge-molasses-tank-explodes
+  - jantar
+  - the-magogas
+  - samstation
+  - voodoograve
 ---
 

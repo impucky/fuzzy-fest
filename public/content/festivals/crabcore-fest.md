@@ -1,12 +1,11 @@
 ---
 name: Crabcore Fest
 slug: crabcore-fest
-website: https://crabcore.ch//
+website: https://crabcore.ch/
 logo: /img/festivals/crabcore-fest.webp
 dates:
-  start: 2025-09-29T22:00:00.000Z
-  end: 2025-09-30T22:00:00.000Z
-  provisional: September
+  start: 2025-09-26
+  end: 2025-09-27
 location:
   country: Switzerland
   city: Lancy
