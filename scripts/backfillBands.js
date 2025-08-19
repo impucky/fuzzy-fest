@@ -47,8 +47,6 @@ function createBand(slug) {
       .map((term) => term.charAt(0).toUpperCase() + term.slice(1))
       .join(" "),
     slug,
-    url: "",
-    photo: `/img/bands/${slug}.webp`,
   };
 
   saveBand(newBand);

@@ -45,11 +45,6 @@ export default defineConfig({
             isTitle: true,
             required: true,
           },
-          {
-            type: "image",
-            name: "photo",
-            label: "Band photo",
-          },
         ],
       },
       {
